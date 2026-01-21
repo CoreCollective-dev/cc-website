@@ -23,21 +23,28 @@ import backgroundVideo from '../assets/0_Abstract_Digital_4096x2304.mp4';
   <main
     class="flex h-screen flex-col items-center justify-center p-4 text-center text-white"
   >
-    <div class="mb-16 flex flex-col items-center">
+    <div
+      class="mb-8 flex w-full max-w-70 flex-col items-center md:mb-16 md:max-w-none"
+    >
       <Logo width={600} />
     </div>
 
     <div
-      class="mx-64 space-y-4 text-4xl font-light tracking-wider text-[#02eaea]"
+      class="mx-auto space-y-4 text-lg font-light tracking-wider text-[#02eaea] md:text-3xl lg:text-4xl"
     >
-      <p class="pb-8">
-        CoreCollective is an open collaborative forum for the Arm Ecosystem.<br
-        />
+      <p class="pb-4 md:pb-8">
+        CoreCollective is an open collaborative forum for the Arm Ecosystem.
+        <br class="hidden md:inline" />
         Its mission is to accelerate the Arm ecosystem through open collaboration,
-        enabling<br /> shared software tools, and standards that power every Arm system,
-        from cloud to edge.
+        enabling
+        <br class="hidden md:inline" />
+        shared software tools, and standards that power every Arm system, from cloud
+        to edge.
       </p>
-      <p class="tracking-widest">// COMING SOON</p>
+
+      <p class="text-sm tracking-widest md:text-3xl lg:text-4xl">
+        // COMING SOON
+      </p>
     </div>
   </main>
 </BaseLayout>

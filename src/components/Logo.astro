@@ -5,14 +5,18 @@ import logoImg from '../assets/CC_logo_with_tag.svg';
 interface Props {
   width?: number;
 }
-
 const { width = 200 } = Astro.props;
 ---
 
-<div class="logo-container">
-  <Image src={logoImg} alt="Company Logo" width={width} loading="eager" />
+<div class="logo-container md:w-1/4">
+  <Image
+    src={logoImg}
+    alt="Company Logo"
+    width={width}
+    loading="eager"
+    class="h-auto w-full"
+  />
 </div>
-
 <style>
   .logo-container {
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
