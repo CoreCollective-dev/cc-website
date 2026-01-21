@@ -27,6 +27,11 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install Pulumi
+        uses: pulumi/actions@v5
+        with:
+          pulumi-version: 3.117.0
+
       - name: Install Dependencies
         run: npm ci
 
