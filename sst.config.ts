@@ -17,10 +17,10 @@ export default $config({
   async run() {
     new sst.aws.Astro('CC-Website', {
       //to hide, comment out the below
-      domain: {
-        name: 'corecollective.dev',
-        redirects: ['www.corecollective.dev'],
-      },
+      // domain: {
+      //   name: 'corecollective.dev',
+      //   redirects: ['www.corecollective.dev'],
+      // },
     });
   },
 });
