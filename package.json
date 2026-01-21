@@ -12,7 +12,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.11",
     "astro-sst": "3.1.4",
-    "sst": "3.17.25",
+    "sst": "^3.17.25",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
