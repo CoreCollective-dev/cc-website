@@ -15,12 +15,16 @@ export default $config({
     };
   },
   async run() {
+    const domain =
+      $app.stage === 'production'
+        ? {
+            name: 'corecollective.dev',
+            dns: sst.aws.dns(),
+            redirects: ['www.corecollective.dev'],
+          }
+        : undefined;
     new sst.aws.Astro('CC-Website', {
-      //to hide, comment out the below
-      // domain: {
-      //   name: 'corecollective.dev',
-      //   redirects: ['www.corecollective.dev'],
-      // },
+      // domain: domain,
     });
   },
 });
