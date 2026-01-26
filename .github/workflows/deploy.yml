@@ -1,18 +1,17 @@
-name: Production Deploy
+name: Deploy
 
 on:
   push:
     branches:
       - main
+      - staging
 
-# Permissions needed for OIDC to work
 permissions:
   id-token: write
   contents: read
 
-# Prevent concurrent deploys
 concurrency:
-  group: production
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -41,5 +40,10 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: eu-west-1
 
-      - name: Deploy to Production
-        run: npx sst deploy --stage production
+      - name: Deploy
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            npx sst deploy --stage production
+          else
+            npx sst deploy --stage staging
+          fi
