@@ -1,11 +1,52 @@
 ---
+import Contact from '../../components/Contact.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import backgroundImage from '../../assets/ee81704efd06ed467ce722c9d5452f2e14cb0859.png';
 ---
 
 <BaseLayout title="About">
-  <main
-    class="flex h-screen flex-col items-center justify-center bg-[#080225] p-4 text-center text-white"
+  <div
+    class="flex w-full flex-col gap-64 bg-[#080225] bg-cover bg-center bg-no-repeat py-32"
+    style={{
+      backgroundImage: `linear-gradient(rgba(8, 2, 37, 0.6), rgba(8, 2, 37, 0.6)), url(${backgroundImage.src})`,
+    }}
   >
-    <p>About</p>
-  </main>
+    <div class="mx-auto flex h-full w-3/5 flex-col justify-center gap-24">
+      <h1 class="text-2xl text-[#02EAEA] md:text-4xl">About</h1>
+      <div class="flex flex-col gap-8 text-lg text-white md:mx-24 md:text-xl">
+        <p class="">
+          The Arm ecosystem has grown far beyond mobile, now spanning AI, cloud,
+          edge, automotive, and client compute. As the ecosystem has expanded
+          and technology evolved, software complexity has increased. No single
+          company can maintain enablement alone - open source collaboration is
+          key.
+        </p>
+        <p>
+          <span class="text-[#02EAEA]">CoreCollective </span>provides a neutral
+          platform for innovators in the Arm ecosystem to come together and
+          openly collaborate on common requirements. By working together on the
+          common needs once, companies can focus more of their efforts and
+          resources on differentiating their product.
+        </p>
+        <p class="font-extrabold">
+          The Core Collective comprises multiple Working Groups, each focused on
+          a specific technology. Any company is free to join and participate in
+          the CoreCollective.
+        </p>
+        <p>
+          To better understand options to join, as well as enhancing your
+          membership to increase visibility and influence <span
+            class="text-[#02EAEA]">click here.</span
+          >
+        </p>
+        <p>
+          To see the benefits of joining as well as the current active Working
+          Groups, please download our <span class="text-[#02EAEA]"
+            >short slide deck</span
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+  <Contact />
 </BaseLayout>

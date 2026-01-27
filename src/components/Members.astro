@@ -1,0 +1,28 @@
+---
+const members = Array(10).fill('');
+---
+
+<div class="flex w-full flex-col items-center gap-8 py-12">
+  <h2 class="text-4xl text-white md:text-5xl">Our Members</h2>
+
+  <ul
+    class="grid w-full max-w-7xl grid-cols-2 gap-4 px-4 pt-8 sm:grid-cols-3 md:grid-cols-5 md:gap-6"
+  >
+    {
+      members.map((_) => (
+        <li class="group flex aspect-2/1 items-center justify-center rounded-sm bg-[#D9D9D9] transition-transform hover:scale-105">
+          <span class="font-bold tracking-wider text-[#080225] uppercase group-hover:hidden">
+            Logo
+          </span>
+
+          {/* <img 
+            src="/path-to-logo.svg" 
+            alt="Member Logo" 
+            class="hidden group-hover:block max-h-[70%] w-auto grayscale hover:grayscale-0 transition-all" 
+          /> 
+          */}
+        </li>
+      ))
+    }
+  </ul>
+</div>

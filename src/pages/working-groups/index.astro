@@ -1,11 +1,72 @@
 ---
+import Contact from '../../components/Contact.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import backgroundImage from '../../assets/ee81704efd06ed467ce722c9d5452f2e14cb0859.png';
+
+const data = [
+  {
+    title: '[placeholder]',
+    id: 'A',
+    wg: 'Working Group',
+    description:
+      'The Core Collective comprises multiple Working Groups, each focused on a specific technology. Any company is free to join and participate in the CoreCollective.',
+  },
+  {
+    title: '[placeholder]',
+    id: 'B',
+    wg: 'Working Group',
+    description:
+      'The Core Collective comprises multiple Working Groups, each focused on a specific technology. Any company is free to join and participate in the CoreCollective.',
+  },
+  {
+    title: '[placeholder]',
+    id: 'C',
+    wg: 'Working Group',
+    description:
+      'The Core Collective comprises multiple Working Groups, each focused on a specific technology. Any company is free to join and participate in the CoreCollective.',
+  },
+  {
+    title: '[placeholder]',
+    id: 'D',
+    wg: 'Working Group',
+    description:
+      'The Core Collective comprises multiple Working Groups, each focused on a specific technology. Any company is free to join and participate in the CoreCollective.',
+  },
+];
 ---
 
 <BaseLayout title="Working Group">
-  <main
-    class="flex h-screen flex-col items-center justify-center bg-[#080225] p-4 text-center text-white"
+  <div
+    class="flex w-full flex-col gap-64 bg-[#080225] bg-cover bg-center bg-no-repeat py-32"
+    style={{
+      backgroundImage: `linear-gradient(rgba(8, 2, 37, 0.6), rgba(8, 2, 37, 0.6)), url(${backgroundImage.src})`,
+    }}
   >
-    <p>Working Groups</p>
-  </main>
+    <div class="mx-auto flex h-full w-3/5 flex-col justify-center gap-24">
+      <h1 class="text-2xl text-[#02EAEA] md:text-4xl">Working Groups</h1>
+      <h3 class="text-lg text-white md:text-xl">
+        The Core Collective comprises multiple Working Groups, each focused on a
+        specific technology. Any company is free to join and participate in the
+        CoreCollective.
+      </h3>
+    </div>
+
+    <ul class="flex w-full flex-col gap-16 p-8 md:flex-row md:gap-24 md:px-64">
+      {
+        data.map((item) => (
+          <li>
+            <div class="aspect-square rounded-full bg-[conic-gradient(from_270deg,#02EAEA,#080225,#46136C,#02EAEA)]">
+              <div class="item-center flex h-full flex-col justify-center">
+                <h1>{item.title}</h1>
+                <h1 class="text-5xl font-bold">{item.id}</h1>
+                <h1 class="md:text-2xl">{item.wg}</h1>
+              </div>
+            </div>
+            <p>{item.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <Contact />
 </BaseLayout>
