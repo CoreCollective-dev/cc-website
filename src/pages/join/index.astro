@@ -1,11 +1,61 @@
 ---
+import Contact from '../../components/Contact.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import backgroundImage from '../../assets/ee81704efd06ed467ce722c9d5452f2e14cb0859.png';
 ---
 
 <BaseLayout title="Join">
-  <main
-    class="flex h-screen flex-col items-center justify-center bg-[#080225] p-4 text-center text-white"
+  <div
+    class="flex w-full flex-col gap-64 bg-[#080225] bg-cover bg-center bg-no-repeat py-32"
+    style={{
+      backgroundImage: `linear-gradient(rgba(8, 2, 37, 0.6), rgba(8, 2, 37, 0.6)), url(${backgroundImage.src})`,
+    }}
   >
-    <p>Join</p>
-  </main>
+    <div class="mx-auto flex h-full w-3/5 flex-col justify-center gap-24">
+      <h1 class="text-2xl text-[#02EAEA] md:text-4xl">Join</h1>
+      <div class="flex flex-col gap-8 text-lg text-white md:mx-24 md:text-xl">
+        <p class="font-extrabold">
+          Membership in the CoreCollective is free. The steps to join are as
+          follows:
+        </p>
+        <ol class="list-disc space-y-8 text-left">
+          <li>
+            Review the CoreCollective Charter <a href="/" class="text-[#02EAEA]"
+              >here</a
+            >
+          </li>
+
+          <li>
+            Download and fill out the <a
+              class="font-bold text-[#02EAEA]"
+              href="/">Membership Agreement</a
+            >. Return the signed Membership Agreement via email to <a
+              href="mailto:enquiries@corecollective.dev"
+              class="text-[#02EAEA]">enquiries@corecollective.dev</a
+            > for countersignature.
+          </li>
+
+          <li>
+            The CoreCollective Administrative team will countersign and return
+            the Membership Agreement to you.
+          </li>
+
+          <li>
+            Once you have received the fully signed Membership Agreement,
+            employees of your organisation will be able to register on the
+            <a class="font-bold text-[#02EAEA]" href="/">CoreCollective Hub</a>,
+            and participate in the active technology Working Groups.
+          </li>
+
+          <li>
+            Note that each registration request requires admin approval, so
+            there may be a delay between when a user requests access and actual
+            approval is granted. Once your registration request has been
+            approved, you will be granted full access to the CoreCollective Hub.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <Contact />
 </BaseLayout>

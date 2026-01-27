@@ -1,44 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Logo from '../components/Logo.astro';
-import { Image } from 'astro:assets';
-import backgroundImage from '../assets/0233f2c4c9a0817f3a88064a357678647bb97e85.png';
+import backgroundVideo from '../assets/0_Abstract_Digital_4096x2304.mp4';
+import Contact from '../components/Contact.astro';
+import Members from '../components/Members.astro';
 ---
 
-<BaseLayout title="Coming Soon">
-  <Image
-    src={backgroundImage}
-    alt="Background"
-    quality="high"
-    class="absolute top-0 left-0 -z-20 h-full w-full object-cover"
-  />
-
+<BaseLayout title="Core Collective">
   <div
-    class="from-cc-blue/0 via-cc-blue to-cc-blue/0 absolute top-0 left-0 -z-10 h-full w-full bg-linear-to-b"
+    class="h-200 w-full bg-[#080225] bg-[linear-gradient(to_bottom,transparent_0%,#000000_50%,transparent_100%)]"
   >
+    <div class="mx-auto flex h-full w-3/5 flex-col justify-center gap-24">
+      <h1 class="text-2xl md:text-4xl">
+        <span class="text-[#02EAEA]">CoreCollective,</span> Where the Arm Ecosystem
+        builds intelligence efficiently, <span class="text-[#02EAEA] italic"
+          >together</span
+        >
+      </h1>
+      <h3 class="text-lg text-[#02EAEA] md:text-xl">
+        //CoreCollective is an open collaborative forum for the Arm Ecosystem.
+        Its mission is to accelerate the Arm ecosystem through open
+        collaboration, enabling shared software tools, and standards that power
+        every Arm system, from cloud to edge.
+      </h3>
+    </div>
   </div>
-
-  <main
-    class="flex h-screen flex-col items-center justify-center p-4 text-center text-white"
-  >
-    <div
-      class="mb-8 flex w-full max-w-100 flex-col items-center md:mb-8 md:max-w-none"
-    >
-      <Logo width={800} />
-    </div>
-
-    <div
-      class="text-cc-cyan mx-auto space-y-4 text-lg font-light tracking-wider md:text-lg lg:text-2xl"
-    >
-      <p class="pb-4 md:pb-8">
-        CoreCollective is an open collaborative forum for the Arm Ecosystem,
-        <br class="hidden md:inline" />
-        designed to accelerate innovation through shared software tools and standards
-        <br class="hidden md:inline" />
-        that power every Arm system from cloud to edge.
-      </p>
-
-      <a href="/about">About</a>
-    </div>
-  </main>
+  <Members />
+  <Contact />
 </BaseLayout>
