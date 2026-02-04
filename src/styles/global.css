@@ -1,3 +1,6 @@
+
+@import "@fontsource-variable/figtree";
+
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
@@ -5,4 +8,6 @@
   --color-cc-blue: #080225;
   --color-cc-cyan: #02EAEA;
   --color-cc-dark: #010004;
+
+  --font-sans: "Figtree Variable", "Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
