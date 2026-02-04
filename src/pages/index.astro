@@ -1,22 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Logo from '../components/Logo.astro';
-import backgroundVideo from '../assets/0_Abstract_Digital_4096x2304.mp4';
+import { Image } from 'astro:assets';
+import backgroundImage from '../assets/0233f2c4c9a0817f3a88064a357678647bb97e85.png';
 ---
 
 <BaseLayout title="Coming Soon">
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    class="absolute top-0 left-0 -z-20 h-full w-full object-cover"
-  >
-    <source src={backgroundVideo} type="video/mp4" />
-  </video>
+  <Image
+    src={backgroundImage}
+    alt="Background"
+    quality="high"
+    class="absolute top-0 left-0 -z-20 h-full w-full scale-[1.01] object-cover"
+  />
 
   <div
-    class="absolute top-0 left-0 -z-10 h-full w-full bg-gradient-to-b from-[#080225]/0 via-[#080225] to-[#080225]/0"
+    class="from-cc-blue/0 via-cc-blue to-cc-blue/0 absolute top-0 left-0 -z-10 h-full w-full bg-linear-to-b"
   >
   </div>
 
@@ -30,7 +28,7 @@ import backgroundVideo from '../assets/0_Abstract_Digital_4096x2304.mp4';
     </div>
 
     <div
-      class="mx-auto space-y-4 text-lg font-light tracking-wider text-[#02eaea] md:text-3xl lg:text-4xl"
+      class="text-cc-cyan mx-auto space-y-4 text-lg font-light tracking-wider md:text-3xl lg:text-4xl"
     >
       <p class="pb-4 md:pb-8">
         CoreCollective is an open collaborative forum for the Arm Ecosystem.
