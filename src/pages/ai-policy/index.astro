@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LogoImg from '../../assets/CC_logo_no_tag.svg';
+---
+
+<BaseLayout title="AI Policy">
+  <header class="bg-cc-blue h-40 w-full text-white">
+    <nav class="mx-16 flex h-full items-center justify-between px-4">
+      <div class="flex h-full shrink-0 items-center pt-4">
+        <a href="/">
+          <img src={LogoImg.src} alt="Logo" class="h-30 w-auto" />
+        </a>
+      </div>
+    </nav>
+  </header>
+  <div class="mx-8 flex flex-col justify-center py-16 md:mx-48">
+    <h1 class="text-cc-cyan text-2xl md:text-4xl">AI Policy</h1>
+  </div>
+  <article class="prose prose-invert mx-8 max-w-none py-16 text-left md:mx-48">
+    <p>Guidance on AI-assisted contributions</p>
+
+    <p>
+      Trusted Firmware projects continue to benefit from the contributions of a
+      broad and diverse community of developers within the open-source
+      ecosystem. As AI technology rapidly evolves, developers are increasingly
+      leveraging AI tools to assist them in code creation. Trusted Firmware
+      projects can accept contributions where AI has been used in their
+      creation. These contributions should follow the contribution guidelines
+      and license terms stipulated by the individual projects. The following
+      should be carefully considered for such contributions.
+    </p>
+    <ol>
+      <li>
+        Contributors should ensure that the terms and conditions of the
+        generative AI tool do not place any contractual restrictions on how the
+        tool's output can be used that are inconsistent with the project's
+        license, contribution guidelines or the <a
+          href="https://opensource.org/osd">Open Source Definition</a
+        >.
+      </li>
+      <li>
+        If any pre-existing copyrighted materials (including pre-existing open
+        source code) authored or owned by third parties are included in the AI
+        tool's output, prior to contributing such output to the project, the
+        Contributor should confirm that they have permission from the third
+        party owners-such as the form of an open source license or public domain
+        declaration that complies with the project's licensing policies-to use
+        and modify such pre-existing materials and contribute them to the
+        project. Additionally, the contributor should provide notice and
+        attribution of such third party rights, along with information about the
+        applicable license terms, with their contribution.
+      </li>
+    </ol>
+
+    <p>
+      Some tools provide features that can assist contributors with the above.
+      For example, some provide a feature that suppresses responses that are
+      similar to third party materials in the AI tool's output, or a feature
+      that flags similarity between copyrighted training data or other materials
+      owned by third parties and the AI tool's output and provides information
+      about the licensing terms that apply to such third party materials
+    </p>
+    <p>
+      When providing contributions where AI tool has been used in their
+      creation, a recommended practice is for contributors to indicate the
+      tooling used to create the contribution. This should be included as a
+      token in the source control commit message, for example including the
+      phrase “Co-developed-by:”
+    </p>
+    <p>
+      Organizations that employ open source developers may have more stringent
+      guidelines related to use of AI for software development. Contributors
+      should comply with their employer's policies when contributing.
+    </p>
+    <p>
+      As AI is a rapidly evolving technology, policies will need to be
+      re-evaluated and updated in response to:
+    </p>
+    <ul>
+      <li>Changes in the law.</li>
+      <li>Changes in AI technology landscape and related tools.</li>
+      <li>Changes in AI technology landscape and related tools.</li>
+    </ul>
+    <p>
+      The guidance is based on Linux Foundation guidance <a
+        href="https://www.linuxfoundation.org/legal/generative-ai">here</a
+      >, licensed under <a href="https://creativecommons.org/licenses/by/3.0"
+        >CC BY 3.0</a
+      > and Apache Software Foundation guidance <a
+        href="https://www.apache.org/legal/generative-tooling.html">here</a
+      >, licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0">
+        Apache License version 2.0</a
+      >.
+    </p>
+
+    <hr class="border-white/10" />
+  </article>
+</BaseLayout>

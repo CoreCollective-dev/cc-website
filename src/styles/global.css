@@ -1,1 +1,8 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-cc-blue: #080225;
+  --color-cc-cyan: #02EAEA;
+  --color-cc-dark: #010004;
+}
