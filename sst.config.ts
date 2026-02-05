@@ -24,7 +24,7 @@ export default $config({
           }
         : undefined;
     new sst.aws.Astro('CC-Website', {
-      // domain: domain,
+      domain: domain,
     });
   },
 });
