@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LogoImg from '../assets/CC_logo_no_tag.svg';
+---
+
+<BaseLayout title="Page Not Found">
+  <header class="bg-cc-blue h-40 w-full text-white">
+    <nav class="flex h-full items-center justify-between px-4 md:mx-16">
+      <div class="flex h-full shrink-0 items-center pt-4">
+        <a href="/">
+          <img src={LogoImg.src} alt="Logo" class="h-30 w-auto" />
+        </a>
+      </div>
+    </nav>
+  </header>
+  <div class="mx-auto mt-8 max-w-4xl text-center text-xl text-white">
+    <h1>Page Not Found</h1>
+    <p>We're sorry but the page you are trying to access cannot be found.</p>
+    <a href="/">Take me home</a>
+  </div>
+</BaseLayout>
