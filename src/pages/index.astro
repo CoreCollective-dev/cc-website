@@ -1,30 +1,40 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Logo from '../components/Logo.astro';
-import backgroundVideo from '../assets/0_Abstract_Digital_4096x2304.mp4';
+import { Image } from 'astro:assets';
 import Contact from '../components/Contact.astro';
 import Members from '../components/Members.astro';
+import backgroundImage from '../assets/52dad6ed54df0213f77fdc794d6d29be3972009c.png';
+import logo from '../assets/CC_logo_no_tag.svg';
 ---
 
 <BaseLayout title="Core Collective">
   <div
-    class="h-200 w-full bg-[#080225] bg-[linear-gradient(to_bottom,transparent_0%,#000000_50%,transparent_100%)]"
+    class="w-full bg-cc-blue bg-[linear-gradient(to_bottom,transparent_0%,#000000_50%,transparent_100%)]"
   >
-    <div class="mx-auto flex h-full w-3/5 flex-col justify-center gap-24">
+    <div
+      class="mx-auto flex h-full w-3/5 flex-col justify-center items-center gap-8 mt-8 mb-24 md:mt-24 md:mb-64"
+    >
+      <Image src={logo} alt="logo" class="md:w-1/2 w-full" />
       <h1 class="text-2xl md:text-4xl">
-        <span class="text-[#02EAEA]">CoreCollective,</span> Where the Arm Ecosystem
-        builds intelligence efficiently, <span class="text-[#02EAEA] italic"
-          >together</span
+        Where the Arm Ecosystem builds intelligence<br /> efficiently, <span
+          class="text-cc-cyan italic">together</span
         >
       </h1>
-      <h3 class="text-lg text-[#02EAEA] md:text-xl">
-        //CoreCollective is an open collaborative forum for the Arm Ecosystem.
-        Its mission is to accelerate the Arm ecosystem through open
-        collaboration, enabling shared software tools, and standards that power
-        every Arm system, from cloud to edge.
+      <h3 class="text-base text-cc-cyan md:text-xl">
+        //CoreCollective is an open collaborative forum for the Arm <br
+        />Ecosystem. Its mission is to accelerate the Arm ecosystem <br
+        />through open collaboration, enabling shared software tools, and <br
+        />standards that power every Arm system, from cloud to edge.
       </h3>
     </div>
   </div>
-  <Members />
-  <Contact />
+  <div
+    class="flex w-full flex-col gap-16 bg-cc-blue bg-cover bg-center bg-no-repeat py-32"
+    style={{
+      backgroundImage: `url(${backgroundImage.src})`,
+    }}
+  >
+    <Members />
+    <Contact />
+  </div>
 </BaseLayout>
