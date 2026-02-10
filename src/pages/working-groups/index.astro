@@ -1,68 +1,117 @@
 ---
 import Contact from '../../components/Contact.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import backgroundImage from '../../assets/ee81704efd06ed467ce722c9d5452f2e14cb0859.png';
+import workingGroupsTitle from '../../assets/working-groups.svg';
+import { Image } from 'astro:assets';
+import backgroundImage from '../../assets/52dad6ed54df0213f77fdc794d6d29be3972009c.png';
+import iconEdge from '../../assets/icons/edgeIcon.svg';
+import iconConfidential from '../../assets/icons/download.svg';
+import iconWindows from '../../assets/icons/message.svg';
+import iconBell from '../../assets/icons/bell.svg';
+import iconGear from '../../assets/icons/gear.svg';
+import iconData from '../../assets/icons/copy.svg';
+import iconLink from '../../assets/icons/link.svg';
 
 const data = [
   {
-    title: '[placeholder]',
-    id: 'A',
-    wg: 'Working Group',
+    title: 'Linux Fundamentals',
+    icon: iconGear,
     description:
-      'The Core Collective comprises multiple Working Groups, each focused on a specific technology. Any company is free to join and participate in the CoreCollective.',
+      'Focused on the Linux Kernel, Toolchains, and Kernel Quality Testing',
   },
   {
-    title: '[placeholder]',
-    id: 'B',
-    wg: 'Working Group',
+    title: 'Confidential Compute',
+    icon: iconConfidential,
     description:
-      'The Core Collective comprises multiple Working Groups, each focused on a specific technology. Any company is free to join and participate in the CoreCollective.',
+      'Provision of a comprehensive set of software emulated hardware enabling execution of Confidential Compute on Arm',
   },
   {
-    title: '[placeholder]',
-    id: 'C',
-    wg: 'Working Group',
+    title: 'Windows on Arm',
+    icon: iconWindows,
     description:
-      'The Core Collective comprises multiple Working Groups, each focused on a specific technology. Any company is free to join and participate in the CoreCollective.',
+      'Targeting application layer support for Windows. From tooling to enablement and optimization of libraries on the Windows platform',
   },
   {
-    title: '[placeholder]',
-    id: 'D',
-    wg: 'Working Group',
+    title: 'Heterogeneous Platforms',
+    icon: iconBell,
     description:
-      'The Core Collective comprises multiple Working Groups, each focused on a specific technology. Any company is free to join and participate in the CoreCollective.',
+      'Software and interfaces for complex multi cluster SoC, eg, A+M',
+  },
+  {
+    title: 'Android',
+    icon: iconWindows,
+    description:
+      'Arm architecture feature adoption. Platform standardization & enablement',
+  },
+  {
+    title: 'Edge AI',
+    icon: iconEdge,
+    description:
+      'Focusing on building technologies to realize the full potential of the Arm architecture on edge computing with a particular focus on AI workloads',
+  },
+  {
+    title: 'Virtualization',
+    icon: iconData,
+    description:
+      'Enable collaboration on evolving Arm-architecture virtualization technologies for secure firmware, hypervisor, kernel and AI workloads',
+  },
+  {
+    title: 'Data Center',
+    icon: iconLink,
+    description:
+      'Focusing on technologies for cloud, on-prem and hybrid datacenter workloads as well as HPC.',
   },
 ];
 ---
 
-<BaseLayout title="Working Group">
+<BaseLayout title="Working Groups">
   <div
-    class="flex w-full flex-col gap-64 bg-[#080225] bg-cover bg-center bg-no-repeat py-32"
+    class="flex w-full flex-col gap-32 py-24 items-center"
     style={{
-      backgroundImage: `linear-gradient(rgba(8, 2, 37, 0.6), rgba(8, 2, 37, 0.6)), url(${backgroundImage.src})`,
+      backgroundImage: `url(${backgroundImage.src})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
     }}
   >
-    <div class="mx-auto flex h-full w-3/5 flex-col justify-center gap-24">
-      <h1 class="text-2xl text-[#02EAEA] md:text-4xl">Working Groups</h1>
-      <h3 class="text-lg text-white md:text-xl">
-        The Core Collective comprises multiple Working Groups, each focused on a
-        specific technology. Any company is free to join and participate in the
-        CoreCollective.
+    <div class="mx-auto w-full flex flex-col justify-center gap-12 text-center">
+      <Image
+        src={workingGroupsTitle}
+        alt="working groups"
+        class="mx-auto w-1/2"
+      />
+      <h3 class="text-xl text-cc-cyan md:text-xl">
+        The Core Collective comprises multiple Working Groups, each focused on a<br
+        />
+        specific technology. Any company is free to join and participate in the CoreCollective.
       </h3>
     </div>
 
-    <ul class="flex w-full flex-col gap-16 p-8 md:flex-row md:gap-24 md:px-64">
+    <ul
+      class="grid w-full grid-cols-1 gap-y-16 px-8 md:grid-cols-4 md:px-16 lg:px-32"
+    >
       {
-        data.map((item) => (
-          <li>
-            <div class="aspect-square rounded-full bg-[conic-gradient(from_270deg,#02EAEA,#080225,#46136C,#02EAEA)]">
-              <div class="item-center flex h-full flex-col justify-center">
-                <h1>{item.title}</h1>
-                <h1 class="text-5xl font-bold">{item.id}</h1>
-                <h1 class="md:text-2xl">{item.wg}</h1>
+        data.map((item, index) => (
+          <li class="relative flex flex-col gap-4 px-4">
+            <div class="flex w-full items-center gap-4">
+              <div class="flex w-1/4 justify-center">
+                <img
+                  src={item.icon.src}
+                  alt={item.title}
+                  class="h-12 w-12 object-contain"
+                />
+              </div>
+              <div class="flex w-3/4 items-center">
+                <h1 class="text-xl text-left font-bold leading-tight text-cc-cyan">
+                  {item.title}
+                </h1>
               </div>
             </div>
-            <p>{item.description}</p>
+            <p class="text-sm text-left text-gray-300 md:text-base">
+              {item.description}
+            </p>
+            {(index + 1) % 4 !== 0 && (
+              <div class="hidden md:block absolute right-0 top-0 h-full w-0.5 bg-linear-to-b from-transparent via-white/30 to-transparent" />
+            )}
           </li>
         ))
       }
