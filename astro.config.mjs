@@ -4,6 +4,8 @@ import aws from 'astro-sst';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
+import mdx from '@astrojs/mdx';
+
 // https://astro.build/config
 export default defineConfig({
   // 'server' for dynamic, 'static' for static site
@@ -14,5 +16,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [react()],
+  integrations: [react(), mdx()],
 });
