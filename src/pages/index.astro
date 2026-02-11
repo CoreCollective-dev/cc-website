@@ -1,44 +1,40 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Logo from '../components/Logo.astro';
 import { Image } from 'astro:assets';
-import backgroundImage from '../assets/0233f2c4c9a0817f3a88064a357678647bb97e85.png';
+import Contact from '../components/Contact.astro';
+import Members from '../components/Members.astro';
+import backgroundImage from '../assets/52dad6ed54df0213f77fdc794d6d29be3972009c.png';
+import logo from '../assets/CC_logo_no_tag.svg';
 ---
 
-<BaseLayout title="Coming Soon">
-  <Image
-    src={backgroundImage}
-    alt="Background"
-    quality="high"
-    class="absolute top-0 left-0 -z-20 h-full w-full object-cover"
-  />
-
+<BaseLayout title="Core Collective">
   <div
-    class="from-cc-blue/0 via-cc-blue to-cc-blue/0 absolute top-0 left-0 -z-10 h-full w-full bg-linear-to-b"
+    class="w-full bg-cc-blue bg-[linear-gradient(to_bottom,transparent_0%,#000000_50%,transparent_100%)]"
   >
+    <div
+      class="mx-auto flex h-full w-3/5 flex-col justify-center items-center gap-8 mt-8 mb-24 md:mt-24 md:mb-64"
+    >
+      <Image src={logo} alt="logo" class="md:w-1/2 w-full" />
+      <h1 class="text-2xl md:text-4xl">
+        Where the Arm Ecosystem builds intelligence<br /> efficiently, <span
+          class="text-cc-cyan italic">together</span
+        >
+      </h1>
+      <h3 class="text-base text-cc-cyan md:text-xl">
+        //CoreCollective is an open collaborative forum for the Arm <br
+        />Ecosystem. Its mission is to accelerate the Arm ecosystem <br
+        />through open collaboration, enabling shared software tools, and <br
+        />standards that power every Arm system, from cloud to edge.
+      </h3>
+    </div>
   </div>
-
-  <main
-    class="flex h-screen flex-col items-center justify-center p-4 text-center text-white"
+  <div
+    class="flex w-full flex-col gap-16 bg-cc-blue bg-cover bg-center bg-no-repeat py-32"
+    style={{
+      backgroundImage: `url(${backgroundImage.src})`,
+    }}
   >
-    <div
-      class="mb-8 flex w-full max-w-100 flex-col items-center md:mb-8 md:max-w-none"
-    >
-      <Logo width={800} />
-    </div>
-
-    <div
-      class="text-cc-cyan mx-auto space-y-4 text-lg font-light tracking-wider md:text-lg lg:text-2xl"
-    >
-      <p class="pb-4 md:pb-8">
-        CoreCollective is an open collaborative forum for the Arm Ecosystem,
-        <br class="hidden md:inline" />
-        designed to accelerate innovation through shared software tools and standards
-        <br class="hidden md:inline" />
-        that power every Arm system from cloud to edge.
-      </p>
-
-      <p class="tracking-widest">// COMING SOON</p>
-    </div>
-  </main>
+    <Members />
+    <Contact />
+  </div>
 </BaseLayout>

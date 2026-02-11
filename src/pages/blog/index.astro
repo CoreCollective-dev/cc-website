@@ -1,0 +1,90 @@
+---
+import Contact from '../../components/Contact.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import blogTitle from '../../assets/blog.svg';
+import { Image } from 'astro:assets';
+import backgroundImage from '../../assets/ccbgd3.png';
+import { getCollection } from 'astro:content';
+
+const stage = import.meta.env.SST_STAGE || 'local';
+const allPosts = await getCollection('blogs');
+
+const posts = allPosts
+  .filter((post) => {
+    if (stage !== 'prod') return true;
+    const postDate = new Date(post.data.date);
+    return postDate <= new Date();
+  })
+  .sort((a, b) => {
+    const dateA = new Date(a.data.date);
+    const dateB = new Date(b.data.date);
+    return dateB.valueOf() - dateA.valueOf();
+  });
+
+const containerStyle = `${posts.length <= 1 ? 'flex w-full mx-auto justify-center text-left' : 'grid w-full max-w-6xl grid-cols-1 justify-center justify-items-center gap-8 px-6 text-left text-white sm:grid-cols-2 lg:grid-cols-3'}`;
+---
+
+<BaseLayout title="Blog">
+  <div
+    class="flex w-full flex-col items-center gap-16 bg-repeat py-12 md:gap-32 md:px-32 md:py-24 md:pb-56"
+    style={{
+      backgroundImage: `url(${backgroundImage.src})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  >
+    <div class="mx-auto flex w-full flex-col justify-center gap-12">
+      <Image
+        src={blogTitle}
+        alt="join"
+        class="mx-auto aspect-auto w-1/2 md:w-1/6"
+      />
+    </div>
+
+    <div class={containerStyle}>
+      {
+        posts.length > 0 ? (
+          posts.map((post) => (
+            <article class="hover-gradient-border group flex h-full w-full max-w-sm rounded-4xl border-gray-600">
+              <div class="bg-cc-blue flex w-full flex-col justify-between rounded-3xl p-8 transition-all">
+                <div class="flex flex-col gap-6">
+                  {post.data.image && (
+                    <div class="shrink-0 rounded-lg">
+                      <Image
+                        src={post.data.image}
+                        alt={post.data.title}
+                        width={400}
+                        height={250}
+                        class="h-auto w-full"
+                      />
+                    </div>
+                  )}
+                  <div class="flex flex-col gap-4">
+                    <h2 class="text-cc-cyan line-clamp-2 text-2xl leading-tight font-bold">
+                      {post.data.title}
+                    </h2>
+                    <p class="line-clamp-3 text-sm leading-relaxed text-gray-200">
+                      {post.data.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-8">
+                  <a
+                    href={`/blog/${post.slug}`}
+                    class="bg-cc-cyan inline-block rounded-full px-6 py-2 text-sm font-semibold text-black transition hover:scale-105 hover:bg-white"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))
+        ) : (
+          <p>No blog posts yet. Check back later!</p>
+        )
+      }
+    </div>
+  </div>
+  <Contact />
+</BaseLayout>

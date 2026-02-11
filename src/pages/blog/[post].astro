@@ -1,0 +1,123 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Contact from '../../components/Contact.astro';
+import backgroundImage from '../../assets/ccbgd3.png';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blogs');
+  return blogEntries.map((entry) => ({
+    params: { post: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const formattedDate = new Date(entry.data.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={entry.data.title}>
+  <div
+    class="flex w-full flex-col items-center bg-repeat py-12 md:px-8 md:py-24"
+    style={{
+      backgroundImage: `url(${backgroundImage.src})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  >
+    <div class="mx-auto w-full max-w-4xl px-4">
+      <div class="mb-10">
+        <a
+          href="/blog"
+          class="group flex w-fit items-center gap-2 rounded-full bg-black/30 px-5 py-2 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white hover:text-black"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="h-4 w-4 transition-transform group-hover:-translate-x-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
+          </svg>
+          Back to Blogs
+        </a>
+      </div>
+
+      <div class="relative z-0 w-full">
+        <div
+          class="absolute inset-0 -z-10 -m-2.5 rounded-4xl"
+          style={{
+            backgroundImage: 'var(--background-image-cc-gradient)',
+          }}
+        >
+        </div>
+
+        <article
+          class="bg-cc-blue w-full overflow-hidden rounded-3xl p-8 shadow-xl md:p-12"
+        >
+          <header
+            class="mb-10 flex flex-col gap-6 border-b border-gray-700 pb-10"
+          >
+            {
+              entry.data.image && (
+                <div class="overflow-hidden rounded-2xl shadow-lg">
+                  <Image
+                    src={entry.data.image}
+                    alt={entry.data.title}
+                    width={1000}
+                    height={500}
+                    class="h-auto w-full object-cover"
+                    transition:name={`image-${entry.slug}`}
+                  />
+                </div>
+              )
+            }
+
+            <div class="flex flex-col gap-4">
+              <div
+                class="flex items-center gap-3 text-sm font-medium text-gray-400"
+              >
+                <time datetime={entry.data.date.toISOString()}
+                  >{formattedDate}</time
+                >
+                {
+                  entry.data.author && (
+                    <>
+                      <span>•</span>
+                      <span>{entry.data.author}</span>
+                    </>
+                  )
+                }
+              </div>
+
+              <h1
+                class="text-cc-cyan text-left text-3xl leading-tight font-bold md:text-5xl"
+              >
+                {entry.data.title}
+              </h1>
+            </div>
+          </header>
+
+          <div
+            class="prose prose-invert prose-lg prose-headings:text-cc-cyan prose-a:text-cc-cyan prose-img:rounded-xl max-w-none text-left text-gray-200"
+          >
+            <Content />
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <Contact />
+</BaseLayout>
