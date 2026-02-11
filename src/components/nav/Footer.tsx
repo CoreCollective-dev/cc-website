@@ -13,7 +13,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-[#010004] px-4 py-12 text-white">
+    <footer className="bg-cc-dark w-full px-4 py-12 text-white">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between space-y-8 border-b border-white/10 pb-10 md:flex-row md:space-y-0">
           <div className="flex flex-1 justify-start">
@@ -26,11 +26,11 @@ export default function Footer() {
               {navLinks.map((link) => (
                 <li
                   key={link.name}
-                  className="flex h-6 items-center border-r-2 border-[#02EAEA] px-6 last:border-r-0"
+                  className="border-cc-cyan flex h-6 items-center border-r-2 px-6 last:border-r-0"
                 >
                   <a
                     href={link.href}
-                    className="text-sm text-white transition-colors hover:text-[#02EAEA]"
+                    className="hover:text-cc-cyan text-sm text-white transition-colors"
                   >
                     {link.name}
                   </a>
@@ -40,14 +40,14 @@ export default function Footer() {
           </nav>
           <div className="flex flex-1 justify-end gap-6">
             <a
-              href="/code-of-conduct"
-              className="border-r-2 border-white px-6 text-xs text-[#02EAEA] hover:text-white"
+              href="/coc"
+              className="text-cc-cyan border-r-2 border-white px-6 text-xs hover:text-white"
             >
               Code of Conduct
             </a>
             <a
               href="/ai-policy"
-              className="text-xs text-[#02EAEA] hover:text-white"
+              className="text-cc-cyan text-xs hover:text-white"
             >
               AI Policy
             </a>

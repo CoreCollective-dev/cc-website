@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 z-50 h-30 w-full bg-[#080225] text-white">
+      <header className="bg-cc-blue fixed top-0 z-50 h-30 w-full text-white">
         <nav className="mx-auto flex h-full items-center justify-between px-4 md:max-w-2/3">
           <div className="flex h-full shrink-0 items-center pt-4">
             <a href="/">
@@ -35,12 +35,12 @@ export default function Navbar() {
               return (
                 <li
                   key={link.name}
-                  className="flex h-6 items-center border-r-2 border-[#02EAEA] px-6 first:border-l-2 last:border-r-0"
+                  className="border-cc-cyan flex h-6 items-center border-r-2 px-6 first:border-l-2 last:border-r-0"
                 >
                   <a
                     href={link.href}
-                    className={`transition-colors hover:text-[#02EAEA] ${
-                      isActive ? 'font-bold text-[#02EAEA]' : 'text-white'
+                    className={`hover:text-cc-cyan transition-colors ${
+                      isActive ? 'text-cc-cyan font-bold' : 'text-white'
                     }`}
                   >
                     {link.name}
@@ -79,7 +79,7 @@ export default function Navbar() {
           </button>
         </nav>
         <div
-          className={`${isOpen ? 'block' : 'hidden'} absolute left-0 w-full border-t border-white/10 bg-[#080225] shadow-lg md:hidden`}
+          className={`${isOpen ? 'block' : 'hidden'} bg-cc-blue absolute left-0 w-full border-t border-white/10 shadow-lg md:hidden`}
         >
           <ul className="flex flex-col p-4">
             {navLinks.map((link) => (
@@ -89,8 +89,8 @@ export default function Navbar() {
               >
                 <a
                   href={link.href}
-                  className={`block py-4 hover:text-[#02EAEA] ${
-                    currentPath === link.href ? 'text-[#02EAEA]' : 'text-white'
+                  className={`hover:text-cc-cyan block py-4 ${
+                    currentPath === link.href ? 'text-cc-cyan' : 'text-white'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
