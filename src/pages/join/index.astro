@@ -8,22 +8,25 @@ import backgroundImage from '../../assets/ccbgd3.png';
 
 <BaseLayout title="Join">
   <div
-    class="flex w-full flex-col gap-32 py-24 items-center md:px-32 md:pb-56"
+    class="flex w-full flex-col items-center gap-32 py-24 md:px-32 md:pb-56"
     style={{
       backgroundImage: `url(${backgroundImage.src})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     }}
   >
-    <div class="mx-auto w-full flex flex-col justify-center gap-12">
-      <Image src={joinTitle} alt="join" class="mx-auto w-1/5 aspect-auto" />
+    <div class="mx-auto flex w-full flex-col justify-center gap-12">
+      <Image
+        src={joinTitle}
+        alt="join"
+        class="mx-auto aspect-auto h-10 md:h-50"
+      />
     </div>
     <div
-      class="flex flex-col gap-8 text-xl text-white md:mx-24 md:text-xl text-left"
+      class="mx-8 flex flex-col gap-8 text-left text-xl text-white md:mx-24 md:text-xl"
     >
-      <p class="font-extrabold text-2xl">
-        Membership in the CoreCollective is free. The steps to join are as
-        follows:
+      <p class="text-2xl font-extrabold">
+        Membership in CoreCollective is free. The steps to join are as follows:
       </p>
       <ol class="list-disc space-y-8 text-left">
         <li>
@@ -35,8 +38,8 @@ import backgroundImage from '../../assets/ccbgd3.png';
 
         <li>
           Download and fill out the <a
-            class="font-bold text-cc-cyan"
-            href="https://static-core-collective.s3.eu-west-1.amazonaws.com/assets/CoreCollective+Membership+Agreement+-+v1.0+-+2026-01-27+(4).pdf"
+            class="text-cc-cyan font-bold"
+            href="https://static.corecollective.dev/assets/CoreCollective+Membership+Agreement+-+v1.0+-+2026-01-27+(4).pdf"
             target="_blank">Membership Agreement</a
           >. Return the signed Membership Agreement via email to <a
             href="mailto:enquiries@corecollective.dev"
@@ -45,7 +48,7 @@ import backgroundImage from '../../assets/ccbgd3.png';
         </li>
 
         <li>
-          The CoreCollective Administrative team will countersign and return the
+          CoreCollective Administrative team will countersign and return the
           Membership Agreement to you.
         </li>
       </ol>
