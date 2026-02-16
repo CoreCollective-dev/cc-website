@@ -5,7 +5,7 @@ const members = Array(10).fill('');
 ---
 
 <div class="flex w-full flex-col items-center gap-24 py-12">
-  <Image src={membersTitle} alt="members" class="w-1/2 md:w-1/5" />
+  <Image src={membersTitle} alt="members" class="h-10 md:h-50" />
 
   <ul
     class="grid w-full max-w-7xl grid-cols-2 gap-4 px-4 pt-8 sm:grid-cols-3 md:grid-cols-5 md:gap-6"
@@ -13,7 +13,7 @@ const members = Array(10).fill('');
     {
       members.map((_) => (
         <li class="group flex aspect-2/1 items-center justify-center rounded-sm bg-[#D9D9D9] transition-transform hover:scale-105">
-          <span class="font-bold tracking-wider text-cc-blue uppercase group-hover:hidden">
+          <span class="text-cc-blue font-bold tracking-wider uppercase group-hover:hidden">
             Logo
           </span>
 

@@ -9,31 +9,33 @@ import developersImage from '../../assets/developers.png';
 
 <BaseLayout title="About">
   <div
-    class="flex w-full flex-col gap-32 py-24 items-center md:px-32"
+    class="flex w-full flex-col items-center gap-32 py-24 md:px-32"
     style={{
       backgroundImage: `url(${backgroundImage.src})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     }}
   >
-    <div class="mx-auto w-full flex flex-col justify-center gap-12 text-center">
+    <div class="mx-auto flex w-full flex-col justify-center gap-12 text-center">
       <Image
         src={aboutTitle}
         alt="about title"
-        class="mx-auto w-1/5 aspect-auto"
+        class="mx-auto aspect-auto h-10 md:h-50"
       />
     </div>
     <div
-      class="flex flex-col gap-8 text-lg text-white md:mx-24 md:text-2xl text-left font-light"
+      class="flex flex-col gap-8 text-left text-lg font-light text-white md:mx-24 md:text-2xl"
     >
-      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
+      <div
+        class="flex flex-col-reverse items-center gap-8 md:flex-row md:gap-0"
+      >
         <Image
           src={developersImage}
           alt="developers talking image"
-          class="w-full md:w-2/5 h-auto object-cover shrink-0 rounded-lg"
+          class="h-auto w-full shrink-0 rounded-lg object-cover md:w-2/5"
         />
         <div
-          class="flex flex-1 flex-col gap-8 py-6 mx-4 md:mx-0 md:px-4 md:py-0"
+          class="mx-4 flex flex-1 flex-col gap-8 py-6 md:mx-0 md:px-4 md:py-0"
         >
           <p class="">
             The Arm ecosystem has grown far beyond mobile, now spanning AI,
@@ -43,7 +45,7 @@ import developersImage from '../../assets/developers.png';
             collaboration is key.
           </p>
           <p>
-            <span class="text-cc-cyan">CoreCollective </span>provides a neutral
+            <span class="font-bold">CoreCollective </span>provides a neutral
             platform for innovators in the Arm ecosystem to come together and
             openly collaborate on common requirements. By working together on
             the common needs once, companies can focus more of their efforts and
@@ -52,15 +54,15 @@ import developersImage from '../../assets/developers.png';
         </div>
       </div>
 
-      <div class="mx-4 lg:mx-auto flex flex-col gap-8">
+      <div class="mx-4 flex flex-col gap-8 lg:mx-auto">
         <p class="font-extrabold">
-          The Core Collective comprises multiple Working Groups, each focused on
-          a specific <br />technology. Any company is free to join and
-          participate in the CoreCollective.
+          CoreCollective comprises multiple Working Groups, each focused on a
+          specific <br />technology. Any company is free to join and participate
+          in CoreCollective.
         </p>
         <p>
           To better understand options to join, as well as enhancing your
-          membership <br />to increase visibility and influence <a
+          membership <br />to increase visibility and influence, <a
             class="text-cc-cyan"
             href="/join">click here.</a
           >
@@ -69,7 +71,7 @@ import developersImage from '../../assets/developers.png';
           To see the benefits of joining as well as the current active Working
           Groups, <br />please download our <a
             class="text-cc-cyan no-underline"
-            href="https://static-core-collective.s3.eu-west-1.amazonaws.com/assets/CoreCollective+Pitch+Deck+v1.2.pdf"
+            href="https://static.corecollective.dev/assets/CoreCollective+Pitch+Deck+v1.2.pdf"
             target="_blank">short slide deck</a
           >
         </p>
