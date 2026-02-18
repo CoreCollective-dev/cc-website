@@ -26,7 +26,7 @@ const containerStyle = `${posts.length <= 1 ? 'flex w-full mx-auto justify-cente
 
 <BaseLayout title="Blog">
   <div
-    class="flex w-full flex-col items-center gap-16 bg-repeat py-12 md:gap-32 md:px-32 md:py-24 md:pb-56"
+    class="flex w-full flex-col items-center gap-16 bg-repeat py-12 md:gap-16 md:px-32 md:py-12 md:pb-56"
     style={{
       backgroundImage: `url(${backgroundImage.src})`,
       backgroundSize: 'cover',
@@ -37,7 +37,7 @@ const containerStyle = `${posts.length <= 1 ? 'flex w-full mx-auto justify-cente
       <Image
         src={blogTitle}
         alt="join"
-        class="mx-auto aspect-auto w-1/2 md:w-1/6"
+        class="mx-auto aspect-auto h-10 md:h-40"
       />
     </div>
 

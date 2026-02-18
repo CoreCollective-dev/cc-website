@@ -66,23 +66,23 @@ const data = [
 
 <BaseLayout title="Working Groups">
   <div
-    class="flex w-full flex-col gap-32 py-24 items-center"
+    class="flex w-full flex-col items-center gap-16 py-12"
     style={{
       backgroundImage: `url(${backgroundImage.src})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     }}
   >
-    <div class="mx-auto w-full flex flex-col justify-center gap-12 text-center">
+    <div class="mx-auto flex w-full flex-col justify-center gap-12 text-center">
       <Image
         src={workingGroupsTitle}
         alt="working groups"
-        class="mx-auto w-1/2"
+        class="mx-auto h-10 md:h-40"
       />
-      <h3 class="text-xl text-cc-cyan md:text-xl">
-        The Core Collective comprises multiple Working Groups, each focused on a<br
+      <h3 class="text-cc-cyan text-xl md:text-xl">
+        CoreCollective comprises multiple Working Groups, each focused on a<br
         />
-        specific technology. Any company is free to join and participate in the CoreCollective.
+        specific technology. Any company is free to join and participate in CoreCollective.
       </h3>
     </div>
 
@@ -101,16 +101,16 @@ const data = [
                 />
               </div>
               <div class="flex w-3/4 items-center">
-                <h1 class="text-xl text-left font-bold leading-tight text-cc-cyan">
+                <h1 class="text-cc-cyan text-left text-xl leading-tight font-bold">
                   {item.title}
                 </h1>
               </div>
             </div>
-            <p class="text-sm text-left text-gray-300 md:text-base">
+            <p class="text-left text-sm text-gray-300 md:text-base">
               {item.description}
             </p>
             {(index + 1) % 4 !== 0 && (
-              <div class="hidden md:block absolute right-0 top-0 h-full w-0.5 bg-linear-to-b from-transparent via-white/30 to-transparent" />
+              <div class="absolute top-0 right-0 hidden h-full w-0.5 bg-linear-to-b from-transparent via-white/30 to-transparent md:block" />
             )}
           </li>
         ))

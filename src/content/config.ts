@@ -12,7 +12,17 @@ const blogs = defineCollection({
       author: z.string().optional(),
     }),
 });
-
+const logosCollection = defineCollection({
+  type: 'data',
+  // Use Astro's built-in image() helper to resolve the paths
+  schema: z.array(
+    z.object({
+      src: z.string().url(),
+      alt: z.string(),
+    })
+  ),
+});
 export const collections = {
   blogs,
+  logos: logosCollection,
 };

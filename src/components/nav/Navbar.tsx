@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import LogoImg from '../../assets/CC_logo_no_tag.svg';
+import LogoImg from '../../assets/CoreCollective_White-Wordmark.png';
 
 const navLinks = [
   { name: 'Working Groups', href: '/working-groups' },
@@ -21,9 +21,9 @@ export default function Navbar() {
     <>
       <header className="bg-cc-blue fixed top-0 z-50 h-30 w-full text-white">
         <nav className="mx-auto flex h-full items-center justify-between px-4 md:max-w-2/3">
-          <div className="flex h-full shrink-0 items-center pt-4">
+          <div className="flex h-full shrink-0 items-center">
             <a href="/">
-              <img src={LogoImg.src} alt="Logo" className="h-24 w-auto" />
+              <img src={LogoImg.src} alt="Logo" className="h-auto w-75" />
             </a>
           </div>
           <ul className="hidden items-center md:flex">
