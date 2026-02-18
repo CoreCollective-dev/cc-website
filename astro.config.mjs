@@ -16,5 +16,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  image: {
+    domains: ['static.corecollective.dev'],
+  },
   integrations: [react(), mdx()],
 });
