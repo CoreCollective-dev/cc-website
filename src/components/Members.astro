@@ -1,28 +1,27 @@
 ---
 import { Image } from 'astro:assets';
 import membersTitle from '../assets/members.svg';
-const members = Array(10).fill('');
+import { getEntry } from 'astro:content';
+
+const companyLogos = await getEntry('logos', 'company');
+const images = companyLogos?.data;
 ---
 
 <div class="flex w-full flex-col items-center gap-24 py-12">
-  <Image src={membersTitle} alt="members" class="w-1/2 md:w-1/5" />
+  <Image src={membersTitle} alt="members" class="h-10 md:h-40" />
 
   <ul
     class="grid w-full max-w-7xl grid-cols-2 gap-4 px-4 pt-8 sm:grid-cols-3 md:grid-cols-5 md:gap-6"
   >
     {
-      members.map((_) => (
-        <li class="group flex aspect-2/1 items-center justify-center rounded-sm bg-[#D9D9D9] transition-transform hover:scale-105">
-          <span class="font-bold tracking-wider text-cc-blue uppercase group-hover:hidden">
-            Logo
-          </span>
-
-          {/* <img 
-            src="/path-to-logo.svg" 
-            alt="Member Logo" 
-            class="hidden group-hover:block max-h-[70%] w-auto grayscale hover:grayscale-0 transition-all" 
-          /> 
-          */}
+      images?.map((img: any) => (
+        <li class="flex items-center justify-center p-4">
+          <Image
+            src={img.src}
+            alt={img.alt}
+            class="max-h-24 w-full object-contain"
+            inferSize={true}
+          />
         </li>
       ))
     }

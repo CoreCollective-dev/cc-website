@@ -9,18 +9,16 @@ import logo from '../assets/CC_logo_no_tag.svg';
 
 <BaseLayout title="Core Collective">
   <div
-    class="w-full bg-cc-blue bg-[linear-gradient(to_bottom,transparent_0%,#000000_50%,transparent_100%)]"
+    class="bg-cc-blue w-full bg-[linear-gradient(to_bottom,transparent_0%,#000000_50%,transparent_100%)]"
   >
     <div
-      class="mx-auto flex h-full w-3/5 flex-col justify-center items-center gap-8 mt-8 mb-24 md:mt-24 md:mb-64"
+      class="mx-auto mt-8 mb-24 flex h-full w-3/5 flex-col items-center justify-center gap-8 md:mt-24 md:mb-64"
     >
-      <Image src={logo} alt="logo" class="md:w-1/2 w-full" />
+      <Image src={logo} alt="logo" class="w-full md:w-1/2" />
       <h1 class="text-2xl md:text-4xl">
-        Where the Arm Ecosystem builds intelligence<br /> efficiently, <span
-          class="text-cc-cyan italic">together</span
-        >
+        Where the Arm software ecosystem connects
       </h1>
-      <h3 class="text-base text-cc-cyan md:text-xl">
+      <h3 class="text-cc-cyan text-base md:text-xl">
         //CoreCollective is an open collaborative forum for the Arm <br
         />Ecosystem. Its mission is to accelerate the Arm ecosystem <br
         />through open collaboration, enabling shared software tools, and <br
@@ -29,7 +27,7 @@ import logo from '../assets/CC_logo_no_tag.svg';
     </div>
   </div>
   <div
-    class="flex w-full flex-col gap-16 bg-cc-blue bg-cover bg-center bg-no-repeat py-32"
+    class="bg-cc-blue flex w-full flex-col gap-16 bg-cover bg-center bg-no-repeat py-32"
     style={{
       backgroundImage: `url(${backgroundImage.src})`,
     }}

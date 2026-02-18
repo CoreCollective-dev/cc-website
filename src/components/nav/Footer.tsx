@@ -38,18 +38,24 @@ export default function Footer() {
               ))}
             </ul>
           </nav>
-          <div className="flex flex-1 justify-end gap-6">
+          <div className="flex flex-1 justify-end">
             <a
               href="/coc"
-              className="text-cc-cyan border-r-2 border-white px-6 text-xs hover:text-white"
+              className="text-cc-cyan border-r-2 border-white px-4 text-xs hover:text-white"
             >
               Code of Conduct
             </a>
             <a
               href="/ai-policy"
-              className="text-cc-cyan text-xs hover:text-white"
+              className="text-cc-cyan border-r-2 border-white px-4 text-xs hover:text-white"
             >
               AI Policy
+            </a>
+            <a
+              href="/antitrust-policy"
+              className="text-cc-cyan px-4 text-xs hover:text-white"
+            >
+              Anti-Trust Policy
             </a>
           </div>
         </div>
