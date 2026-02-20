@@ -1,0 +1,16 @@
+- src: ../../assets/portraits/andrew.png
+  name: Andrew Wafaa
+  role: Senior Director Software
+  company: Communities & Fellow, Arm Chair
+- src: ../../assets/portraits/ligong.png
+  name: Li Gong
+  role: Linaro CEO
+  company: Board Member
+- src: ../../assets/portraits/don.png
+  name: Don Harbin
+  role: Community Director
+  company: Linaro
+- src: ../../assets/portraits/grant.png
+  name: Grant Likely
+  role: Technical Chair
+  company: Arm
