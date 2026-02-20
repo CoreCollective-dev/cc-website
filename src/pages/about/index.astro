@@ -5,6 +5,7 @@ import aboutTitle from '../../assets/about.svg';
 import { Image } from 'astro:assets';
 import backgroundImage from '../../assets/0233f2c4c9a0817f3a88064a357678647bb97e85.png';
 import developersImage from '../../assets/developers.png';
+import PageTitle from '../../components/PageTitle.astro';
 ---
 
 <BaseLayout title="About">
@@ -16,13 +17,7 @@ import developersImage from '../../assets/developers.png';
       backgroundPosition: 'center',
     }}
   >
-    <div class="mx-auto flex w-full flex-col justify-center gap-12 text-center">
-      <Image
-        src={aboutTitle}
-        alt="about title"
-        class="mx-auto aspect-auto h-10 md:h-40"
-      />
-    </div>
+    <PageTitle path={aboutTitle} />
     <div
       class="flex flex-col gap-8 text-left text-lg font-light text-white md:mx-24 md:text-2xl"
     >
