@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import joinTitle from '../../assets/join.svg';
 import { Image } from 'astro:assets';
 import backgroundImage from '../../assets/ccbgd3.png';
+import PageTitle from '../../components/PageTitle.astro';
 ---
 
 <BaseLayout title="Join">
@@ -15,13 +16,7 @@ import backgroundImage from '../../assets/ccbgd3.png';
       backgroundPosition: 'center',
     }}
   >
-    <div class="mx-auto flex w-full flex-col justify-center gap-12">
-      <Image
-        src={joinTitle}
-        alt="join"
-        class="mx-auto aspect-auto h-10 md:h-50"
-      />
-    </div>
+    <PageTitle path={joinTitle} />
     <div
       class="mx-8 flex flex-col gap-8 text-left text-xl text-white md:mx-24 md:text-xl"
     >
