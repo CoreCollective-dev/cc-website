@@ -12,6 +12,7 @@ export default defineConfig({
   output: 'static',
 
   adapter: aws(),
+  trailingSlash: 'always',
 
   vite: {
     plugins: [tailwindcss()],
