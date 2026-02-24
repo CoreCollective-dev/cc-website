@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import aws from 'astro-sst';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
+import icon from 'astro-icon';
 
 import mdx from '@astrojs/mdx';
 
@@ -20,5 +21,12 @@ export default defineConfig({
   image: {
     domains: ['static.corecollective.dev'],
   },
-  integrations: [react(), mdx()],
+
+  integrations: [
+    react(),
+    mdx(),
+    icon({
+      iconDir: 'src/assets/icons',
+    }),
+  ],
 });
