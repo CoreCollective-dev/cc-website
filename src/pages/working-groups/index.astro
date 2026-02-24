@@ -37,7 +37,7 @@ const data = [
       'Arm architecture feature adoption. Platform standardization & enablement',
   },
   {
-    title: 'Edge Platforms',
+    title: 'Edge Commute',
     icon: iconEdge,
     description: 'Standards and Firmware for Arm edge platforms',
   },
@@ -53,6 +53,7 @@ const data = [
     description:
       'Focusing on technologies for cloud, on-prem and hybrid datacenter workloads as well as HPC.',
   },
+  { title: 'And more', description: '' },
 ];
 ---
 
@@ -82,11 +83,13 @@ const data = [
           <li class="group relative flex w-full flex-col gap-4 px-4 md:w-1/2 lg:w-1/4">
             <div class="flex w-full items-start gap-4">
               <div class="flex w-1/4 shrink-0 justify-center">
-                <img
-                  src={item.icon.src}
-                  alt={item.title}
-                  class="h-12 w-12 object-contain"
-                />
+                {item.icon && (
+                  <img
+                    src={item.icon.src}
+                    alt={item.title}
+                    class="h-12 w-12 object-contain"
+                  />
+                )}
               </div>
               <div class="flex w-3/4 items-center">
                 <h1 class="text-cc-cyan text-left text-xl leading-tight font-bold break-words">
