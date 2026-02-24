@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import membersTitle from '../assets/members.svg';
+import { getEntry } from 'astro:content';
+import PageTitle from './PageTitle.astro';
+
+const entry = await getEntry('leadership', 'leadership');
+const leadershipTeam = entry.data;
+---
+
+<div class="flex w-full flex-col items-center gap-24 py-24">
+  <h1 class="text-cc-cyan text-2xl font-extrabold md:text-5xl">
+    CoreCollective Leadership
+  </h1>
+
+  <ul
+    class="flex w-full max-w-2/3 flex-wrap items-center justify-center gap-8 px-4 pt-8 sm:gap-10 md:gap-12"
+  >
+    {
+      leadershipTeam?.map((img: any) => (
+        <li class="flex flex-col items-center justify-center gap-4">
+          <Image
+            src={img.src}
+            alt="member portrait"
+            class="aspect-square h-48 w-48 object-contain"
+          />
+          <div class="flex flex-col gap-0">
+            <h1 class="text-cc-cyan font-bold">{img.name}</h1>
+            <h1>{img.role}</h1>
+            <h1>{img.company}</h1>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</div>

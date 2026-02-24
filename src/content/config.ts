@@ -14,7 +14,6 @@ const blogs = defineCollection({
 });
 const logosCollection = defineCollection({
   type: 'data',
-  // Use Astro's built-in image() helper to resolve the paths
   schema: z.array(
     z.object({
       src: z.string().url(),
@@ -22,7 +21,22 @@ const logosCollection = defineCollection({
     })
   ),
 });
+
+const leadershipCollection = defineCollection({
+  type: 'data',
+  schema: ({ image }) =>
+    z.array(
+      z.object({
+        src: image(),
+        name: z.string(),
+        role: z.string(),
+        company: z.string(),
+      })
+    ),
+});
+
 export const collections = {
   blogs,
   logos: logosCollection,
+  leadership: leadershipCollection,
 };

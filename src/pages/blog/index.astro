@@ -5,6 +5,7 @@ import blogTitle from '../../assets/blog.svg';
 import { Image } from 'astro:assets';
 import backgroundImage from '../../assets/ccbgd3.png';
 import { getCollection } from 'astro:content';
+import PageTitle from '../../components/PageTitle.astro';
 
 const stage = import.meta.env.SST_STAGE || 'local';
 const allPosts = await getCollection('blogs');
@@ -33,14 +34,7 @@ const containerStyle = `${posts.length <= 1 ? 'flex w-full mx-auto justify-cente
       backgroundPosition: 'center',
     }}
   >
-    <div class="mx-auto flex w-full flex-col justify-center gap-12">
-      <Image
-        src={blogTitle}
-        alt="join"
-        class="mx-auto aspect-auto h-10 md:h-40"
-      />
-    </div>
-
+    <PageTitle path={blogTitle} />
     <div class={containerStyle}>
       {
         posts.length > 0 ? (
