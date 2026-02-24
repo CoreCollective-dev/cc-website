@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  path: ImageMetadata;
+}
+
+const { path } = Astro.props;
+---
+
+<div class="mx-auto flex w-full flex-col justify-center gap-12 text-center">
+  <Image
+    src={path}
+    alt="page title"
+    class="mx-auto aspect-auto h-10 md:h-[50px]"
+  />
+</div>

@@ -2,7 +2,6 @@
 import Contact from '../../components/Contact.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import workingGroupsTitle from '../../assets/working-groups.svg';
-import { Image } from 'astro:assets';
 import backgroundImage from '../../assets/52dad6ed54df0213f77fdc794d6d29be3972009c.png';
 import iconEdge from '../../assets/icons/edgeIcon.svg';
 import iconConfidential from '../../assets/icons/download.svg';
@@ -11,6 +10,7 @@ import iconBell from '../../assets/icons/bell.svg';
 import iconGear from '../../assets/icons/gear.svg';
 import iconData from '../../assets/icons/copy.svg';
 import iconLink from '../../assets/icons/link.svg';
+import PageTitle from '../../components/PageTitle.astro';
 
 const data = [
   {
@@ -31,12 +31,12 @@ const data = [
     description:
       'Targeting application layer support for Windows. From tooling to enablement and optimization of libraries on the Windows platform',
   },
-  {
-    title: 'Heterogeneous Platforms',
-    icon: iconBell,
-    description:
-      'Software and interfaces for complex multi cluster SoC, eg, A+M',
-  },
+  // {
+  //   title: 'Heterogeneous Platforms',
+  //   icon: iconBell,
+  //   description:
+  //     'Software and interfaces for complex multi cluster SoC, eg, A+M',
+  // },
   {
     title: 'Android',
     icon: iconWindows,
@@ -44,10 +44,9 @@ const data = [
       'Arm architecture feature adoption. Platform standardization & enablement',
   },
   {
-    title: 'Edge AI',
+    title: 'Edge Compute',
     icon: iconEdge,
-    description:
-      'Focusing on building technologies to realize the full potential of the Arm architecture on edge computing with a particular focus on AI workloads',
+    description: 'Standards and Firmware for Arm edge platforms',
   },
   {
     title: 'Virtualization',
@@ -74,11 +73,7 @@ const data = [
     }}
   >
     <div class="mx-auto flex w-full flex-col justify-center gap-12 text-center">
-      <Image
-        src={workingGroupsTitle}
-        alt="working groups"
-        class="mx-auto h-10 md:h-40"
-      />
+      <PageTitle path={workingGroupsTitle} />
       <h3 class="text-cc-cyan text-xl md:text-xl">
         CoreCollective comprises multiple Working Groups, each focused on a<br
         />
