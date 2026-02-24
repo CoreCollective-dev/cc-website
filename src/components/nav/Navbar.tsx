@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import LogoImg from '../../assets/CoreCollective_White-Wordmark.png';
 
 const navLinks = [
-  { name: 'Working Groups', href: '/working-groups' },
-  { name: 'About', href: '/about' },
-  { name: 'Join', href: '/join' },
-  { name: 'Blog & News', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Working Groups', href: '/working-groups/' },
+  { name: 'About', href: '/about/' },
+  { name: 'Join', href: '/join/' },
+  { name: 'Blog & News', href: '/blog/' },
+  { name: 'Contact', href: '/contact/' },
 ];
 
 export default function Navbar() {

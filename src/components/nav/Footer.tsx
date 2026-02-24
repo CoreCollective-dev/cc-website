@@ -2,11 +2,11 @@ import React from 'react';
 import LogoImg from '../../assets/CC_logo_no_tag.svg';
 
 const navLinks = [
-  { name: 'Working Groups', href: '/working-groups' },
-  { name: 'About', href: '/about' },
-  { name: 'Join', href: '/join' },
-  { name: 'Blog & News', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Working Groups', href: '/working-groups/' },
+  { name: 'About', href: '/about/' },
+  { name: 'Join', href: '/join/' },
+  { name: 'Blog & News', href: '/blog/' },
+  { name: 'Contact', href: '/contact/' },
 ];
 
 export default function Footer() {
@@ -40,19 +40,19 @@ export default function Footer() {
           </nav>
           <div className="flex flex-1 justify-end">
             <a
-              href="/coc"
+              href="/coc/"
               className="text-cc-cyan border-r-2 border-white px-4 text-xs hover:text-white"
             >
               Code of Conduct
             </a>
             <a
-              href="/ai-policy"
+              href="/ai-policy/"
               className="text-cc-cyan border-r-2 border-white px-4 text-xs hover:text-white"
             >
               AI Policy
             </a>
             <a
-              href="/antitrust-policy"
+              href="/antitrust-policy/"
               className="text-cc-cyan px-4 text-xs hover:text-white"
             >
               Anti-Trust Policy
