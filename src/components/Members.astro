@@ -12,15 +12,16 @@ const images = companyLogos?.data;
   <PageTitle path={membersTitle} />
 
   <ul
-    class="flex w-full max-w-2/3 flex-wrap items-center justify-center gap-8 px-4 pt-8 sm:gap-10 md:gap-12"
+    class="flex w-full flex-col flex-wrap items-center justify-center gap-8 px-4 sm:gap-10 md:flex-row md:gap-16 md:pt-8"
   >
     {
       images?.map((img: any) => (
-        <li class="flex h-16 w-28 shrink-0 items-center justify-center sm:h-20 sm:w-32 md:h-32 md:w-64">
+        <li class="flex h-16 w-28 shrink-0 items-center justify-center sm:h-20 sm:w-32 md:h-32 md:w-64 md:py-2">
           <Image
             src={img.src}
             alt={img.alt}
             class="h-full w-full object-contain"
+            style={`transform: scale(${img.scale || 1});`}
             inferSize={true}
           />
         </li>
