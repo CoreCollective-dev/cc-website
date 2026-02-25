@@ -11,9 +11,5 @@ const { path } = Astro.props;
 ---
 
 <div class="mx-auto flex w-full flex-col justify-center gap-12 text-center">
-  <Image
-    src={path}
-    alt="page title"
-    class="mx-auto aspect-auto h-10 md:h-[50px]"
-  />
+  <Image src={path} alt="page title" class="mx-auto h-10 w-auto md:h-[50px]" />
 </div>
