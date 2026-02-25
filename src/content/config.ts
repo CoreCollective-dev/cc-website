@@ -17,6 +17,7 @@ const logosCollection = defineCollection({
     z.object({
       src: z.string().url(),
       alt: z.string(),
+      scale: z.string().optional(),
     })
   ),
 });
