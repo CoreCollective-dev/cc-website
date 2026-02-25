@@ -12,9 +12,11 @@ const allPosts = await getCollection('blogs');
 
 const posts = allPosts
   .filter((post) => {
-    if (stage !== 'prod') return true;
+    if (stage !== 'production') return true;
+
     const postDate = new Date(post.data.date);
-    return postDate <= new Date();
+    const now = new Date();
+    return postDate.valueOf() <= now.valueOf();
   })
   .sort((a, b) => {
     const dateA = new Date(a.data.date);
