@@ -25,6 +25,7 @@ export default $config({
         : undefined;
     new sst.aws.Astro('CC-Website', {
       domain: domain,
+      environment: { PUBLIC_APP_STAGE: $app.stage },
     });
   },
 });
