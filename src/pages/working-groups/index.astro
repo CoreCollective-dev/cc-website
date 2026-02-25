@@ -1,0 +1,114 @@
+---
+import Contact from '../../components/Contact.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import workingGroupsTitle from '../../assets/working-groups.svg';
+import backgroundImage from '../../assets/52dad6ed54df0213f77fdc794d6d29be3972009c.png';
+import iconEdge from '../../assets/icons/edgeIcon.svg';
+import iconConfidential from '../../assets/icons/download.svg';
+import iconWindows from '../../assets/icons/message.svg';
+import iconGear from '../../assets/icons/gear.svg';
+import iconData from '../../assets/icons/copy.svg';
+import iconLink from '../../assets/icons/link.svg';
+import PageTitle from '../../components/PageTitle.astro';
+
+const data = [
+  {
+    title: 'Linux Fundamentals',
+    icon: iconGear,
+    description:
+      'Focused on the Linux Kernel, Toolchains, and Kernel Quality Testing',
+  },
+  {
+    title: 'Confidential Compute',
+    icon: iconConfidential,
+    description:
+      'Provision of a comprehensive set of software emulated hardware enabling execution of Confidential Compute on Arm',
+  },
+  {
+    title: 'Windows on Arm',
+    icon: iconWindows,
+    description:
+      'Targeting application layer support for Windows. From tooling to enablement and optimization of libraries on the Windows platform',
+  },
+  {
+    title: 'Android',
+    icon: iconWindows,
+    description:
+      'Arm architecture feature adoption. Platform standardization & enablement',
+  },
+  {
+    title: 'Edge Compute',
+    icon: iconEdge,
+    description: 'Standards and Firmware for Arm edge platforms',
+  },
+  {
+    title: 'Virtualization',
+    icon: iconData,
+    description:
+      'Enable collaboration on evolving Arm-architecture virtualization technologies for secure firmware, hypervisor, kernel and AI workloads',
+  },
+  {
+    title: 'Data Center',
+    icon: iconLink,
+    description:
+      'Focusing on technologies for cloud, on-prem and hybrid datacenter workloads as well as HPC.',
+  },
+  { title: 'And more', description: '' },
+];
+---
+
+<BaseLayout title="Working Groups">
+  <div
+    class="flex w-full flex-col items-center gap-16 py-12"
+    style={{
+      backgroundImage: `url(${backgroundImage.src})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  >
+    <div class="mx-auto flex w-full flex-col justify-center gap-12 text-center">
+      <PageTitle path={workingGroupsTitle} />
+      <h3 class="text-cc-cyan text-xl md:text-xl">
+        CoreCollective comprises multiple Working Groups, each focused on a<br
+        />
+        specific technology. Any company is free to join and participate in CoreCollective.
+      </h3>
+    </div>
+
+    <ul
+      class="flex w-full flex-row flex-wrap justify-center gap-y-16 px-8 md:px-16 lg:px-32"
+    >
+      {
+        data.map((item, index) => (
+          <li class="group relative flex w-full flex-col gap-4 px-4 md:w-1/2 lg:w-1/4">
+            <div class="flex w-full items-start gap-4">
+              <div class="flex w-1/4 shrink-0 justify-center">
+                {item.icon && (
+                  <img
+                    src={item.icon.src}
+                    alt={item.title}
+                    class="h-12 w-12 object-contain"
+                  />
+                )}
+              </div>
+              <div class="flex w-3/4 items-center">
+                <h1 class="text-cc-cyan text-left text-xl leading-tight font-bold break-words">
+                  {item.title}
+                </h1>
+              </div>
+            </div>
+
+            <p class="text-left text-sm break-words text-gray-300 md:text-base">
+              {item.description}
+            </p>
+
+            {index !== data.length - 1 && (
+              <div class="absolute top-0 right-0 hidden h-full w-0.5 bg-linear-to-b from-transparent via-white/30 to-transparent group-last:hidden md:block md:group-even:hidden lg:group-not-nth-[4n]:block lg:group-nth-[4n]:hidden" />
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <Contact />
+</BaseLayout>

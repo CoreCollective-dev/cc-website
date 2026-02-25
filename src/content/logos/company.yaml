@@ -1,0 +1,30 @@
+- src: https://static.corecollective.dev/company_logos/amdLogo.svg
+  alt: amd logo
+- src: https://static.corecollective.dev/company_logos/ampereLogo.svg
+  alt: ampere logo
+- src: https://static.corecollective.dev/company_logos/armLogo.svg
+  alt: arm logo
+  scale: "0.75"
+- src: https://static.corecollective.dev/company_logos/canonicalLogo.svg
+  alt: canonical logo
+- src: https://static.corecollective.dev/company_logos/cixLogo.svg
+  alt: cix logo
+- src: https://static.corecollective.dev/company_logos/fujitsuLogo.svg
+  alt: fujitsu logo
+- src: https://static.corecollective.dev/company_logos/googleLogo.svg
+  alt: google logo
+  scale: "0.95"
+- src: https://static.corecollective.dev/company_logos/graphcoreLogo.svg
+  alt: graphcore logo
+- src: https://static.corecollective.dev/company_logos/linaroLogo.svg
+  alt: linaro logo
+- src: https://static.corecollective.dev/company_logos/microsoftLogo.svg
+  alt: microsoft logo
+- src: https://static.corecollective.dev/company_logos/qualcommLogo.svg
+  alt: qualcomm logo
+- src: https://static.corecollective.dev/company_logos/redhatLogo.svg
+  alt: redhat logo
+- src: https://static.corecollective.dev/company_logos/suseLogo.svg
+  alt: suse logo
+- src: https://static.corecollective.dev/company_logos/samsungLogo.svg
+  alt: samsung logo
