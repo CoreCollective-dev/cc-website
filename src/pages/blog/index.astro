@@ -7,14 +7,18 @@ import backgroundImage from '../../assets/ccbgd3.png';
 import { getCollection } from 'astro:content';
 import PageTitle from '../../components/PageTitle.astro';
 
-const stage = import.meta.env.SST_STAGE || 'local';
 const allPosts = await getCollection('blogs');
 
 const posts = allPosts
   .filter((post) => {
-    if (stage !== 'prod') return true;
+    if (!import.meta.env.PROD) return true;
     const postDate = new Date(post.data.date);
-    return postDate <= new Date();
+    const now = new Date();
+    console.log(
+      `Checking post: ${post.data.title} | Post Date: ${postDate.toISOString()} | Build Time: ${now.toISOString()}`
+    );
+
+    return postDate.valueOf() <= now.valueOf();
   })
   .sort((a, b) => {
     const dateA = new Date(a.data.date);
