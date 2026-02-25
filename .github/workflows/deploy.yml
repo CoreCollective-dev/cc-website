@@ -6,6 +6,9 @@ on:
       - main
       - staging
 
+  schedule:
+    - cron: "31 13 25 2 *"
+
 permissions:
   id-token: write
   contents: read
