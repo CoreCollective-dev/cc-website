@@ -16,6 +16,9 @@
   scale: "0.95"
 - src: https://static.corecollective.dev/company_logos/graphcoreLogo.svg
   alt: graphcore logo
+- src: https://static.corecollective.dev/company_logos/huawei3.svg
+  alt: huawei logo
+  scale: "1.9"
 - src: https://static.corecollective.dev/company_logos/linaroLogo.svg
   alt: linaro logo
 - src: https://static.corecollective.dev/company_logos/microsoftLogo.svg
