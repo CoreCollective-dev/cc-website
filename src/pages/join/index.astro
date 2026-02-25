@@ -1,0 +1,53 @@
+---
+import Contact from '../../components/Contact.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import joinTitle from '../../assets/join.svg';
+import { Image } from 'astro:assets';
+import backgroundImage from '../../assets/ccbgd3.png';
+import PageTitle from '../../components/PageTitle.astro';
+---
+
+<BaseLayout title="Join">
+  <div
+    class="flex w-full flex-col items-center gap-16 py-12 md:px-32 md:pb-56"
+    style={{
+      backgroundImage: `url(${backgroundImage.src})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  >
+    <PageTitle path={joinTitle} />
+    <div
+      class="mx-8 flex flex-col gap-8 text-left text-xl text-white md:mx-24 md:text-xl"
+    >
+      <p class="text-2xl font-extrabold">
+        Membership in CoreCollective is free. The steps to join are as follows:
+      </p>
+      <ol class="list-disc space-y-8 text-left">
+        <li>
+          Review the CoreCollective Charter <a
+            href="/charter/"
+            class="text-cc-cyan">here</a
+          >
+        </li>
+
+        <li>
+          Download and fill out the <a
+            class="text-cc-cyan font-bold"
+            href="https://static.corecollective.dev/assets/CoreCollective+Membership+Agreement+-+v1.0+-+2026-01-27+(4).pdf"
+            target="_blank">Membership Agreement</a
+          >. Return the signed Membership Agreement via email to <a
+            href="mailto:enquiries@corecollective.dev"
+            class="text-cc-cyan">enquiries@corecollective.dev</a
+          > for countersignature.
+        </li>
+
+        <li>
+          CoreCollective Administrative team will countersign and return the
+          Membership Agreement to you.
+        </li>
+      </ol>
+    </div>
+  </div>
+  <Contact />
+</BaseLayout>

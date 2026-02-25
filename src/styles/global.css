@@ -8,6 +8,32 @@
   --color-cc-blue: #080225;
   --color-cc-cyan: #02EAEA;
   --color-cc-dark: #010004;
+  --color-cc-purple: #7233F7;
+
+  --background-image-cc-gradient: linear-gradient(to top right, var(--color-cc-purple), var(--color-cc-cyan));
 
   --font-sans: "Figtree Variable", "Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer utilities {
+  .hover-gradient-border {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: -10px;
+    z-index: -1;
+    border-radius: inherit;
+    background-image: var(--background-image-cc-gradient);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  .hover-gradient-border:hover::before {
+    opacity: 1;
+  }
 }

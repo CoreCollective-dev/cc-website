@@ -2,8 +2,10 @@
 import { defineConfig } from 'astro/config';
 import aws from 'astro-sst';
 import react from '@astrojs/react';
-
 import tailwindcss from '@tailwindcss/vite';
+import icon from 'astro-icon';
+
+import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,9 +13,20 @@ export default defineConfig({
   output: 'static',
 
   adapter: aws(),
+  trailingSlash: 'always',
 
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [react()],
+  image: {
+    domains: ['static.corecollective.dev'],
+  },
+
+  integrations: [
+    react(),
+    mdx(),
+    icon({
+      iconDir: 'src/assets/icons',
+    }),
+  ],
 });
