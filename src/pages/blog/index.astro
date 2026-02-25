@@ -8,10 +8,11 @@ import { getCollection } from 'astro:content';
 import PageTitle from '../../components/PageTitle.astro';
 
 const allPosts = await getCollection('blogs');
+const stage = import.meta.env.PUBLIC_APP_STAGE;
 
 const posts = allPosts
   .filter((post) => {
-    if (!import.meta.env.PROD) return true;
+    if (stage !== 'production') return true;
     const postDate = new Date(post.data.date);
     const now = new Date();
     console.log(
