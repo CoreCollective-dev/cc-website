@@ -45,13 +45,13 @@ export default function Navbar() {
   return (
     <>
       <header className="bg-cc-blue fixed top-0 z-50 h-30 w-full text-white">
-        <nav className="mx-auto flex h-full items-center justify-between px-4 md:max-w-2/3">
+        <nav className="mx-auto flex h-full items-center justify-between gap-8 px-4 lg:px-8">
           <div className="flex h-full shrink-0 items-center">
             <a href="/">
-              <img src={LogoImg.src} alt="Logo" className="h-auto w-75" />
+              <img src={LogoImg.src} alt="Logo" className="h-auto w-full max-w-75" />
             </a>
           </div>
-          <ul className="hidden items-center md:flex">
+          <ul className="hidden items-center lg:flex">
             {navLinks.map((link) => {
               if ('children' in link) {
                 const isActive = link.children.some(
@@ -133,7 +133,7 @@ export default function Navbar() {
           </ul>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-white focus:outline-none md:hidden"
+            className="p-2 text-white focus:outline-none lg:hidden"
             aria-expanded={isOpen}
           >
             <svg
@@ -161,7 +161,7 @@ export default function Navbar() {
           </button>
         </nav>
         <div
-          className={`${isOpen ? 'block' : 'hidden'} bg-cc-blue absolute left-0 w-full border-t border-white/10 shadow-lg md:hidden`}
+          className={`${isOpen ? 'block' : 'hidden'} bg-cc-blue absolute left-0 w-full border-t border-white/10 shadow-lg lg:hidden`}
         >
           <ul className="flex flex-col p-4">
             {navLinks.map((link) => {
