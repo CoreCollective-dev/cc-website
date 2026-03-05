@@ -62,7 +62,7 @@ jobs:
             exit 1
           fi
 
-          URL=$(echo "$OUTPUT" | grep "url: https://" | head -n 1 | awk '{print $2}')
+          URL=$(echo "$OUTPUT" | grep "CC-Website: https://" | head -n 1 | awk '{print $2}')
 
           if [ -z "$URL" ]; then
             echo "Could not find deployment URL in output"
