@@ -1,0 +1,83 @@
+name: Pull Request Preview
+
+on:
+  pull_request_target:
+    branches: [main]
+
+permissions:
+  id-token: write
+  contents: read
+  statuses: write
+  pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Pulumi
+        uses: pulumi/actions@v5
+        with:
+          pulumi-version: 3.117.0
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: eu-west-1
+
+      - name: Initialise Status
+        run: |
+          STATUSES_URL=$(jq -r ".pull_request.statuses_url" "$GITHUB_EVENT_PATH")
+          DATA='{"state": "pending", "target_url": "", "context": "Deploy preview", "description": "Waiting for site to build"}'
+          curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" -d "$DATA" "$STATUSES_URL"
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy Preview
+        id: deploy
+        run: |
+          if OUTPUT=$(npx sst deploy --stage pr-${{ github.event.number }} 2>&1); then
+            echo "Deployment succeeded"
+            echo "$OUTPUT"
+          else
+            echo "Deployment failed"
+            echo "$OUTPUT"
+            exit 1
+          fi
+
+          URL=$(echo "$OUTPUT" | grep "url: https://" | head -n 1 | awk '{print $2}')
+
+          if [ -z "$URL" ]; then
+            echo "Could not find deployment URL in output"
+          else
+            echo "preview_url=$URL" >> "$GITHUB_OUTPUT"
+            echo "Deployment URL: $URL"
+          fi
+
+      - name: Update Status
+        if: success() && steps.deploy.outputs.preview_url
+        run: |
+          STATUSES_URL=$(jq -r ".pull_request.statuses_url" "$GITHUB_EVENT_PATH")
+          DATA=$(jq -n \
+            --arg url "${{ steps.deploy.outputs.preview_url }}" \
+            '{state: "success", target_url: $url, context: "Deploy preview", description: "Preview deployment complete"}')
+          curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" -d "$DATA" "$STATUSES_URL"
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}

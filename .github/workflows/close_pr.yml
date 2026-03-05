@@ -1,20 +1,19 @@
-name: Deploy
+name: Close Pull Request
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types: [closed]
 
 permissions:
   id-token: write
   contents: read
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false
+  group: cleanup-${{ github.event.number }}
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  cleanup:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,6 +38,5 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: eu-west-1
 
-      - name: Deploy
-        run: |
-          npx sst deploy --stage production
+      - name: Remove SST Stage
+        run: npx sst remove --stage pr-${{ github.event.number }}
