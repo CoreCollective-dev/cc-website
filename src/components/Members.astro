@@ -11,21 +11,72 @@ const images = companyLogos?.data;
 <div class="flex w-full flex-col items-center gap-24 py-12">
   <PageTitle path={membersTitle} />
 
-  <ul
-    class="flex w-full flex-col flex-wrap items-center justify-center gap-8 px-4 sm:gap-10 md:flex-row md:gap-16 md:pt-8"
-  >
-    {
-      images?.map((img: any) => (
-        <li class="flex h-16 w-28 shrink-0 items-center justify-center sm:h-20 sm:w-32 md:h-32 md:w-64 md:py-2">
-          <Image
-            src={img.src}
-            alt={img.alt}
-            class="h-full w-full object-contain"
-            style={`transform: scale(${img.scale || 1});`}
-            inferSize={true}
-          />
-        </li>
-      ))
-    }
-  </ul>
+  <div class="relative w-full overflow-hidden">
+    <div
+      class="carousel-track flex w-max"
+    >
+      {
+        [0, 1].map(() => (
+          <div class="flex items-center gap-12 pr-12 md:gap-16 md:pr-16">
+            {(images || []).map((img: any) => (
+              <div class="carousel-logo flex shrink-0 items-center justify-center">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  class="max-h-full max-w-full object-contain"
+                  style={img.scale ? `transform: scale(${img.scale});` : undefined}
+                  inferSize={true}
+                />
+              </div>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+    <div
+      class="pointer-events-none absolute inset-y-0 left-0 w-24 md:w-48"
+      style="background: linear-gradient(to right, var(--color-cc-blue), transparent);"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute inset-y-0 right-0 w-24 md:w-48"
+      style="background: linear-gradient(to left, var(--color-cc-blue), transparent);"
+    >
+    </div>
+  </div>
 </div>
+
+<style>
+  .carousel-track {
+    animation: scroll 30s linear infinite;
+  }
+
+  .carousel-track:hover {
+    animation-play-state: paused;
+  }
+
+  .carousel-logo {
+    height: 2.5rem;
+    width: 7rem;
+  }
+
+  @media (min-width: 640px) {
+    .carousel-logo {
+      height: 3rem;
+      width: 9rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .carousel-logo {
+      height: 3.5rem;
+      width: 12rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-track {
+      animation: none;
+    }
+  }
+</style>
