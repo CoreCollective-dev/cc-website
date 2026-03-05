@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import backgroundImage from '../../assets/0233f2c4c9a0817f3a88064a357678647bb97e85.png';
+
+const faqs = [
+  {
+    question: 'Is there a clear role and set of responsibilities for Linaro?',
+    answer:
+      'Linaro is an active Member of CoreCollective and provides governance, hosting, and other services.',
+  },
+  {
+    question: 'What is the process for requesting the creation of a new CoreCollective Working Group?',
+    answer:
+      'CoreCollective is always open to the proposal of new Working Groups. A new WG must be approved by the TAC Chair / TAC.',
+  },
+];
+---
+
+<BaseLayout title="FAQ">
+  <div
+    class="flex w-full flex-col items-center gap-16 py-14 md:px-32"
+    style={{
+      backgroundImage: `url(${backgroundImage.src})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  >
+    <h1 class="text-center text-3xl font-bold text-white md:text-5xl">
+      Frequently Asked Questions
+    </h1>
+    <div class="mx-4 flex w-full max-w-4xl flex-col gap-4 md:mx-0">
+      {
+        faqs.map((faq) => (
+          <details class="group rounded-lg border border-white/10 bg-white/5">
+            <summary class="flex cursor-pointer items-center justify-between px-6 py-5 text-lg font-semibold text-white transition-colors hover:text-cc-cyan md:text-xl [&::-webkit-details-marker]:hidden">
+              <span>{faq.question}</span>
+              <svg
+                class="h-5 w-5 shrink-0 transition-transform group-open:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-base font-light leading-relaxed text-white/80 md:text-lg">
+              <Fragment set:html={faq.answer} />
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>
