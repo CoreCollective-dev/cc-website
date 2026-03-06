@@ -1,0 +1,14 @@
+- question: "Is there a clear role and set of responsibilities for Linaro?"
+  answer: >
+    Linaro is an active Member of CoreCollective and provides governance, hosting, and other services.
+
+- question: "What is the process for requesting the creation of a new CoreCollective Working Group?"
+  answer: >
+    <p>CoreCollective is always open to the proposal of new Working Groups. A new WG must be approved by the TAC Chair / TAC.</p>
+    <p>Considerations regarding requesting the launch of new WGs:</p>
+    <ul>
+      <li>Each new group will require a WG Chair—someone to help define the WG and lead member outreach. When requesting a new Working Group, the requester should be willing to recommend a candidate who is willing to serve as the Working Group Chair.</li>
+      <li>Provide an outline of the WG'S scope.  A summary of expectations, goals, focus, etc. are needed</li>
+      <li>Providing a list of recommended WG member companies and a willingness to approach them is essential for kicking off a new WG.</li>
+    </ul>
+    <p>The above can be sent to <a href="mailto:enquiries@corecollective.dev">enquiries@corecollective.dev</a> for consideration. A member of the leadership team will respond with additional questions and proposed next steps.</p>

@@ -61,6 +61,42 @@ applies a CSS `transform: scale()` to adjust a logo's visual weight within its b
 (trim whitespace from the viewBox, ensure artwork fills a consistent proportion of the canvas).
 This reduces the need for per-logo scale overrides.
 
+## Updating FAQ content
+
+FAQ entries are stored in `src/content/faq/faq.yaml`. Each entry has a `question` and an `answer` field.
+
+### Simple answers
+
+For short, plain-text answers:
+
+```yaml
+- question: "What is CoreCollective?"
+  answer: "CoreCollective provides a neutral platform for collaboration in the Arm ecosystem."
+```
+
+### Rich answers with HTML
+
+For answers that need bullet lists, links, email addresses, or multiple paragraphs, use the YAML `>` folded block scalar and write HTML:
+
+```yaml
+- question: "What is the process for requesting a new Working Group?"
+  answer: >
+    <p>CoreCollective is always open to proposals. The process involves:</p>
+    <ul>
+      <li>Submit a proposal to the TAC</li>
+      <li>Present to the TAC for approval</li>
+    </ul>
+    <p>Contact <a href="mailto:info@corecollective.dev">info@corecollective.dev</a> for details.</p>
+```
+
+**Supported HTML tags:** `<p>`, `<ul>`, `<ol>`, `<li>`, `<a href="...">`, `<strong>`, `<em>`
+
+**Tips:**
+- Always wrap paragraphs in `<p>` tags when using multiple paragraphs
+- Use `<a href="mailto:...">` for email addresses
+- Links are automatically styled in cyan; lists and paragraphs are styled via Tailwind Typography
+- Preview changes locally with `npm run dev` before deploying
+
 ## Updating blogs
 
 New blogs should be added as `.mdx` files to `src/content/blogs` folder.
