@@ -1,19 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import backgroundImage from '../../assets/0233f2c4c9a0817f3a88064a357678647bb97e85.png';
+import { getEntry } from 'astro:content';
 
-const faqs = [
-  {
-    question: 'Is there a clear role and set of responsibilities for Linaro?',
-    answer:
-      'Linaro is an active Member of CoreCollective and provides governance, hosting, and other services.',
-  },
-  {
-    question: 'What is the process for requesting the creation of a new CoreCollective Working Group?',
-    answer:
-      'CoreCollective is always open to the proposal of new Working Groups. A new WG must be approved by the TAC Chair / TAC.',
-  },
-];
+const faqData = await getEntry('faq', 'faq');
+const faqs = faqData?.data || [];
 ---
 
 <BaseLayout title="FAQ">
@@ -48,7 +39,7 @@ const faqs = [
                 />
               </svg>
             </summary>
-            <div class="px-6 pb-5 text-base font-light leading-relaxed text-white/80 md:text-lg">
+            <div class="prose prose-invert prose-lg max-w-none px-6 pb-5 font-light text-white/80 prose-a:text-cc-cyan prose-li:text-white/80">
               <Fragment set:html={faq.answer} />
             </div>
           </details>
