@@ -44,9 +44,9 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="bg-cc-blue fixed top-0 z-50 h-30 w-full text-white">
-        <nav className="mx-auto flex h-full items-center justify-between gap-8 px-4 lg:px-8">
-          <div className="flex h-full shrink-0 items-center">
+      <header className="bg-cc-blue fixed top-0 z-50 h-30 w-full overflow-x-hidden text-white">
+        <nav className="mx-auto flex h-full items-center justify-between gap-4 px-4 lg:gap-8 lg:px-8">
+          <div className="flex h-full min-w-0 items-center">
             <a href="/">
               <img src={LogoImg.src} alt="Logo" className="h-auto w-full max-w-75" />
             </a>
