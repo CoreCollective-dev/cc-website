@@ -1,29 +1,22 @@
-## 🧞 Commands
+## Contributing
 
-All commands are run from the root of the project, from a terminal:
+The instructions for contributing to the website depend on whether or not you have write access to the main repository.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### If you have write access ...
 
-```bash
-npx sst deploy --stage production
-```
+Create a new branch from `main`:
 
-## Keeping branches in sync
+* `git checkout main`
+* `git pull` (to ensure your copy is up to date)
+* `git checkout -b <new branch name>`
 
-Whenever you finish a feature and merge it into main, your staging branch will technically be "behind." To sync it back up so staging always matches production before you start the next task:
+### If you do not have write access ...
 
-```bash
-git checkout staging
-git pull origin main
-git push origin staging
-```
+Fork the repository to your own namespace
+
+### In both cases ...
+
+When you have made your changes and tested them with `npm run dev`, push them back to GitHub and raise a pull request against the `main` branch. This will trigger the deployment of a test version under a cloudfront.net URL.
 
 ## Updating Member logos
 
@@ -65,8 +58,3 @@ This reduces the need for per-logo scale overrides.
 
 New blogs should be added as `.mdx` files to `src/content/blogs` folder.
 The current schema requires a `title`, `date`, `image` and `author`, along with the content.
-
-## Deployment
-
-Merges into the `staging` branch will automatically be deployed to Cloudfront with a default url.
-Merges into the `main` branch will automatically be deployed into the `production` stage and the "corecollective.dev" url.
