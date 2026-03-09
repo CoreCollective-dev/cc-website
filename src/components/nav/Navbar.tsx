@@ -10,7 +10,7 @@ const navLinks: NavLink[] = [
   {
     name: 'About',
     children: [
-      { name: 'About', href: '/about/' },
+      { name: 'CoreCollective', href: '/about/' },
       { name: 'FAQ', href: '/faq/' },
     ],
   },
