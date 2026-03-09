@@ -10,7 +10,7 @@ const navLinks: NavLink[] = [
   {
     name: 'About',
     children: [
-      { name: 'About', href: '/about/' },
+      { name: 'CoreCollective', href: '/about/' },
       { name: 'FAQ', href: '/faq/' },
     ],
   },
@@ -24,6 +24,7 @@ export default function Navbar() {
   const [currentPath, setCurrentPath] = useState('');
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLLIElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setCurrentPath(globalThis.location.pathname);
@@ -31,12 +32,14 @@ export default function Navbar() {
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
+      const target = e.target as Node;
       if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(e.target as Node)
+        dropdownRef.current?.contains(target) ||
+        mobileMenuRef.current?.contains(target)
       ) {
-        setDropdownOpen(null);
+        return;
       }
+      setDropdownOpen(null);
     }
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
@@ -44,14 +47,14 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="bg-cc-blue fixed top-0 z-50 h-30 w-full text-white">
-        <nav className="mx-auto flex h-full items-center justify-between px-4 md:max-w-2/3">
-          <div className="flex h-full shrink-0 items-center">
+      <header className="bg-cc-blue fixed inset-x-0 top-0 z-50 h-30 text-white">
+        <nav className="mx-auto flex h-full items-center justify-between gap-4 px-4 lg:gap-8 lg:px-8">
+          <div className="flex h-full min-w-0 max-w-75 items-center">
             <a href="/">
-              <img src={LogoImg.src} alt="Logo" className="h-auto w-75" />
+              <img src={LogoImg.src} alt="Logo" className="h-auto w-full" />
             </a>
           </div>
-          <ul className="hidden items-center md:flex">
+          <ul className="hidden items-center lg:flex">
             {navLinks.map((link) => {
               if ('children' in link) {
                 const isActive = link.children.some(
@@ -133,7 +136,7 @@ export default function Navbar() {
           </ul>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-white focus:outline-none md:hidden"
+            className="shrink-0 p-2 text-white focus:outline-none lg:hidden"
             aria-expanded={isOpen}
           >
             <svg
@@ -160,87 +163,88 @@ export default function Navbar() {
             </svg>
           </button>
         </nav>
-        <div
-          className={`${isOpen ? 'block' : 'hidden'} bg-cc-blue absolute left-0 w-full border-t border-white/10 shadow-lg md:hidden`}
-        >
-          <ul className="flex flex-col p-4">
-            {navLinks.map((link) => {
-              if ('children' in link) {
-                const isMobileDropdownOpen = dropdownOpen === link.name;
-                return (
-                  <li
-                    key={link.name}
-                    className="border-b border-white/10 last:border-b-0"
-                  >
-                    <button
-                      onClick={() =>
-                        setDropdownOpen(
-                          isMobileDropdownOpen ? null : link.name,
-                        )
-                      }
-                      className="hover:text-cc-cyan flex w-full items-center justify-between py-4 text-white"
-                    >
-                      {link.name}
-                      <svg
-                        className={`h-3 w-3 transition-transform ${isMobileDropdownOpen ? 'rotate-180' : ''}`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </button>
-                    {isMobileDropdownOpen && (
-                      <ul className="pb-2 pl-4">
-                        {link.children.map((child) => (
-                          <li key={child.name}>
-                            <a
-                              href={child.href}
-                              className={`hover:text-cc-cyan block py-2 ${
-                                currentPath === child.href
-                                  ? 'text-cc-cyan'
-                                  : 'text-white'
-                              }`}
-                              onClick={() => {
-                                setIsOpen(false);
-                                setDropdownOpen(null);
-                              }}
-                            >
-                              {child.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                );
-              }
-
+      </header>
+      <div
+        ref={mobileMenuRef}
+        className={`${isOpen ? 'block' : 'hidden'} bg-cc-blue fixed inset-x-0 top-30 z-50 border-t border-white/10 shadow-lg lg:hidden`}
+      >
+        <ul className="flex flex-col p-4">
+          {navLinks.map((link) => {
+            if ('children' in link) {
+              const isMobileDropdownOpen = dropdownOpen === link.name;
               return (
                 <li
                   key={link.name}
                   className="border-b border-white/10 last:border-b-0"
                 >
-                  <a
-                    href={link.href}
-                    className={`hover:text-cc-cyan block py-4 ${
-                      currentPath === link.href ? 'text-cc-cyan' : 'text-white'
-                    }`}
-                    onClick={() => setIsOpen(false)}
+                  <button
+                    onClick={() =>
+                      setDropdownOpen(
+                        isMobileDropdownOpen ? null : link.name,
+                      )
+                    }
+                    className="hover:text-cc-cyan flex w-full items-center justify-between py-4 text-white"
                   >
                     {link.name}
-                  </a>
+                    <svg
+                      className={`h-3 w-3 transition-transform ${isMobileDropdownOpen ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {isMobileDropdownOpen && (
+                    <ul className="pb-2 pl-4">
+                      {link.children.map((child) => (
+                        <li key={child.name}>
+                          <a
+                            href={child.href}
+                            className={`hover:text-cc-cyan block py-2 ${
+                              currentPath === child.href
+                                ? 'text-cc-cyan'
+                                : 'text-white'
+                            }`}
+                            onClick={() => {
+                              setIsOpen(false);
+                              setDropdownOpen(null);
+                            }}
+                          >
+                            {child.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               );
-            })}
-          </ul>
-        </div>
-      </header>
+            }
+
+            return (
+              <li
+                key={link.name}
+                className="border-b border-white/10 last:border-b-0"
+              >
+                <a
+                  href={link.href}
+                  className={`hover:text-cc-cyan block py-4 ${
+                    currentPath === link.href ? 'text-cc-cyan' : 'text-white'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
       <div className="h-30"></div>
     </>
   );
