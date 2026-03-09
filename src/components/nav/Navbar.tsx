@@ -24,6 +24,7 @@ export default function Navbar() {
   const [currentPath, setCurrentPath] = useState('');
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLLIElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setCurrentPath(globalThis.location.pathname);
@@ -31,12 +32,14 @@ export default function Navbar() {
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
+      const target = e.target as Node;
       if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(e.target as Node)
+        dropdownRef.current?.contains(target) ||
+        mobileMenuRef.current?.contains(target)
       ) {
-        setDropdownOpen(null);
+        return;
       }
+      setDropdownOpen(null);
     }
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
@@ -44,7 +47,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="bg-cc-blue fixed inset-x-0 top-0 z-50 h-30 overflow-x-hidden text-white">
+      <header className="bg-cc-blue fixed inset-x-0 top-0 z-50 h-30 text-white">
         <nav className="mx-auto flex h-full items-center justify-between gap-4 px-4 lg:gap-8 lg:px-8">
           <div className="flex h-full min-w-0 max-w-75 items-center">
             <a href="/">
@@ -162,6 +165,7 @@ export default function Navbar() {
         </nav>
       </header>
       <div
+        ref={mobileMenuRef}
         className={`${isOpen ? 'block' : 'hidden'} bg-cc-blue fixed inset-x-0 top-30 z-50 border-t border-white/10 shadow-lg lg:hidden`}
       >
         <ul className="flex flex-col p-4">
