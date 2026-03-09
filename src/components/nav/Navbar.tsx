@@ -160,87 +160,87 @@ export default function Navbar() {
             </svg>
           </button>
         </nav>
-        <div
-          className={`${isOpen ? 'block' : 'hidden'} bg-cc-blue absolute left-0 w-full border-t border-white/10 shadow-lg lg:hidden`}
-        >
-          <ul className="flex flex-col p-4">
-            {navLinks.map((link) => {
-              if ('children' in link) {
-                const isMobileDropdownOpen = dropdownOpen === link.name;
-                return (
-                  <li
-                    key={link.name}
-                    className="border-b border-white/10 last:border-b-0"
-                  >
-                    <button
-                      onClick={() =>
-                        setDropdownOpen(
-                          isMobileDropdownOpen ? null : link.name,
-                        )
-                      }
-                      className="hover:text-cc-cyan flex w-full items-center justify-between py-4 text-white"
-                    >
-                      {link.name}
-                      <svg
-                        className={`h-3 w-3 transition-transform ${isMobileDropdownOpen ? 'rotate-180' : ''}`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </button>
-                    {isMobileDropdownOpen && (
-                      <ul className="pb-2 pl-4">
-                        {link.children.map((child) => (
-                          <li key={child.name}>
-                            <a
-                              href={child.href}
-                              className={`hover:text-cc-cyan block py-2 ${
-                                currentPath === child.href
-                                  ? 'text-cc-cyan'
-                                  : 'text-white'
-                              }`}
-                              onClick={() => {
-                                setIsOpen(false);
-                                setDropdownOpen(null);
-                              }}
-                            >
-                              {child.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                );
-              }
-
+      </header>
+      <div
+        className={`${isOpen ? 'block' : 'hidden'} bg-cc-blue fixed inset-x-0 top-30 z-50 border-t border-white/10 shadow-lg lg:hidden`}
+      >
+        <ul className="flex flex-col p-4">
+          {navLinks.map((link) => {
+            if ('children' in link) {
+              const isMobileDropdownOpen = dropdownOpen === link.name;
               return (
                 <li
                   key={link.name}
                   className="border-b border-white/10 last:border-b-0"
                 >
-                  <a
-                    href={link.href}
-                    className={`hover:text-cc-cyan block py-4 ${
-                      currentPath === link.href ? 'text-cc-cyan' : 'text-white'
-                    }`}
-                    onClick={() => setIsOpen(false)}
+                  <button
+                    onClick={() =>
+                      setDropdownOpen(
+                        isMobileDropdownOpen ? null : link.name,
+                      )
+                    }
+                    className="hover:text-cc-cyan flex w-full items-center justify-between py-4 text-white"
                   >
                     {link.name}
-                  </a>
+                    <svg
+                      className={`h-3 w-3 transition-transform ${isMobileDropdownOpen ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {isMobileDropdownOpen && (
+                    <ul className="pb-2 pl-4">
+                      {link.children.map((child) => (
+                        <li key={child.name}>
+                          <a
+                            href={child.href}
+                            className={`hover:text-cc-cyan block py-2 ${
+                              currentPath === child.href
+                                ? 'text-cc-cyan'
+                                : 'text-white'
+                            }`}
+                            onClick={() => {
+                              setIsOpen(false);
+                              setDropdownOpen(null);
+                            }}
+                          >
+                            {child.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               );
-            })}
-          </ul>
-        </div>
-      </header>
+            }
+
+            return (
+              <li
+                key={link.name}
+                className="border-b border-white/10 last:border-b-0"
+              >
+                <a
+                  href={link.href}
+                  className={`hover:text-cc-cyan block py-4 ${
+                    currentPath === link.href ? 'text-cc-cyan' : 'text-white'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
       <div className="h-30"></div>
     </>
   );
