@@ -1,8 +1,31 @@
-- question: "Is there a clear role and set of responsibilities for Linaro?"
+- question: "How do I join a CoreCollective working group?"
   answer: >
-    Linaro is an active Member of CoreCollective and provides governance, hosting, and other services.
+    Working groups are coordinated via Google Groups mailing lists.
+    The Google Group can be joined by visiting the group's page, or by
+    emailing [group name]+subscribe@corecollective.dev.
+    At a future date each Working Group will have a team page which
+    includes the group calendar and a place to store files.
+    Until then, all WG information will be shared via the Google Group.
 
-- question: "What is the process for requesting the creation of a new CoreCollective Working Group?"
+- question: "What CoreCollective groups are available to join?"
+  answer: >
+    The <a href="/working-groups/">Working Groups</a> page lists all the
+    active working groups.
+    Click on the group title to get to the Google Group page where you can
+    request to join and see the archives
+
+- question: "Can I join via email instead of the Google Groups page?"
+  answer: >
+    Yes, send an empty email to [group-name]+subscribe@corecollective.dev
+
+- question: "Are working group archives public?"
+  answer: >
+    Yes, working groups keep public archives of the mailing list traffic.
+    You don't need to be a member of a group to read the archive.
+    You can see the mailing list archive by clicking on the group name
+    on the <a href="/working-groups/">Working Groups</a> page.
+
+- question: "How do I propose a new CoreCollective Working Group?"
   answer: >
     <p>CoreCollective is always open to the proposal of new Working Groups. A new WG must be approved by the TAC Chair / TAC.</p>
     <p>Considerations regarding requesting the launch of new WGs:</p>
