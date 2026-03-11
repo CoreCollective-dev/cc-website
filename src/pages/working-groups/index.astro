@@ -17,41 +17,55 @@ const data = [
     icon: iconGear,
     description:
       'Focused on the Linux Kernel, Toolchains, and Kernel Quality Testing',
+    googlegroupname: 'linux-fundamentals',
   },
   {
     title: 'Confidential Compute',
     icon: iconConfidential,
     description:
       'Provision of a comprehensive set of software emulated hardware enabling execution of Confidential Compute on Arm',
+    googlegroupname: 'confidential-compute',
   },
   {
     title: 'Windows on Arm',
     icon: iconWindows,
     description:
       'Targeting application layer support for Windows. From tooling to enablement and optimization of libraries on the Windows platform',
+    googlegroupname: 'windows-on-arm',
   },
   {
     title: 'Android',
     icon: iconWindows,
     description:
       'Arm architecture feature adoption. Platform standardization & enablement',
+    googlegroupname: 'android',
   },
   {
     title: 'Edge Compute',
     icon: iconEdge,
     description: 'Standards and Firmware for Arm edge platforms',
+    googlegroupname: 'edge-compute',
   },
   {
     title: 'Virtualization',
     icon: iconData,
     description:
       'Enable collaboration on evolving Arm-architecture virtualization technologies for secure firmware, hypervisor, kernel and AI workloads',
+    googlegroupname: 'virtualization',
   },
   {
     title: 'Data Center',
     icon: iconLink,
     description:
       'Focusing on technologies for cloud, on-prem and hybrid datacenter workloads as well as HPC.',
+    googlegroupname: 'datacenter',
+  },
+  {
+    title: 'Technical Advisory Committee',
+    icon: iconLink,
+    description:
+      'Guidance committee for all CoreCollective activities',
+    googlegroupname: 'tac',
   },
   { title: 'And more', description: '' },
 ];
@@ -92,7 +106,9 @@ const data = [
               </div>
               <div class="flex w-3/4 items-center">
                 <h1 class="text-cc-cyan text-left text-xl leading-tight font-bold break-words">
-                  {item.title}
+                  <a href=`https://groups.google.com/u/0/a/corecollective.dev/g/${item.googlegroupname}`>
+                    {item.title}
+                  </a>
                 </h1>
               </div>
             </div>
