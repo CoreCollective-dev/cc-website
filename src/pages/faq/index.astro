@@ -5,6 +5,19 @@ import { getEntry } from 'astro:content';
 
 const faqData = await getEntry('faq', 'faq');
 const faqs = faqData?.data || [];
+
+// 1. Group the FAQs by their category
+const groupedFaqs = faqs.reduce((acc, faq) => {
+  const category = faq.category || 'General'; // Default to 'General' if category is missing
+  if (!acc[category]) {
+    acc[category] = [];
+  }
+  acc[category].push(faq);
+  return acc;
+}, {} as Record<string, typeof faqs>);
+
+// 2. Get the list of category names
+const categories = Object.keys(groupedFaqs);
 ---
 
 <BaseLayout title="FAQ">
@@ -19,32 +32,43 @@ const faqs = faqData?.data || [];
     <h1 class="text-center text-3xl font-bold text-white md:text-5xl">
       Frequently Asked Questions
     </h1>
-    <div class="mx-4 flex w-full max-w-4xl flex-col gap-4 text-left md:mx-0">
+    
+    <div class="mx-4 flex w-full max-w-4xl flex-col gap-12 text-left md:mx-0">
       {
-        faqs.map((faq) => (
-          <details class="group rounded-lg border border-white/10 bg-white/5">
-            <summary class="flex cursor-pointer items-center justify-between px-6 py-5 text-lg font-semibold text-white transition-colors hover:text-cc-cyan md:text-xl [&::-webkit-details-marker]:hidden">
-              <span>{faq.question}</span>
-              <svg
-                class="h-5 w-5 shrink-0 transition-transform group-open:rotate-180"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </summary>
-            <div class="prose prose-invert prose-lg max-w-none px-6 pb-5 font-light text-white/80 prose-a:text-cc-cyan prose-li:text-white/80">
-              <Fragment set:html={faq.answer} />
-            </div>
-          </details>
+        categories.map((category) => (
+          <section class="flex flex-col gap-4">
+            {/* THIS IS YOUR NEW HEADER */}
+            <h2 class="text-2xl font-bold text-cc-cyan border-b border-white/10 pb-2 mb-2">
+              {category}
+            </h2>
+
+            {groupedFaqs[category].map((faq) => (
+              <details class="group rounded-lg border border-white/10 bg-white/5">
+                <summary class="flex cursor-pointer items-center justify-between px-6 py-5 text-lg font-semibold text-white transition-colors hover:text-cc-cyan md:text-xl [&::-webkit-details-marker]:hidden">
+                  <span>{faq.question}</span>
+                  <svg
+                    class="h-5 w-5 shrink-0 transition-transform group-open:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </summary>
+                <div class="prose prose-invert prose-lg max-w-none px-6 pb-5 font-light text-white/80 prose-a:text-cc-cyan prose-li:text-white/80">
+                  <Fragment set:html={faq.answer} />
+                </div>
+              </details>
+            ))}
+          </section>
         ))
       }
     </div>
   </div>
 </BaseLayout>
+

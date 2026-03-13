@@ -2,21 +2,104 @@
 
 The instructions for contributing to the website depend on whether or not you have write access to the main repository.
 
-### If you have write access ...
+### Prerequisites 
 
-Create a new branch from `main`:
+Before you begin, ensure you have Node.js and npm (Node Package Manager) installed in your local environment.
 
-* `git checkout main`
-* `git pull` (to ensure your copy is up to date)
-* `git checkout -b <new branch name>`
+#### Check Installation
+Run the following commands in your terminal:
 
-### If you do not have write access ...
+```
+node -v
+npm -v
+```
+If a version number (e.g., v18.17.0) appears, you are ready. If not, follow the installation steps for your OS:
 
-Fork the repository to your own namespace
+| Operating System | Command / Action |
+| macOS | Run brew install node (requires Homebrew) |
+| Ubuntu/Linux | sudo apt update && sudo apt install nodejs npm |
+| Windows | Download the installer from nodejs.org |
 
-### In both cases ...
+#### Getting the Code
 
-When you have made your changes and tested them with `npm run dev`, push them back to GitHub and raise a pull request against the `main` branch. This will trigger the deployment of a test version under a cloudfront.net URL.
+From your local terminal command line, set up a working directory and go to that directory.
+The method for downloading the code depends on your access level to the [CoreCollective website repository](https://github.com/CoreCollective-dev/cc-website)
+
+**If you do not have write access...**
+
+Fork the repository to your own namespace first using the Fork button in the GitHub repo UI.
+Clone your fork locally (replace YOUR-USERNAME with your GitHub handle)
+
+```
+git clone https://github.com/YOUR-USERNAME/cc-website.git
+cd cc-website
+```
+
+**If you have write access...**
+
+* Clone the main repository directly:
+
+```
+git clone https://github.com/CoreCollective-dev/cc-website.git
+cd cc-website
+```
+
+* Create a new branch from main:
+
+```
+git checkout main
+git pull  # Ensures your local copy is up to date
+git checkout -b <new-branch-name>
+```
+
+#### Initialize and Test
+
+Now that the code has been brought into a local repo, you'll need to initialize
+if and test to make sure your config is working.
+
+```
+npm install
+npm run dev
+```
+
+Open http://localhost:3000 (or the port shown in your terminal) to preview your changes.
+
+#### Make Changes and Test Locally
+
+Modify the files you need to update in your local working directory
+
+Validate the results using `npm run dev` 
+
+#### Submit Changes
+
+You're now ready to submit the changes back the the github repository!
+
+**If you have direct write access...**
+
+```
+git add .
+git commit -m "Description of changes"
+git push origin main
+```
+
+**If using the Fork method...**
+
+```
+git add .
+git commit -m "Description of changes"
+git push origin <your branch name>
+```
+
+#### Submit the Pull Request
+
+Regardless of your access level, the final step happens on the GitHub website:
+1 Navigate to the original repository: https://github.com/CoreCollective-dev/cc-website.
+2 You will see a yellow banner at the top of the page. Click "Compare & pull request."
+3 Ensure the base repository is CoreCollective-dev/cc-website and the base branch is main.
+4 Click "Create pull request."
+
+**Note:** Opening a PR will automatically trigger a test deployment. Look for a comment from a "bot" in your PR thread providing a cloudfront.net URL to preview your work live.
+
 
 ## Updating Member logos
 
