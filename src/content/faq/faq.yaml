@@ -35,3 +35,39 @@
       <li>Providing a list of recommended WG member companies and a willingness to approach them is essential for kicking off a new WG.</li>
     </ul>
     <p>The above can be sent to <a href="mailto:enquiries@corecollective.dev">enquiries@corecollective.dev</a> for consideration. A member of the leadership team will respond with additional questions and proposed next steps.</p>
+
+- question: "How does CoreCollective work?"
+  answer: >
+    <p>The two primary purposes of CoreCollective is to host
+       <a href="/working-groups/">Working Groups</a> and to run engineering Initiatives.
+    </p>
+    <p>Working Groups are technical discussion forums on topics relevant to the Arm ecosystem.
+    Each working group is chaired by a CoreCollective member, with the support of a community manager
+    supplied by the project.
+    Members of CoreCollective may join any active working group.
+    </p>
+    <p>Initiatives are engineering projects within a Working Group which are funded by CoreCollective
+    members via sponsorship.
+    It provides a way for multiple CoreCollective members to drive work on a shared need.
+    The scope, priorities and approach of an initiative is set by the members who sponsor it.
+    Management of the initiative is provided by CoreCollective on behalf of the sponsoring members.
+    </p>
+
+- question: "How is CoreCollective organized?"
+  answer: >
+    CoreCollective is organized into three primary groups; the Governing Board, the Technical
+    Advisory Committee, and the Working Groups.
+    The Governing Board sets the overall direction of CoreCollective,
+    and is responsible for the governance policies and overall budget.
+    The Technical Advisory Committee (TAC) is a forum for technical discussions that span
+    multiple interest areas, and is responsible for oversight of the Working Groups.
+    It is the TAC which approves new Working Groups and who evaluates the state of each active
+    group on a regular basis.
+
+- question: "Who runs CoreCollective?"
+  answer: >
+    CoreCollective is a project of Linaro Limited, a UK based limited by guarantee company,
+    with the backing of Arm Limited.
+    Linaro operates the project on behalf of the Arm ecosystem according to the terms of the
+    <a href="/charter/">CoreCollective Charter</a>,
+    and is accountable to the <a href="/about/">CoreCollective Governing Board</a>.
