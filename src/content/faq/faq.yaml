@@ -6,6 +6,7 @@
     At a future date each Working Group will have a team page which
     includes the group calendar and a place to store files.
     Until then, all WG information will be shared via the Google Group.
+  category: "Working Group FAQs"
 
 - question: "What CoreCollective groups are available to join?"
   answer: >
@@ -13,10 +14,12 @@
     active working groups.
     Click on the group title to get to the Google Group page where you can
     request to join and see the archives.
+  category: "Working Group FAQs"
 
 - question: "Can I join via email instead of the Google Groups page?"
   answer: >
     Yes, send an empty email to [group-name]+subscribe@corecollective.dev.
+  category: "Mailing List FAQs"
 
 - question: "Are working group archives public?"
   answer: >
@@ -24,6 +27,7 @@
     You don't need to be a member of a group to read the archive.
     You can see the mailing list archive by clicking on the group name
     on the <a href="/working-groups/">Working Groups</a> page.
+  category: "Mailing List FAQs"
 
 - question: "How do I propose a new CoreCollective Working Group?"
   answer: >
@@ -35,6 +39,7 @@
       <li>Providing a list of recommended WG member companies and a willingness to approach them is essential for kicking off a new WG.</li>
     </ul>
     <p>The above can be sent to <a href="mailto:enquiries@corecollective.dev">enquiries@corecollective.dev</a> for consideration. A member of the leadership team will respond with additional questions and proposed next steps.</p>
+  category: "Working Group FAQs"
 
 - question: "How does CoreCollective work?"
   answer: >
@@ -52,6 +57,7 @@
     The scope, priorities and approach of an initiative is set by the members who sponsor it.
     Management of the initiative is provided by CoreCollective on behalf of the sponsoring members.
     </p>
+  category: "CoreCollective General FAQs"
 
 - question: "How is CoreCollective organized?"
   answer: >
@@ -63,6 +69,7 @@
     multiple interest areas, and is responsible for oversight of the Working Groups.
     It is the TAC which approves new Working Groups and who evaluates the state of each active
     group on a regular basis.
+  category: "CoreCollective General FAQs"
 
 - question: "Who runs CoreCollective?"
   answer: >
@@ -71,3 +78,4 @@
     Linaro operates the project on behalf of the Arm ecosystem according to the terms of the
     <a href="/charter/">CoreCollective Charter</a>,
     and is accountable to the <a href="/about/">CoreCollective Governing Board</a>.
+  category: "CoreCollective General FAQs"
