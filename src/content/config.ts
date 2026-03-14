@@ -41,6 +41,7 @@ const faqCollection = defineCollection({
     z.object({
       question: z.string(),
       answer: z.string(),
+      category: z.string().optional(),
     })
   ),
 });
