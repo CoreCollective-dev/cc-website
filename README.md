@@ -94,8 +94,9 @@ git push origin <your branch name>
 #### Submit the Pull Request
 
 Regardless of your access level, the final step happens on the GitHub website:
+
 1 Navigate to the original repository: https://github.com/CoreCollective-dev/cc-website.
-2 You will see a yellow banner at the top of the page. Click "Compare & pull request."
+2 You will see an indication at the top of the page. Click "Compare & pull request."
 3 Ensure the base repository is CoreCollective-dev/cc-website and the base branch is main.
 4 Click "Create pull request."
 
