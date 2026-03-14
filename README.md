@@ -16,6 +16,7 @@ npm -v
 If a version number (e.g., v18.17.0) appears, you are ready. If not, follow the installation steps for your OS:
 
 | Operating System | Command / Action |
+|------------------|------------------|
 | macOS | Run brew install node (requires Homebrew) |
 | Ubuntu/Linux | sudo apt update && sudo apt install nodejs npm |
 | Windows | Download the installer from nodejs.org |
