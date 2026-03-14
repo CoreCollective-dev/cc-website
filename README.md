@@ -95,10 +95,10 @@ git push origin <your branch name>
 
 Regardless of your access level, the final step happens on the GitHub website:
 
-1 Navigate to the original repository: https://github.com/CoreCollective-dev/cc-website.
-2 You will see an indication at the top of the page. Click "Compare & pull request."
-3 Ensure the base repository is CoreCollective-dev/cc-website and the base branch is main.
-4 Click "Create pull request."
+1. Navigate to the original repository: https://github.com/CoreCollective-dev/cc-website.
+2. You will see an indication at the top of the page. Click "Compare & pull request."
+3. Ensure the base repository is CoreCollective-dev/cc-website and the base branch is main.
+4. Click "Create pull request."
 
 **Note:** Opening a PR will automatically trigger a test deployment. Look for a comment from a "bot" in your PR thread providing a cloudfront.net URL to preview your work live.
 
