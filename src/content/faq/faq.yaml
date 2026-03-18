@@ -1,8 +1,11 @@
 - question: "How do I join a CoreCollective working group?"
   answer: >
     Working groups are coordinated via Google Groups mailing lists.
-    The Google Group can be joined by visiting the group's page, or by
-    emailing [group-name]+subscribe@corecollective.dev.
+    The Google Working Group can be joined by visiting the <a
+    href="/working-groups/">Working Groups</a> page, clicking on the group
+    title, then click join. It can also be joined by emailing
+    [group-name]+subscribe@corecollective.dev where the group-name is found on
+    the Working Group --> About page.  
     At a future date each Working Group will have a team page which
     includes the group calendar and a place to store files.
     Until then, all WG information will be shared via the Google Group.
@@ -18,7 +21,9 @@
 
 - question: "Can I join via email instead of the Google Groups page?"
   answer: >
-    Yes, send an empty email to [group-name]+subscribe@corecollective.dev.
+    Yes, send an empty email to [group-name]+subscribe@corecollective.dev where
+    the group-name is found on the Working Group --> About page of the
+    associated Google Working Group.  
   category: "Mailing List FAQs"
 
 - question: "Are working group archives public?"
@@ -30,15 +35,14 @@
   category: "Mailing List FAQs"
 
 - question: "How do I propose a new CoreCollective Working Group?"
-  answer: >
-    <p>CoreCollective is always open to the proposal of new Working Groups. A new WG must be approved by the TAC Chair / TAC.</p>
-    <p>Considerations regarding requesting the launch of new WGs:</p>
+  answer: |
+    CoreCollective is always open to the proposal of new Working Groups. A new WG must be approved by the TAC Chair / TAC.<br /><br /> Considerations regarding requesting the launch of new WGs:
     <ul>
-      <li>Each new group will require a WG Chair—someone to help define the WG and lead member outreach. When requesting a new Working Group, the requester should be willing to recommend a candidate who is willing to serve as the Working Group Chair.</li>
-      <li>Provide an outline of the WG'S scope.  A summary of expectations, goals, focus, etc. are needed</li>
-      <li>Providing a list of recommended WG member companies and a willingness to approach them is essential for kicking off a new WG.</li>
+      <li>Each new group will require a WG Chair—someone to help define the WG and lead member outreach.</li>
+      <li>Provide an outline of the WG'S scope.</li>
+      <li>Providing a list of recommended WG member companies is essential.</li>
     </ul>
-    <p>The above can be sent to <a href="mailto:enquiries@corecollective.dev">enquiries@corecollective.dev</a> for consideration. A member of the leadership team will respond with additional questions and proposed next steps.</p>
+    The above can be sent to <a href="mailto:enquiries@corecollective.dev">enquiries@corecollective.dev</a>.
   category: "Working Group FAQs"
 
 - question: "How does CoreCollective work?"
@@ -46,13 +50,13 @@
     <p>The two primary purposes of CoreCollective is to host
        <a href="/working-groups/">Working Groups</a> and to run engineering Initiatives.
     </p>
-    <p>Working Groups are technical discussion forums on topics relevant to the Arm ecosystem.
-    Each working group is chaired by a CoreCollective member, with the support of a community manager
-    supplied by the project.
+    <p>Working Groups are technical discussion forums on topics relevant to the
+    Arm ecosystem.  Each working group is chaired by a CoreCollective member,
+    with the support of a community manager supplied by the project.
     Members of CoreCollective may join any active working group.
     </p>
-    <p>Initiatives are engineering projects within a Working Group which are funded by CoreCollective
-    members via sponsorship.
+    <p>Initiatives are engineering projects within a Working Group which are
+    funded by CoreCollective members via sponsorship.
     It provides a way for multiple CoreCollective members to drive work on a shared need.
     The scope, priorities and approach of an initiative is set by the members who sponsor it.
     Management of the initiative is provided by CoreCollective on behalf of the sponsoring members.
