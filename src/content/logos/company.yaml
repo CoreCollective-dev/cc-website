@@ -8,9 +8,12 @@
   scale: "0.75"
 - src: https://static.corecollective.dev/company_logos/canonicalLogo.svg
   alt: canonical logo
+  scale: "2"
 - src: https://static.corecollective.dev/company_logos/cixLogo.svg
   alt: cix logo
   scale: "0.8"
+- src: https://static.corecollective.dev/company_logos/codethinkLogo.png
+  alt: codethink logo
 - src: https://static.corecollective.dev/company_logos/fujitsuLogo.svg
   alt: fujitsu logo
 - src: https://static.corecollective.dev/company_logos/googleLogo.svg
@@ -29,7 +32,11 @@
   alt: qualcomm logo
 - src: https://static.corecollective.dev/company_logos/redhatLogo.svg
   alt: redhat logo
-- src: https://static.corecollective.dev/company_logos/suseLogo.svg
-  alt: suse logo
+- src: https://static.corecollective.dev/company_logos/rockylinuxLogo.svg
+  alt: rocky linux logo
 - src: https://static.corecollective.dev/company_logos/samsungLogo.svg
   alt: samsung logo
+- src: https://static.corecollective.dev/company_logos/stackableLogo.svg
+  alt: stackable logo
+- src: https://static.corecollective.dev/company_logos/suseLogo.svg
+  alt: suse logo

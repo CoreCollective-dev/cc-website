@@ -25,7 +25,8 @@ const images = companyLogos?.data;
                   alt={img.alt}
                   class="max-h-full max-w-full object-contain"
                   style={img.scale ? `transform: scale(${img.scale});` : undefined}
-                  inferSize={true}
+                  width={300}
+                  height={100}
                 />
               </div>
             ))}
