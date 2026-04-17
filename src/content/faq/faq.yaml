@@ -32,15 +32,15 @@
     on the <a href="/working-groups/">Working Groups</a> page.
   category: "Mailing List FAQs"
 
-- question: "How do I propose a new CoreCollective Working Group?"
+- question: "How do I propose a new CoreCollective Working Group or WG Initiative?"
   answer: |
-    CoreCollective is always open to the proposal of new Working Groups. A new WG must be approved by the TAC Chair / TAC.<br /><br /> Considerations regarding requesting the launch of new WGs:
+    CoreCollective is always open to the proposal of new Working Groups or new Initiatives within a Working Group. New Working Groups must be approved by the TAC Chair/TAC. New Initiatives within a Working Group must be approved by the Working Group Steering Committee.<br /><br /> To propose a new WG or WG Initiative, just send an email to  <a href="mailto:enquiries@corecollective.dev">enquiries@corecollective.dev</a> and include the following:
     <ul>
-      <li>Each new group will require a WG Chair—someone to help define the WG and lead member outreach.</li>
-      <li>Provide an outline of the WG'S scope.</li>
-      <li>Providing a list of recommended WG member companies is essential.</li>
+      <li>A candidate to Chair/lead the new WG/Initiative efforts from a member company. This person will be required to help define the WG/Initiative and lead member outreach.</li>
+      <li>Provide an outline of the WG/Initiative's technical scope including the problem it solves for the ecosystem and a brief summary of the envisioned technical solution.</li>
+      <li>Provide a list of recommended WG/Initiative member companies that would benefit from the technical effort.</li>
     </ul>
-    The above can be sent to <a href="mailto:enquiries@corecollective.dev">enquiries@corecollective.dev</a>.
+    The enquiries response team, composed of inidividuals such as the TAC Chair and Community Director, will assure that the proposal is routed to the correct technical leadership teams for consideration.
   category: "Working Group FAQs"
 
 - question: "How does CoreCollective work?"
