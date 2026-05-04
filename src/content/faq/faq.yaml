@@ -5,8 +5,9 @@
     href="/working-groups/">Working Groups</a> page, clicking on the group
     title, then click "ask to join." This method requires a user be logged into
     a google account.  <br /><br />
-    A group can also be joined by emailing [group-name]+subscribe@corecollective.dev where the group-name is found in the url of the Google Working Group page. NOTE: A confirm email is sent to the originator from Google. This often ends up in spam, so after sending, please check your spam to process the confirm. Once that's completed, the request will be sent on to the admin for final approval. <br /><br />
-    At a future date each Working Group will have a team page which includes the group calendar and a place to store files. Until then, all WG information will be shared via the Google Group. 
+    A group can also be joined by emailing [group-name]+subscribe@corecollective.dev where the group-name is found in the url of the Google Working Group page. NOTE: A confirm email is sent to the originator from Google. This often ends up in spam, so after sending, please check your spam to process the confirm. Once that's completed, the user must respond to that email, and the request will be sent on to the admin for final approval. <br /><br />
+    At a future date each Working Group will have a team page which includes the group calendar and a place to store files. Until then, all WG information will be shared via the Google Group. <br /><br />
+    If you have any issues, please email <b>community-mgrs@corecollective.dev</b> and one of us will add you manually.
   category: "Working Group FAQs"
 
 - question: "What CoreCollective groups are available to join?"
