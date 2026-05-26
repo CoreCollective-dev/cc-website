@@ -26,6 +26,8 @@
   scale: "2.8"
 - src: https://static.corecollective.dev/company_logos/linaroLogo.svg
   alt: linaro logo
+- src: https://static.corecollective.dev/company_logos/machinewareLogo.svg
+  alt: linaro logo
 - src: https://static.corecollective.dev/company_logos/microsoftLogo.svg
   alt: microsoft logo
 - src: https://static.corecollective.dev/company_logos/qualcommLogo.svg
