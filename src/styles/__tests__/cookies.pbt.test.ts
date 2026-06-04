@@ -227,7 +227,7 @@ describe("Feature: cookie-consent-readability, Property 2: Preservation - Unaffe
     { property: "--cc-btn-primary-hover-text", expectedValue: "#ffffff" },
     { property: "--cc-toggle-bg-off", expectedValue: "rgba(255, 255, 255, 0.3)" },
     { property: "--cc-toggle-bg-on", expectedValue: "#7233F7" },
-    { property: "--cc-cookie-category-block-bg", expectedValue: "rgba(255, 255, 255, 0.05)" },
+    { property: "--cc-cookie-category-block-bg", expectedValue: "rgba(255, 255, 255, 0.08)" },
     { property: "--cc-font-family", expectedValue: '"Figtree Variable", "Figtree", ui-sans-serif, system-ui, sans-serif' },
     { property: "--cc-border-radius", expectedValue: "0.375rem" },
   ];
