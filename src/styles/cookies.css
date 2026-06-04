@@ -6,9 +6,9 @@
   --cc-btn-primary-text: #ffffff;
   --cc-btn-primary-hover-bg: #5b28c6;
   --cc-btn-primary-hover-text: #ffffff;
-  --cc-btn-secondary-bg: rgba(255, 255, 255, 0.1);
+  --cc-btn-secondary-bg: rgba(255, 255, 255, 0.35);
   --cc-btn-secondary-text: #ffffff;
-  --cc-btn-secondary-hover-bg: rgba(255, 255, 255, 0.2);
+  --cc-btn-secondary-hover-bg: rgba(255, 255, 255, 0.5);
   --cc-btn-secondary-hover-text: #ffffff;
   --cc-btn-border-radius: 0.375rem;
   --cc-border-radius: 0.375rem;
@@ -23,4 +23,13 @@
   --cc-overlay-bg: rgba(0, 0, 0, 0.7);
   --cc-separator-border-color: rgba(255, 255, 255, 0.1);
   --cc-consent-modal-box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.4);
+}
+
+#cc-main .cm__title {
+  color: #ffffff;
+}
+
+#cc-main .cm__desc {
+  opacity: 1;
+  font-weight: 400;
 }
