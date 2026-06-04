@@ -1,5 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import LogoImg from '../../assets/CoreCollective_White-Wordmark.png';
+import { pushEvent } from '../../lib/dataLayer';
+
+export function trackNavClick(e: React.MouseEvent<HTMLAnchorElement>): void {
+  const anchor = e.currentTarget;
+  const img = anchor.querySelector("img");
+  const linkText = anchor.textContent?.trim() || img?.alt || "";
+  const linkUrl = anchor.getAttribute("href") || "";
+
+  pushEvent({ event: "nav_click", linkText, linkUrl });
+  // Do NOT call e.preventDefault() — default navigation must proceed
+}
 
 type NavLink =
   | { name: string; href: string }
@@ -50,7 +61,7 @@ export default function Navbar() {
       <header className="bg-cc-blue fixed inset-x-0 top-0 z-50 h-30 text-white">
         <nav className="mx-auto flex h-full items-center justify-between gap-4 px-4 lg:gap-8 lg:px-8">
           <div className="flex h-full min-w-0 max-w-75 items-center">
-            <a href="/">
+            <a href="/" onClick={trackNavClick}>
               <img src={LogoImg.src} alt="Logo" className="h-auto w-full" />
             </a>
           </div>
@@ -101,7 +112,10 @@ export default function Navbar() {
                                   ? 'text-cc-cyan font-bold'
                                   : 'text-white'
                               }`}
-                              onClick={() => setDropdownOpen(null)}
+                              onClick={(e) => {
+                                trackNavClick(e);
+                                setDropdownOpen(null);
+                              }}
                             >
                               {child.name}
                             </a>
@@ -127,6 +141,7 @@ export default function Navbar() {
                     className={`hover:text-cc-cyan transition-colors ${
                       isActive ? 'text-cc-cyan font-bold' : 'text-white'
                     }`}
+                    onClick={trackNavClick}
                   >
                     {link.name}
                   </a>
@@ -211,7 +226,8 @@ export default function Navbar() {
                                 ? 'text-cc-cyan'
                                 : 'text-white'
                             }`}
-                            onClick={() => {
+                            onClick={(e) => {
+                              trackNavClick(e);
                               setIsOpen(false);
                               setDropdownOpen(null);
                             }}
@@ -236,7 +252,10 @@ export default function Navbar() {
                   className={`hover:text-cc-cyan block py-4 ${
                     currentPath === link.href ? 'text-cc-cyan' : 'text-white'
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => {
+                    trackNavClick(e);
+                    setIsOpen(false);
+                  }}
                 >
                   {link.name}
                 </a>

@@ -6,9 +6,11 @@
     "astro": "astro",
     "build": "astro build",
     "dev": "astro dev",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "test": "vitest --run"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.9",
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/react": "^4.4.2",
     "@fontsource-variable/figtree": "^5.2.10",
@@ -24,12 +26,17 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "sst": "^3.17.25",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3",
+    "vanilla-cookieconsent": "^3.1.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
+    "fast-check": "^3.23.2",
+    "jsdom": "^25.0.1",
     "prettier": "^3.8.0",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.14"
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "vitest": "^3.2.3"
   }
 }

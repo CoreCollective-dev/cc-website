@@ -1,0 +1,137 @@
+---
+import "vanilla-cookieconsent/dist/cookieconsent.css";
+import "../styles/cookies.css";
+---
+
+<script>
+  import * as CookieConsent from "vanilla-cookieconsent";
+
+  CookieConsent.run({
+    manageScriptTags: true,
+
+    guiOptions: {
+      consentModal: {
+        layout: "cloud",
+        position: "bottom center",
+        flipButtons: false,
+      },
+      preferencesModal: {
+        layout: "box",
+      },
+    },
+
+    categories: {
+      necessary: {
+        readOnly: true,
+      },
+      analytics_cookies: {},
+      marketing_cookies: {},
+    },
+
+    onConsent: ({ cookie }) => {
+      // Fires after initial consent or on page load with existing consent
+    },
+
+    onChange: ({ cookie, changedCategories }) => {
+      for (const category of changedCategories) {
+        if (!CookieConsent.acceptedCategory(category)) {
+          CookieConsent.eraseCookies(getCookiesForCategory(category));
+        }
+      }
+    },
+
+    language: {
+      default: "en",
+      translations: {
+        en: {
+          consentModal: {
+            title: "Cookies & Privacy",
+            description:
+              "We use cookies to enhance your experience. You can accept all cookies, reject optional ones, or customise your preferences.",
+            acceptAllBtn: "Accept all Cookies",
+            acceptNecessaryBtn: "Reject all",
+            showPreferencesBtn: "Customise Cookies",
+          },
+          preferencesModal: {
+            title: "Cookie Settings",
+            savePreferencesBtn: "Save settings",
+            acceptAllBtn: "Accept all",
+            acceptNecessaryBtn: "Reject all",
+            closeIconLabel: "Close",
+            sections: [
+              {
+                title: "Cookie Usage",
+                description:
+                  "We use cookies to ensure basic site functionality and enhance your experience. Choose which categories to allow.",
+              },
+              {
+                title: "Necessary Cookies",
+                description:
+                  "These cookies are essential for the website to function and cannot be disabled.",
+                linkedCategory: "necessary",
+              },
+              {
+                title: "Analytics Cookies",
+                description:
+                  "These cookies help us understand how visitors interact with the website by collecting anonymous data.",
+                linkedCategory: "analytics_cookies",
+                cookieTable: {
+                  headers: {
+                    name: "Name",
+                    domain: "Domain",
+                    expiration: "Expiration",
+                    description: "Description",
+                  },
+                  body: [
+                    {
+                      name: "_ga",
+                      domain: "google.com",
+                      expiration: "2 years",
+                      description: "Distinguishes unique users.",
+                    },
+                    {
+                      name: "_gid",
+                      domain: "google.com",
+                      expiration: "1 day",
+                      description: "Distinguishes unique users.",
+                    },
+                  ],
+                },
+              },
+              {
+                title: "Marketing Cookies",
+                description:
+                  "These cookies are used to deliver relevant advertisements and track campaign effectiveness.",
+                linkedCategory: "marketing_cookies",
+                cookieTable: {
+                  headers: {
+                    name: "Name",
+                    domain: "Domain",
+                    expiration: "Expiration",
+                    description: "Description",
+                  },
+                  body: [
+                    {
+                      name: "_gcl_au",
+                      domain: "google.com",
+                      expiration: "90 days",
+                      description: "Stores conversion data for Google Ads.",
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      },
+    },
+  });
+
+  function getCookiesForCategory(category: string): string[] {
+    const cookieMap: Record<string, string[]> = {
+      analytics_cookies: ["_ga", "_gid", "_gat"],
+      marketing_cookies: ["_gcl_au"],
+    };
+    return cookieMap[category] ?? [];
+  }
+</script>
