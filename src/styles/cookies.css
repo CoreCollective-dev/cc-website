@@ -1,0 +1,26 @@
+:root {
+  --cc-font-family: "Figtree Variable", "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --cc-bg: #080225;
+  --cc-text: #ffffff;
+  --cc-btn-primary-bg: #7233F7;
+  --cc-btn-primary-text: #ffffff;
+  --cc-btn-primary-hover-bg: #5b28c6;
+  --cc-btn-primary-hover-text: #ffffff;
+  --cc-btn-secondary-bg: rgba(255, 255, 255, 0.1);
+  --cc-btn-secondary-text: #ffffff;
+  --cc-btn-secondary-hover-bg: rgba(255, 255, 255, 0.2);
+  --cc-btn-secondary-hover-text: #ffffff;
+  --cc-btn-border-radius: 0.375rem;
+  --cc-border-radius: 0.375rem;
+  --cc-toggle-bg-off: rgba(255, 255, 255, 0.3);
+  --cc-toggle-bg-on: #7233F7;
+  --cc-toggle-bg-readonly: rgba(255, 255, 255, 0.15);
+  --cc-toggle-knob-bg: #ffffff;
+  --cc-cookie-category-block-bg: rgba(255, 255, 255, 0.05);
+  --cc-cookie-category-block-bg-hover: rgba(255, 255, 255, 0.08);
+  --cc-section-border: rgba(255, 255, 255, 0.1);
+  --cc-cookie-table-border: rgba(255, 255, 255, 0.1);
+  --cc-overlay-bg: rgba(0, 0, 0, 0.7);
+  --cc-separator-border-color: rgba(255, 255, 255, 0.1);
+  --cc-consent-modal-box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.4);
+}
