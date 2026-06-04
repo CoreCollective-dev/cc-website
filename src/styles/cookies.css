@@ -1,6 +1,8 @@
 :root {
   --cc-font-family: "Figtree Variable", "Figtree", ui-sans-serif, system-ui, sans-serif;
   --cc-bg: #080225;
+  --cc-primary-color: #ffffff;
+  --cc-secondary-color: rgba(255, 255, 255, 0.85);
   --cc-text: #ffffff;
   --cc-btn-primary-bg: #7233F7;
   --cc-btn-primary-text: #ffffff;
@@ -8,8 +10,10 @@
   --cc-btn-primary-hover-text: #ffffff;
   --cc-btn-secondary-bg: rgba(255, 255, 255, 0.35);
   --cc-btn-secondary-text: #ffffff;
+  --cc-btn-secondary-color: #ffffff;
   --cc-btn-secondary-hover-bg: rgba(255, 255, 255, 0.5);
   --cc-btn-secondary-hover-text: #ffffff;
+  --cc-btn-secondary-hover-color: #ffffff;
   --cc-btn-border-radius: 0.375rem;
   --cc-border-radius: 0.375rem;
   --cc-toggle-bg-off: rgba(255, 255, 255, 0.3);
@@ -18,10 +22,15 @@
   --cc-toggle-knob-bg: #ffffff;
   --cc-cookie-category-block-bg: rgba(255, 255, 255, 0.08);
   --cc-cookie-category-block-bg-hover: rgba(255, 255, 255, 0.08);
+  --cc-cookie-category-block-border: rgba(255, 255, 255, 0.25);
+  --cc-cookie-category-block-hover-bg: rgba(255, 255, 255, 0.12);
+  --cc-cookie-category-block-hover-border: rgba(255, 255, 255, 0.3);
+  --cc-cookie-category-expanded-block-bg: rgba(255, 255, 255, 0.04);
+  --cc-cookie-category-expanded-block-hover-bg: rgba(255, 255, 255, 0.1);
   --cc-section-border: rgba(255, 255, 255, 0.25);
-  --cc-cookie-table-border: rgba(255, 255, 255, 0.1);
+  --cc-cookie-table-border: rgba(255, 255, 255, 0.15);
   --cc-overlay-bg: rgba(0, 0, 0, 0.7);
-  --cc-separator-border-color: rgba(255, 255, 255, 0.1);
+  --cc-separator-border-color: rgba(255, 255, 255, 0.15);
   --cc-consent-modal-box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.4);
 }
 
@@ -45,5 +54,25 @@
 #cc-main .pm__section-desc {
   opacity: 1;
   font-weight: 400;
+  color: #ffffff;
+}
+
+#cc-main .pm__section--toggle .pm__section-title {
+  color: #ffffff;
+}
+
+#cc-main .pm__section-desc-wrapper {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#cc-main .pm__table-head > tr {
+  color: #ffffff;
+}
+
+#cc-main .pm__table-td {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#cc-main .pm__table-td:before {
   color: #ffffff;
 }

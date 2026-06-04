@@ -44,7 +44,7 @@ const preservedCustomProperties: Array<{ property: string; expectedValue: string
   { property: "--cc-btn-secondary-text", expectedValue: "#ffffff" },
   { property: "--cc-toggle-bg-on", expectedValue: "#7233F7" },
   { property: "--cc-toggle-bg-off", expectedValue: "rgba(255, 255, 255, 0.3)" },
-  { property: "--cc-cookie-table-border", expectedValue: "rgba(255, 255, 255, 0.1)" },
+  { property: "--cc-cookie-table-border", expectedValue: "rgba(255, 255, 255, 0.15)" },
 ];
 
 // --- Preserved Element-Level Rules ---
