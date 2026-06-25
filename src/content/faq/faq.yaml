@@ -74,11 +74,7 @@
     group on a regular basis.
   category: "CoreCollective General FAQs"
 
-- question: "Who runs CoreCollective?"
+- question: "Who Administers CoreCollective?"
   answer: >
-    CoreCollective is a project of Linaro Limited, a UK based limited by guarantee company,
-    with the backing of Arm Limited.
-    Linaro operates the project on behalf of the Arm ecosystem according to the terms of the
-    <a href="/charter/">CoreCollective Charter</a>,
-    and is accountable to the <a href="/about/">CoreCollective Governing Board</a>.
+    Linaro provides IT/operational hosting, financial and administrative services for the CoreCollective community project. Linaro operates the project on behalf of the Arm ecosystem according to the terms of the <a href="/charter/">CoreCollective Charter</a>, and is accountable to the <a href="/about/">CoreCollective Governing Board</a>.  
   category: "CoreCollective General FAQs"
