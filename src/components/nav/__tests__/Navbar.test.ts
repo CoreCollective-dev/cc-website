@@ -23,17 +23,37 @@ describe("trackNavClick", () => {
     mockedPushEvent.mockClear();
   });
 
-  it("extracts visible text from anchor", () => {
+  it("pushes navigation_click with item and breadcrumb for top-level link", () => {
     const anchor = document.createElement("a");
-    anchor.href = "/about/";
-    anchor.textContent = "About Us";
+    anchor.href = "/working-groups/";
+    anchor.textContent = "Working Groups";
 
     trackNavClick(createMockEvent(anchor));
 
     expect(mockedPushEvent).toHaveBeenCalledWith({
-      event: "nav_click",
-      linkText: "About Us",
-      linkUrl: "/about/",
+      event: "navigation_click",
+      navigation: {
+        item: "Working Groups",
+        breadcrumb: "Working Groups",
+        type: "Header",
+      },
+    });
+  });
+
+  it("builds breadcrumb from parent label for dropdown items", () => {
+    const anchor = document.createElement("a");
+    anchor.href = "/faq/";
+    anchor.textContent = "FAQ";
+
+    trackNavClick(createMockEvent(anchor), "About");
+
+    expect(mockedPushEvent).toHaveBeenCalledWith({
+      event: "navigation_click",
+      navigation: {
+        item: "FAQ",
+        breadcrumb: "About > FAQ",
+        type: "Header",
+      },
     });
   });
 
@@ -45,9 +65,12 @@ describe("trackNavClick", () => {
     trackNavClick(createMockEvent(anchor));
 
     expect(mockedPushEvent).toHaveBeenCalledWith({
-      event: "nav_click",
-      linkText: "Contact",
-      linkUrl: "/contact/",
+      event: "navigation_click",
+      navigation: {
+        item: "Contact",
+        breadcrumb: "Contact",
+        type: "Header",
+      },
     });
   });
 
@@ -61,9 +84,12 @@ describe("trackNavClick", () => {
     trackNavClick(createMockEvent(anchor));
 
     expect(mockedPushEvent).toHaveBeenCalledWith({
-      event: "nav_click",
-      linkText: "Logo",
-      linkUrl: "/",
+      event: "navigation_click",
+      navigation: {
+        item: "Logo",
+        breadcrumb: "Logo",
+        type: "Header",
+      },
     });
   });
 
@@ -71,29 +97,17 @@ describe("trackNavClick", () => {
     const anchor = document.createElement("a");
     anchor.href = "/unknown/";
     const img = document.createElement("img");
-    // No alt attribute set
     anchor.appendChild(img);
 
     trackNavClick(createMockEvent(anchor));
 
     expect(mockedPushEvent).toHaveBeenCalledWith({
-      event: "nav_click",
-      linkText: "",
-      linkUrl: "/unknown/",
-    });
-  });
-
-  it("preserves href exactly", () => {
-    const anchor = document.createElement("a");
-    anchor.setAttribute("href", "/page?foo=bar#section");
-    anchor.textContent = "Link";
-
-    trackNavClick(createMockEvent(anchor));
-
-    expect(mockedPushEvent).toHaveBeenCalledWith({
-      event: "nav_click",
-      linkText: "Link",
-      linkUrl: "/page?foo=bar#section",
+      event: "navigation_click",
+      navigation: {
+        item: "",
+        breadcrumb: "",
+        type: "Header",
+      },
     });
   });
 

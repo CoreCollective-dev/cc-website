@@ -18,17 +18,17 @@ const arbFormSubmissionEvent = fc
     })
   );
 
-/** Arbitrary for valid nav_click events */
+/** Arbitrary for valid navigation_click events */
 const arbNavClickEvent = fc
   .record({
-    linkText: fc.string(),
-    linkUrl: fc.string(),
+    item: fc.string(),
+    breadcrumb: fc.string(),
+    type: fc.constant("Header"),
   })
   .map(
-    ({ linkText, linkUrl }): DataLayerEvent => ({
-      event: "nav_click",
-      linkText,
-      linkUrl,
+    (navigation): DataLayerEvent => ({
+      event: "navigation_click",
+      navigation,
     })
   );
 

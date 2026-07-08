@@ -17,14 +17,16 @@ describe("pushEvent", () => {
     });
   });
 
-  it("pushes correct structure for nav_click event", () => {
-    pushEvent({ event: "nav_click", linkText: "About", linkUrl: "/about/" });
+  it("pushes correct structure for navigation_click event", () => {
+    pushEvent({
+      event: "navigation_click",
+      navigation: { item: "About", breadcrumb: "About", type: "Header" },
+    });
 
     expect(window.dataLayer).toHaveLength(1);
     expect(window.dataLayer[0]).toEqual({
-      event: "nav_click",
-      linkText: "About",
-      linkUrl: "/about/",
+      event: "navigation_click",
+      navigation: { item: "About", breadcrumb: "About", type: "Header" },
     });
   });
 
@@ -40,14 +42,16 @@ describe("pushEvent", () => {
   it("appends without clobbering existing entries", () => {
     window.dataLayer = [{ event: "gtm.js" } as any];
 
-    pushEvent({ event: "nav_click", linkText: "Home", linkUrl: "/" });
+    pushEvent({
+      event: "navigation_click",
+      navigation: { item: "Home", breadcrumb: "Home", type: "Header" },
+    });
 
     expect(window.dataLayer).toHaveLength(2);
     expect(window.dataLayer[0]).toEqual({ event: "gtm.js" });
     expect(window.dataLayer[1]).toEqual({
-      event: "nav_click",
-      linkText: "Home",
-      linkUrl: "/",
+      event: "navigation_click",
+      navigation: { item: "Home", breadcrumb: "Home", type: "Header" },
     });
   });
 });
