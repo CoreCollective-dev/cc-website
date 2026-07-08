@@ -2,13 +2,19 @@ import React, { useState, useEffect, useRef } from 'react';
 import LogoImg from '../../assets/CoreCollective_White-Wordmark.png';
 import { pushEvent } from '../../lib/dataLayer';
 
-export function trackNavClick(e: React.MouseEvent<HTMLAnchorElement>): void {
+export function trackNavClick(
+  e: React.MouseEvent<HTMLAnchorElement>,
+  parentLabel?: string,
+): void {
   const anchor = e.currentTarget;
   const img = anchor.querySelector("img");
-  const linkText = anchor.textContent?.trim() || img?.alt || "";
-  const linkUrl = anchor.getAttribute("href") || "";
+  const item = anchor.textContent?.trim() || img?.alt || "";
+  const breadcrumb = parentLabel ? `${parentLabel} > ${item}` : item;
 
-  pushEvent({ event: "nav_click", linkText, linkUrl });
+  pushEvent({
+    event: "navigation_click",
+    navigation: { item, breadcrumb, type: "Header" },
+  });
   // Do NOT call e.preventDefault() — default navigation must proceed
 }
 
@@ -113,7 +119,7 @@ export default function Navbar() {
                                   : 'text-white'
                               }`}
                               onClick={(e) => {
-                                trackNavClick(e);
+                                trackNavClick(e, link.name);
                                 setDropdownOpen(null);
                               }}
                             >
@@ -227,7 +233,7 @@ export default function Navbar() {
                                 : 'text-white'
                             }`}
                             onClick={(e) => {
-                              trackNavClick(e);
+                              trackNavClick(e, link.name);
                               setIsOpen(false);
                               setDropdownOpen(null);
                             }}

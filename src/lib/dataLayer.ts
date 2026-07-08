@@ -1,7 +1,16 @@
 /** Supported DataLayer event types */
+export type NavigationClickEvent = {
+  event: "navigation_click";
+  navigation: {
+    item: string;
+    breadcrumb: string;
+    type: string;
+  };
+};
+
 export type DataLayerEvent =
   | { event: "form_submission"; formName: string }
-  | { event: "nav_click"; linkText: string; linkUrl: string };
+  | NavigationClickEvent;
 
 /**
  * Push a structured event to the GTM DataLayer.
