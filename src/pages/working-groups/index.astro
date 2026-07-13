@@ -117,6 +117,9 @@ const data = [
             <p class="text-left text-sm break-words text-gray-300 md:text-base">
               {item.description}
             </p>
+            <p class="text-left text-cc-cyan md:text-base">
+              <a href={`https://groups.google.com/u/0/a/corecollective.dev/g/${item.googlegroupname}`}>List Archive</a>
+            </p>
 
             {index !== data.length - 1 && (
               <div class="absolute top-0 right-0 hidden h-full w-0.5 bg-linear-to-b from-transparent via-white/30 to-transparent group-last:hidden md:block md:group-even:hidden lg:group-not-nth-[4n]:block lg:group-nth-[4n]:hidden" />
