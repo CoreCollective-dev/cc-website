@@ -44,6 +44,13 @@
     The enquiries response team, composed of inidividuals such as the TAC Chair and Community Director, will assure that the proposal is routed to the correct technical leadership teams for consideration.
   category: "Working Group FAQs"
 
+- question: "How do I subscribe to the announcements mailing list?"
+  answer: >
+    <p>To join our official announcements mailing list, please head over to our 
+      <a href="/subscribe/" class="subscribe-link">Subscription Page</a> where you can securely register your email
+    </p>
+  category: "CoreCollective General FAQs"
+
 - question: "How does CoreCollective work?"
   answer: >
     <p>The two primary purposes of CoreCollective is to host

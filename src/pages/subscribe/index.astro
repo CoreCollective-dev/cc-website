@@ -1,0 +1,218 @@
+---
+import Layout from '../../layouts/BaseLayout.astro';
+---
+
+<Layout title="Subscribe to Announcements">
+  <div class="custom-container">
+    <h1 class="form-title">Stay in the Loop</h1>
+    <p class="form-desc">
+      Join the <strong>CoreCollective Announcements Mailing List</strong> to get the latest updates sent straight to your inbox.
+    </p>
+
+    <form class="subscribe-form" onsubmit="return false;">
+      <div id="step-email-container">
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address:</label>
+          <input 
+            type="email" 
+            id="email-input" 
+            name="email" 
+            placeholder="you@example.com" 
+            required 
+            class="form-input"
+          />
+        </div>
+        
+        <button type="button" id="send-code-btn" class="form-button">
+          Send Verification Code
+        </button>
+      </div>
+
+      <div id="step-code-container" style="display: none;">
+        <div class="form-group">
+          <label for="code" class="form-label" style="color: #a855f7;">Enter the 4-Digit Code sent to your email:</label>
+          <input 
+            type="text" 
+            id="code-input" 
+            maxlength="4"
+            placeholder="1234" 
+            class="form-input"
+            style="text-align: center; font-size: 1.5rem; letter-spacing: 0.5rem; font-weight: 700; border-color: #a855f7;"
+          />
+        </div>
+        
+        <button type="button" id="verify-code-btn" class="form-button" style="background-color: #a855f7; color: #ffffff;">
+          Verify & Subscribe
+        </button>
+        <p class="form-note" style="text-align: center; margin-top: 0.75rem;">Code expires in 5 minutes.</p>
+      </div>
+    </form>
+
+    <p class="form-note">We respect your privacy. Unsubscribe at any time.</p>
+  </div>
+</Layout>
+
+<style>
+  .custom-container {
+    max-width: 500px;
+    margin: 6rem auto;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-family: system-ui, sans-serif;
+  }
+  .form-title {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .form-desc {
+    color: #cbd5e1;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .subscribe-form {
+    background-color: #171717;
+    border: 1px solid #262626;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: left;
+  }
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  .form-label {
+    display: block;
+    color: #e5e5e5;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #0a0a0a;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: #a855f7;
+  }
+  .form-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #ffffff; 
+    color: #000000; 
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .form-button:hover {
+    background-color: #e5e5e5;
+  }
+  .form-note {
+    font-size: 0.75rem;
+    color: #737373;
+    margin-top: 1rem;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const emailContainer = document.getElementById('step-email-container');
+    const codeContainer = document.getElementById('step-code-container');
+    const emailInput = document.getElementById('email-input') as HTMLInputElement;
+    const codeInput = document.getElementById('code-input') as HTMLInputElement;
+    
+    const sendCodeBtn = document.getElementById('send-code-btn') as HTMLButtonElement;
+    const verifyCodeBtn = document.getElementById('verify-code-btn') as HTMLButtonElement;
+
+    // STEP 1: Request 4-digit verification code
+    sendCodeBtn?.addEventListener('click', async () => {
+      const email = emailInput.value.trim();
+      if (!email || !emailInput.checkValidity()) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      sendCodeBtn.textContent = 'Sending...';
+      sendCodeBtn.disabled = true;
+
+      try {
+        const response = await fetch('/api/subscribe/send-code/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        const result = await response.json();
+
+        if (response.ok) {
+          // Hide email input, show verification input
+          if (emailContainer) emailContainer.style.display = 'none';
+          if (codeContainer) codeContainer.style.display = 'block';
+        } else {
+          alert(`Error: ${result.error || 'Could not send verification code.'}`);
+          sendCodeBtn.textContent = 'Send Verification Code';
+          sendCodeBtn.disabled = false;
+        }
+      } catch (err) {
+        alert('Network Error connecting to the verification server.');
+        sendCodeBtn.textContent = 'Send Verification Code';
+        sendCodeBtn.disabled = false;
+      }
+    });
+
+    // STEP 2: Validate code submission
+    verifyCodeBtn?.addEventListener('click', async () => {
+      const userInputCode = codeInput.value.trim();
+      if (userInputCode.length !== 4) {
+        alert('Please enter the full 4-digit verification code.');
+        return;
+      }
+
+      verifyCodeBtn.textContent = 'Verifying...';
+      verifyCodeBtn.disabled = true;
+
+      try {
+        const response = await fetch('/api/subscribe/verify/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ userInputCode })
+        });
+        const result = await response.json();
+
+        if (response.ok) {
+          alert('🎉 Successfully verified and subscribed to the list!');
+          
+          // Clear forms and reset UI steps back to default entry state
+          codeInput.value = '';
+          emailInput.value = '';
+          if (codeContainer) codeContainer.style.display = 'none';
+          if (emailContainer) emailContainer.style.display = 'block';
+          
+          if (sendCodeBtn) {
+            sendCodeBtn.textContent = 'Send Verification Code';
+            sendCodeBtn.disabled = false;
+          }
+        } else {
+          alert(`Verification Failed: ${result.error || 'Incorrect code.'}`);
+        }
+      } catch (err) {
+        alert('Network Error validating verification session.');
+      } finally {
+        if (verifyCodeBtn) {
+          verifyCodeBtn.textContent = 'Verify & Subscribe';
+          verifyCodeBtn.disabled = false;
+        }
+      }
+    });
+  });
+</script>
+
