@@ -24,7 +24,7 @@ const data = [
     icon: iconConfidential,
     description:
       'Focused on the software enablement and deployment of Arm Confidential Compute Architecture (CCA) based platforms',
-    googlegroupname: 'confidential-compute-private',
+    googlegroupname: 'confidential-compute',
   },
   {
     title: 'Windows on Arm',
@@ -53,6 +53,7 @@ const data = [
       'Enable collaboration on evolving Arm-architecture simulation, emulation, & virtualization technologies for secure firmware, hypervisor, kernel and AI workloads',
     googlegroupname: 'virtualization',
   },
+/*
   {
     title: 'Data Center',
     icon: iconLink,
@@ -60,6 +61,7 @@ const data = [
       'Focusing on technologies for cloud, on-prem and hybrid datacenter workloads as well as HPC.',
     googlegroupname: 'datacenter',
   },
+*/
   {
     title: 'Technical Advisory Committee',
     icon: iconLink,
@@ -116,6 +118,9 @@ const data = [
 
             <p class="text-left text-sm break-words text-gray-300 md:text-base">
               {item.description}
+            </p>
+            <p class="text-left text-cc-cyan md:text-base">
+              <a href={`https://groups.google.com/u/0/a/corecollective.dev/g/${item.googlegroupname}`}>List Archive</a>
             </p>
 
             {index !== data.length - 1 && (
