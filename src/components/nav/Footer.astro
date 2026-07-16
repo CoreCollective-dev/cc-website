@@ -33,14 +33,19 @@ const currentYear = new Date().getFullYear();
       class="flex flex-col items-center justify-between space-y-8 border-b border-white/10 pb-10 lg:flex-row lg:space-y-0"
     >
       <div class="flex flex-1 flex-col items-center justify-start">
-        <a href="/">
+        <a href="/" data-nav-item="Home">
           <img src={LogoImg.src} alt="Logo" class="h-24 w-auto" />
         </a>
         <ul class="not-prose flex flex-wrap gap-2">
           {
             socials.map((social) => (
               <li class="p-3">
-                <a href={social.url} target="_blank" aria-label={social.label}>
+                <a
+                  href={social.url}
+                  target="_blank"
+                  aria-label={social.label}
+                  data-nav-item={social.label}
+                >
                   <Icon
                     name={social.icon}
                     size={20}
@@ -99,3 +104,23 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
 </footer>
+
+<script>
+  import { pushEvent } from '../../lib/dataLayer';
+
+  document.querySelectorAll<HTMLAnchorElement>('footer a').forEach((anchor) => {
+    anchor.addEventListener('click', () => {
+      const item =
+        anchor.dataset.navItem ||
+        anchor.textContent?.trim() ||
+        anchor.getAttribute('aria-label') ||
+        '';
+
+      pushEvent({
+        event: 'navigation_click',
+        navigation: { item, breadcrumb: item, type: 'Footer' },
+      });
+      // Do NOT preventDefault — default navigation must proceed
+    });
+  });
+</script>
