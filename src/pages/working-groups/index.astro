@@ -10,7 +10,7 @@ import iconGear from '../../assets/icons/gear.svg';
 import iconData from '../../assets/icons/copy.svg';
 import iconLink from '../../assets/icons/link.svg';
 import PageTitle from '../../components/PageTitle.astro';
-import iconSOAFEE from '../../assets/icons/iconSOAFEE.svg'
+import iconSOAFEE from '../../assets/icons/iconSOAFEE.svg';
 
 const data = [
   {
@@ -59,17 +59,8 @@ const data = [
     icon: iconSOAFEE,
     description:
       'Cloud native software development methodology for physical AI.',
-    googlegroupname: 'soafee',
+    archiveUrl: 'https://www.soafee.io',
   },
-/*
-  {
-    title: 'Data Center',
-    icon: iconLink,
-    description:
-      'Focusing on technologies for cloud, on-prem and hybrid datacenter workloads as well as HPC.',
-    googlegroupname: 'datacenter',
-  },
-*/
   {
     title: 'Technical Advisory Committee',
     icon: iconLink,
@@ -79,7 +70,6 @@ const data = [
   },
 ];
 ---
-
 <BaseLayout title="Working Groups">
   <div
     class="flex w-full flex-col items-center gap-16 py-12"
@@ -103,41 +93,56 @@ const data = [
       class="flex w-full flex-row flex-wrap justify-center gap-y-16 px-8 md:px-16 lg:px-32"
     >
       {
-        data.map((item, index) => (
-          <li class="group relative flex w-full flex-col gap-4 px-4 md:w-1/2 lg:w-1/4">
-            <div class="flex w-full items-start gap-4">
-              <div class="flex w-1/4 shrink-0 justify-center">
-                {item.icon && (
-                  <img
-                    src={item.icon.src}
-                    alt={item.title}
-                    class="h-12 w-12 object-contain"
-                  />
-                )}
+        data.map((item, index) => {
+          const targetUrl = item.archiveUrl || (item.googlegroupname ? `https://groups.google.com/u/0/a/corecollective.dev/g/${item.googlegroupname}` : null);
+          const linkText = item.archiveUrl ? 'Learn More' : 'List Archive';
+
+          return (
+            <li class="group relative flex w-full flex-col gap-4 px-4 md:w-1/2 lg:w-1/4">
+              <div class="flex w-full items-start gap-4">
+                <div class="flex w-1/4 shrink-0 justify-center">
+                  {item.icon && (
+                    <img
+                      src={item.icon.src}
+                      alt={item.title}
+                      class="h-12 w-12 object-contain"
+                    />
+                  )}
+                </div>
+                <div class="flex w-3/4 items-center">
+                  <h1 class="text-cc-cyan text-left text-xl leading-tight font-bold break-words">
+                    {targetUrl ? (
+                      <a href={targetUrl} target="_blank" rel="noopener noreferrer">
+                        {item.title}
+                      </a>
+                    ) : (
+                      item.title
+                    )}
+                  </h1>
+                </div>
               </div>
-              <div class="flex w-3/4 items-center">
-                <h1 class="text-cc-cyan text-left text-xl leading-tight font-bold break-words">
-                  <a href={`https://groups.google.com/u/0/a/corecollective.dev/g/${item.googlegroupname}`}>
-                    {item.title}
+
+              <p class="text-left text-sm break-words text-gray-300 md:text-base">
+                {item.description}
+              </p>
+
+              {targetUrl && (
+                <p class="text-left text-cc-cyan md:text-base">
+                  <a href={targetUrl} target="_blank" rel="noopener noreferrer">
+                    {linkText}
                   </a>
-                </h1>
-              </div>
-            </div>
+                </p>
+              )}
 
-            <p class="text-left text-sm break-words text-gray-300 md:text-base">
-              {item.description}
-            </p>
-            <p class="text-left text-cc-cyan md:text-base">
-              <a href={`https://groups.google.com/u/0/a/corecollective.dev/g/${item.googlegroupname}`}>List Archive</a>
-            </p>
-
-            {index !== data.length - 1 && (
-              <div class="absolute top-0 right-0 hidden h-full w-0.5 bg-linear-to-b from-transparent via-white/30 to-transparent group-last:hidden md:block md:group-even:hidden lg:group-not-nth-[4n]:block lg:group-nth-[4n]:hidden" />
-            )}
-          </li>
-        ))
+              {index !== data.length - 1 && (
+                <div class="absolute top-0 right-0 hidden h-full w-0.5 bg-linear-to-b from-transparent via-white/30 to-transparent group-last:hidden md:block md:group-even:hidden lg:group-not-nth-[4n]:block lg:group-nth-[4n]:hidden" />
+              )}
+            </li>
+          );
+        })
       }
     </ul>
   </div>
   <Contact />
 </BaseLayout>
+
