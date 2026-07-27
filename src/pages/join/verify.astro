@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageTitle from '../../components/PageTitle.astro';
+import joinTitle from '../../assets/join 1.png';
+import backgroundImage from '../../assets/ccbgd3.png';
+---
+
+<BaseLayout title="Verify Email">
+  <div
+    class="flex w-full flex-col items-center gap-12 py-12 md:px-32 md:pb-32"
+    style={{
+      backgroundImage: `url(${backgroundImage.src})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  >
+    <!-- Hero Title Image -->
+    <PageTitle path={joinTitle} />
+
+    <!-- Code Verification Container -->
+    <div class="w-full max-w-md px-4">
+      <div class="bg-slate-900/80 backdrop-blur-md p-8 rounded-xl border border-slate-700/60 shadow-xl text-center space-y-6 text-white">
+        <h2 id="cardTitle" class="text-2xl font-bold">Verification Code Sent</h2>
+        <p id="cardDescription" class="text-sm text-slate-300">
+          A 4-digit verification code has been sent to your corporate email. Enter it below to complete your application.
+        </p>
+
+        <!-- Success Message Container (Hidden by default) -->
+        <div id="successBox" class="hidden p-4 bg-emerald-950/60 border border-emerald-500/50 text-emerald-200 rounded-md text-sm leading-relaxed text-left"></div>
+
+        <form id="verifyForm" class="space-y-4">
+          <div id="inputContainer">
+            <input
+              type="text"
+              id="code"
+              name="code"
+              maxlength="4"
+              required
+              placeholder="1234"
+              class="w-full text-center text-3xl font-mono tracking-[0.5em] py-3 bg-slate-800 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-cc-cyan text-white"
+            />
+          </div>
+
+          <div id="verifyError" class="hidden p-3 bg-red-900/50 border border-red-500/50 text-red-200 rounded-md text-xs font-medium"></div>
+
+          <button
+            type="submit"
+            id="verifyBtn"
+            class="w-full bg-cc-cyan hover:bg-cyan-400 text-slate-950 font-bold py-3 px-4 rounded-md shadow transition-colors text-sm uppercase tracking-wider cursor-pointer"
+          >
+            Verify & Complete
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const email = urlParams.get('email') || '';
+  const docusign = urlParams.get('docusign') || '';
+
+  const form = document.getElementById('verifyForm') as HTMLFormElement;
+  const errorBox = document.getElementById('verifyError');
+  const successBox = document.getElementById('successBox');
+  const inputContainer = document.getElementById('inputContainer');
+  const cardTitle = document.getElementById('cardTitle');
+  const cardDescription = document.getElementById('cardDescription');
+  const verifyBtn = document.getElementById('verifyBtn') as HTMLButtonElement;
+
+  let isCompleted = false;
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // If already verified, clicking OK redirects to the blank join page
+      if (isCompleted) {
+        window.location.href = '/join/';
+        return;
+      }
+
+      if (errorBox) errorBox.classList.add('hidden');
+
+      const codeInput = (document.getElementById('code') as HTMLInputElement)?.value.trim();
+
+      if (codeInput.length !== 4) {
+        if (errorBox) {
+          errorBox.classList.remove('hidden');
+          errorBox.innerText = 'Please enter a valid 4-digit code.';
+        }
+        return;
+      }
+
+      if (verifyBtn) {
+        verifyBtn.disabled = true;
+        verifyBtn.innerText = 'Verifying...';
+      }
+
+      try {
+        const res = await fetch('/api/join/verify/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            code: codeInput,
+            email,
+            docusignEnabled: docusign === 'true',
+          }),
+        });
+
+        const data = await res.json();
+
+        if (res.ok && (data.status === 'success' || data.redirectUrl === null)) {
+          isCompleted = true;
+
+          // Hide input controls and header description
+          if (inputContainer) inputContainer.classList.add('hidden');
+          if (cardDescription) cardDescription.classList.add('hidden');
+          if (cardTitle) cardTitle.innerText = 'Application Submitted';
+
+          // Show confirmation banner with text returned from server
+          if (successBox) {
+            successBox.classList.remove('hidden');
+            successBox.innerText = data.message || 'Your request has been successfully submitted, you will be receiving an email with the Membership Agreement, please follow the instructions in that email.';
+          }
+
+          // Transform button to "OK"
+          if (verifyBtn) {
+            verifyBtn.disabled = false;
+            verifyBtn.innerText = 'OK';
+          }
+        } else {
+          if (errorBox) {
+            errorBox.classList.remove('hidden');
+            errorBox.innerText = data.message || 'Invalid verification code.';
+          }
+          if (verifyBtn) {
+            verifyBtn.disabled = false;
+            verifyBtn.innerText = 'Verify & Complete';
+          }
+        }
+      } catch (err) {
+        if (errorBox) {
+          errorBox.classList.remove('hidden');
+          errorBox.innerText = 'Network error during verification. Please try again.';
+        }
+        if (verifyBtn) {
+          verifyBtn.disabled = false;
+          verifyBtn.innerText = 'Verify & Complete';
+        }
+      }
+    });
+  }
+</script>
+

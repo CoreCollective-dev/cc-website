@@ -9,45 +9,269 @@ import PageTitle from '../../components/PageTitle.astro';
 
 <BaseLayout title="Join">
   <div
-    class="flex w-full flex-col items-center gap-16 py-12 md:px-32 md:pb-56"
+    class="flex w-full flex-col items-center gap-12 py-12 md:px-32 md:pb-32"
     style={{
       backgroundImage: `url(${backgroundImage.src})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     }}
   >
+    <!-- Hero Title Image -->
     <PageTitle path={joinTitle} />
+
+    <!-- Intro & Clean 3-Step Overview (Smaller Text) -->
     <div
-      class="mx-8 flex flex-col gap-8 text-left text-xl text-white md:mx-24 md:text-xl"
+      class="mx-8 flex max-w-4xl flex-col gap-6 text-left text-white md:mx-24"
     >
-      <p class="text-2xl font-extrabold">
+      <p class="text-xl font-extrabold">
         Membership in CoreCollective is free. The steps to join are as follows:
       </p>
-      <ol class="list-disc space-y-8 text-left">
-        <li>
-          Review the CoreCollective Charter <a
-            href="/charter/"
-            class="text-cc-cyan">here</a
-          >
-        </li>
 
+      <ol class="list-decimal list-inside space-y-3 text-left text-sm">
         <li>
-          Download and fill out the <a
-            class="text-cc-cyan font-bold"
-            href="https://static.corecollective.dev/assets/CoreCollective+Membership+Agreement+-+v1.0+-+2026-01-27+(4).pdf"
-            target="_blank">Membership Agreement</a
-          >. Return the signed Membership Agreement via email to <a
-            href="mailto:enquiries@corecollective.dev"
-            class="text-cc-cyan">enquiries@corecollective.dev</a
-          > for countersignature.
+          Review the{' '}
+          <a href="/charter/" target="_blank" class="text-cc-cyan hover:underline font-medium">
+            CoreCollective Charter here
+          </a>.
         </li>
-
         <li>
-          CoreCollective Administrative team will countersign and return the
-          Membership Agreement to you.
+          Download and circulate the{' '}
+          <a href="https://static.corecollective.dev/assets/CoreCollective_Membership_Agreement-v2.0.pdf" target="_blank" download class="text-cc-cyan hover:underline font-medium">
+            Membership Agreement
+          </a>{' '}
+          internally for review within your organization. Contact CoreCollective with any questions.
+        </li>
+        <li>
+          Once general internal agreement is attained, fill in the Membership Submission form below and click "Submit". If you'd like an automated digital signature, check the DocuSign option; otherwise, leave it unchecked to download a copy to circulate and sign manually.
         </li>
       </ol>
+
+      <!-- Yellow Warning Box -->
+      <div class="mt-2 p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg text-amber-200 text-sm leading-relaxed flex items-start gap-3">
+        <svg class="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <div>
+          <strong class="font-semibold block mb-0.5 text-amber-300">Corporate Email Required</strong>
+          Membership is reserved for corporate entities. Personal email addresses (such as Gmail, Yahoo, Hotmail, ProtonMail, or iCloud) and non-corporate domain foundations are strictly blocked during verification.
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Form Container -->
+    <div class="w-full max-w-4xl mx-auto px-4">
+      <div class="bg-slate-900/80 backdrop-blur-md p-8 rounded-xl border border-slate-700/60 shadow-xl">
+        <!-- Form Section Header -->
+        <h2 class="text-xl font-bold text-white mb-6 pb-3 border-b border-slate-700/80">
+          CoreCollective Membership Submission Form
+        </h2>
+
+        <form id="joinForm" action="/api/join/send-code/" method="POST" class="space-y-6 text-white">
+          
+          <!-- DocuSign Toggle Box -->
+          <div class="flex items-start gap-3 p-4 bg-slate-800/80 border border-slate-700 rounded-lg">
+            <input
+              type="checkbox"
+              id="docusignEnabled"
+              name="docusignEnabled"
+              class="mt-1 h-4 w-4 rounded border-slate-600 bg-slate-900 text-cc-cyan focus:ring-cc-cyan cursor-pointer"
+            />
+            <label for="docusignEnabled" class="text-sm text-slate-100 font-medium cursor-pointer select-none">
+              Use DocuSign for digital signature
+              <span class="block text-xs text-slate-400 font-normal mt-0.5">
+                If checked, DocuSign will send an electronic agreement. If unchecked, a copy will be provided for manual offline signature.
+              </span>
+            </label>
+          </div>
+
+          <!-- Section 1: Company & Domains -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="companyName" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                Company Name <span class="text-red-400">*</span>
+              </label>
+              <input
+                type="text"
+                id="companyName"
+                name="companyName"
+                required
+                class="w-full px-3.5 py-2.5 bg-slate-800/90 text-white placeholder:text-slate-500 border border-slate-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cc-cyan text-sm"
+                placeholder="Acme Corporation"
+              />
+            </div>
+
+            <div>
+              <label for="allowedDomains" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                Allowed Corporate Domains <span class="text-red-400">*</span>
+              </label>
+              <input
+                type="text"
+                id="allowedDomains"
+                name="allowedDomains"
+                required
+                class="w-full px-3.5 py-2.5 bg-slate-800/90 text-white placeholder:text-slate-500 border border-slate-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cc-cyan text-sm"
+                placeholder="acme.com, acme.org"
+              />
+              <p class="text-xs text-slate-400 mt-1.5">
+                Comma-separated corporate domain(s) owned by your organization.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 2: Contact Info -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="contactName" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                Contact Name <span class="text-red-400">*</span>
+              </label>
+              <input
+                type="text"
+                id="contactName"
+                name="contactName"
+                required
+                class="w-full px-3.5 py-2.5 bg-slate-800/90 text-white placeholder:text-slate-500 border border-slate-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cc-cyan text-sm"
+                placeholder="Jane Doe"
+              />
+            </div>
+
+            <div>
+              <label for="contactEmail" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                Contact Corporate Email <span class="text-red-400">*</span>
+              </label>
+              <input
+                type="email"
+                id="contactEmail"
+                name="contactEmail"
+                required
+                class="w-full px-3.5 py-2.5 bg-slate-800/90 text-white placeholder:text-slate-500 border border-slate-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cc-cyan text-sm"
+                placeholder="jane@acme.com"
+              />
+            </div>
+          </div>
+
+          <!-- Conditional Signatory Email Field -->
+          <div id="signatoryContainer" class="hidden p-4 bg-slate-800/80 border border-slate-700 rounded-lg space-y-2">
+            <label for="docusignSignatoryEmail" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">
+              DocuSign Signatory Email <span class="text-red-400">*</span>
+            </label>
+            <input
+              type="email"
+              id="docusignSignatoryEmail"
+              name="docusignSignatoryEmail"
+              class="w-full md:w-2/3 px-3.5 py-2.5 bg-slate-900 text-white placeholder:text-slate-500 border border-slate-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-cc-cyan text-sm"
+              placeholder="authorized.signatory@acme.com"
+            />
+            <p class="text-xs text-slate-400">
+              Must be a corporate email address for the individual authorized to execute legal agreements for your company.
+            </p>
+          </div>
+
+          <!-- Validation Error Banner -->
+          <div id="errorBanner" class="hidden p-4 bg-red-900/50 border border-red-500/50 text-red-200 rounded-md text-sm font-medium"></div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            id="submitBtn"
+            class="w-full bg-cc-cyan hover:bg-cyan-400 text-slate-950 font-bold py-3.5 px-4 rounded-md shadow transition-colors text-sm uppercase tracking-wider cursor-pointer"
+          >
+            Submit Application
+          </button>
+        </form>
+      </div>
     </div>
   </div>
+
   <Contact />
 </BaseLayout>
+
+<script>
+  const form = document.getElementById('joinForm') as HTMLFormElement;
+  const errorBanner = document.getElementById('errorBanner');
+  const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+  const docusignCheckbox = document.getElementById('docusignEnabled') as HTMLInputElement;
+  const signatoryContainer = document.getElementById('signatoryContainer');
+  const signatoryInput = document.getElementById('docusignSignatoryEmail') as HTMLInputElement;
+
+  // Toggle Signatory input visibility
+  if (docusignCheckbox && signatoryContainer) {
+    docusignCheckbox.addEventListener('change', () => {
+      if (docusignCheckbox.checked) {
+        signatoryContainer.classList.remove('hidden');
+        if (signatoryInput) signatoryInput.setAttribute('required', 'true');
+      } else {
+        signatoryContainer.classList.add('hidden');
+        if (signatoryInput) {
+          signatoryInput.removeAttribute('required');
+          signatoryInput.value = '';
+        }
+      }
+    });
+  }
+
+  // Handle AJAX form submission
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Reset & hide error banner on each submission attempt
+      if (errorBanner) {
+        errorBanner.classList.add('hidden');
+        errorBanner.innerText = '';
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Processing...';
+      }
+
+      const formData = new FormData(form);
+      const payload = {
+        companyName: formData.get('companyName'),
+        contactName: formData.get('contactName'),
+        contactEmail: formData.get('contactEmail'),
+        allowedDomains: formData.get('allowedDomains'),
+        docusignEnabled: formData.get('docusignEnabled') === 'on' || formData.get('docusignEnabled') === 'true',
+        docusignSignatoryEmail: formData.get('docusignSignatoryEmail') || '',
+      };
+
+      try {
+        const res = await fetch('/api/join/send-code/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.status === 'success') {
+          const email = encodeURIComponent(payload.contactEmail as string);
+          const docusign = payload.docusignEnabled ? 'true' : 'false';
+          window.location.href = `/join/verify/?email=${email}&docusign=${docusign}`;
+        } else {
+          if (errorBanner) {
+            errorBanner.classList.remove('hidden');
+            
+            if (data.errors) {
+              const errMsgs = Object.values(data.errors).flat().join(' ');
+              errorBanner.innerText = errMsgs || data.message || 'Validation failed.';
+            } else {
+              errorBanner.innerText = data.message || 'Validation failed. Please check your inputs.';
+            }
+          }
+        }
+      } catch (err) {
+        if (errorBanner) {
+          errorBanner.classList.remove('hidden');
+          errorBanner.innerText = 'Network error occurred. Please try again.';
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerText = 'Submit Application';
+        }
+      }
+    });
+  }
+</script>
+
