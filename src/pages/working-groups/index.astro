@@ -33,6 +33,7 @@ const data = [
     description:
       'Targeting application layer support for Windows. From tooling to enablement and optimization of libraries on the Windows platform',
     googlegroupname: 'windows-on-arm',
+    githubUrl: 'https://github.com/CoreCollective-dev/windows-on-arm-wg',
   },
   {
     title: 'Android',
@@ -94,8 +95,10 @@ const data = [
     >
       {
         data.map((item, index) => {
-          const targetUrl = item.archiveUrl || (item.googlegroupname ? `https://groups.google.com/u/0/a/corecollective.dev/g/${item.googlegroupname}` : null);
-          const linkText = item.archiveUrl ? 'Learn More' : 'List Archive';
+          const archiveUrl = item.archiveUrl || (item.googlegroupname ? `https://groups.google.com/u/0/a/corecollective.dev/g/${item.googlegroupname}` : null);
+          const archiveText = item.archiveUrl ? 'Learn More' : 'List Archive';
+          // The title links to the GitHub URL when provided, otherwise to the archive/group.
+          const titleUrl = item.githubUrl || archiveUrl;
 
           return (
             <li class="group relative flex w-full flex-col gap-4 px-4 md:w-1/2 lg:w-1/4">
@@ -111,8 +114,8 @@ const data = [
                 </div>
                 <div class="flex w-3/4 items-center">
                   <h1 class="text-cc-cyan text-left text-xl leading-tight font-bold break-words">
-                    {targetUrl ? (
-                      <a href={targetUrl} target="_blank" rel="noopener noreferrer">
+                    {titleUrl ? (
+                      <a href={titleUrl} target="_blank" rel="noopener noreferrer">
                         {item.title}
                       </a>
                     ) : (
@@ -126,10 +129,18 @@ const data = [
                 {item.description}
               </p>
 
-              {targetUrl && (
+              {item.githubUrl && (
                 <p class="text-left text-cc-cyan md:text-base">
-                  <a href={targetUrl} target="_blank" rel="noopener noreferrer">
-                    {linkText}
+                  <a href={item.githubUrl} target="_blank" rel="noopener noreferrer">
+                    Learn More
+                  </a>
+                </p>
+              )}
+
+              {archiveUrl && (
+                <p class="text-left text-cc-cyan md:text-base">
+                  <a href={archiveUrl} target="_blank" rel="noopener noreferrer">
+                    {archiveText}
                   </a>
                 </p>
               )}
