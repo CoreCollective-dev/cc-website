@@ -129,19 +129,18 @@ const data = [
                 {item.description}
               </p>
 
-              {item.githubUrl && (
-                <p class="text-left text-cc-cyan md:text-base">
-                  <a href={item.githubUrl} target="_blank" rel="noopener noreferrer">
-                    Learn More
-                  </a>
-                </p>
-              )}
-
-              {archiveUrl && (
-                <p class="text-left text-cc-cyan md:text-base">
-                  <a href={archiveUrl} target="_blank" rel="noopener noreferrer">
-                    {archiveText}
-                  </a>
+              {(item.githubUrl || archiveUrl) && (
+                <p class="text-cc-cyan flex flex-row flex-wrap gap-x-6 gap-y-2 text-left md:text-base">
+                  {item.githubUrl && (
+                    <a href={item.githubUrl} target="_blank" rel="noopener noreferrer">
+                      Learn More
+                    </a>
+                  )}
+                  {archiveUrl && (
+                    <a href={archiveUrl} target="_blank" rel="noopener noreferrer">
+                      {archiveText}
+                    </a>
+                  )}
                 </p>
               )}
 
