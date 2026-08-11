@@ -33,6 +33,7 @@ const data = [
     description:
       'Targeting application layer support for Windows. From tooling to enablement and optimization of libraries on the Windows platform',
     googlegroupname: 'windows-on-arm',
+    slug: 'windows-on-arm',
     githubUrl: 'https://github.com/CoreCollective-dev/windows-on-arm-wg',
   },
   {
@@ -97,8 +98,11 @@ const data = [
         data.map((item, index) => {
           const archiveUrl = item.archiveUrl || (item.googlegroupname ? `https://groups.google.com/u/0/a/corecollective.dev/g/${item.googlegroupname}` : null);
           const archiveText = item.archiveUrl ? 'Learn More' : 'List Archive';
-          // The title links to the GitHub URL when provided, otherwise to the archive/group.
-          const titleUrl = item.githubUrl || archiveUrl;
+          // If the WG has a dedicated sub-page (slug), link there. Otherwise fall back to GitHub or archive.
+          const titleUrl = item.slug
+            ? `/working-groups/${item.slug}/`
+            : (item.githubUrl || archiveUrl);
+          const titleIsExternal = !item.slug;
 
           return (
             <li class="group relative flex w-full flex-col gap-4 px-4 md:w-1/2 lg:w-1/4">
@@ -115,7 +119,10 @@ const data = [
                 <div class="flex w-3/4 items-center">
                   <h1 class="text-cc-cyan text-left text-xl leading-tight font-bold break-words">
                     {titleUrl ? (
-                      <a href={titleUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={titleUrl}
+                        {...(titleIsExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      >
                         {item.title}
                       </a>
                     ) : (
@@ -133,7 +140,7 @@ const data = [
                 <p class="text-cc-cyan flex flex-row flex-wrap gap-x-6 gap-y-2 text-left md:text-base">
                   {item.githubUrl && (
                     <a href={item.githubUrl} target="_blank" rel="noopener noreferrer">
-                      Learn More
+                      GitHub
                     </a>
                   )}
                   {archiveUrl && (

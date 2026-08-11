@@ -46,9 +46,18 @@ const faqCollection = defineCollection({
   ),
 });
 
+const workingGroupsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
 export const collections = {
   blogs,
   logos: logosCollection,
   leadership: leadershipCollection,
   faq: faqCollection,
+  'working-groups': workingGroupsCollection,
 };
