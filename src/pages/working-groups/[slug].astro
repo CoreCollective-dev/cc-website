@@ -1,7 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Contact from '../../components/Contact.astro';
+import WGMembers from '../../components/WGMembers.astro';
+import WGNews from '../../components/WGNews.astro';
+import { resolveMembers } from '../../lib/companyLogos';
+import { selectLatestNews } from '../../lib/wgNews';
 import backgroundImage from '../../assets/ccbgd3.png';
 
 export async function getStaticPaths() {
@@ -14,6 +18,12 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const news = await getEntry('wg-news', entry.slug);
+const latest = news ? selectLatestNews(news.data.items, 3) : [];
+
+const membersEntry = await getEntry('wg-members', entry.slug);
+const members = membersEntry ? resolveMembers(membersEntry.data.members) : [];
 ---
 
 <BaseLayout title={entry.data.title}>
@@ -71,11 +81,19 @@ const { Content } = await entry.render();
             </p>
           </header>
 
+          {latest.length > 0 && (
+            <WGNews items={latest} heading={news?.data.heading} />
+          )}
+
           <div
             class="prose prose-invert prose-lg prose-headings:text-cc-cyan prose-a:text-cc-cyan prose-img:rounded-xl max-w-none text-left text-gray-200"
           >
             <Content />
           </div>
+
+          {members.length > 0 && (
+            <WGMembers members={members} heading={membersEntry?.data.heading} />
+          )}
         </article>
       </div>
     </div>

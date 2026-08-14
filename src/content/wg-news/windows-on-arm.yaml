@@ -1,0 +1,7 @@
+heading: Latest News
+items:
+  - headline: FFmpeg ARM64EC binaries now available
+    body: Prebuilt FFmpeg binaries for Windows on Arm are published for download.
+    date: 2026-07-01
+    links:
+      - { label: FFmpeg ARM64EC release page, href: https://github.com/Multicorewareinc/FFmpeg/releases }
