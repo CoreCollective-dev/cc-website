@@ -1,0 +1,14 @@
+---
+interface Props {
+  label?: string;
+}
+
+const { label = 'Note' } = Astro.props;
+---
+
+<div class="not-prose rounded-lg bg-white/5 p-4 text-sm text-gray-400 [&_a]:text-cc-cyan [&_a]:underline">
+  <p>
+    <strong class="text-gray-200">{label}:</strong>
+    <slot />
+  </p>
+</div>
