@@ -1,36 +1,30 @@
 - question: "How do I join a CoreCollective working group?"
   answer: |
-    Working groups are coordinated via Google Groups mailing lists.
-    The Google Working Group can be joined by visiting the <a
-    href="/working-groups/">Working Groups</a> page, clicking on the group
-    title, then click "ask to join." This method requires a user be logged into
-    a google account.  <br /><br />
-    A group can also be joined by emailing [group-name]+subscribe@corecollective.dev where the group-name is found in the url of the Google Working Group page. NOTE: A confirm email is sent to the originator from Google. This often ends up in spam, so after sending, please check your spam to process the confirm. Once that's completed, the user must respond to that email, and the request will be sent on to the admin for final approval. <br /><br />
-    At a future date each Working Group will have a team page which includes the group calendar and a place to store files. Until then, all WG information will be shared via the Google Group. <br /><br />
-    If you have any issues, please email <b>community-mgrs@corecollective.dev</b> and one of us will add you manually.
+    Working groups are accessible through the <a href="https://hub.corecollective.dev/" target="_blank" rel="noreferrer">CoreCollective Hub.</a>
+    Working Group access is restricted to CoreCollective members. Joining CoreCollective is accomplished by signing a corporate Membership Agreement. To learn more, see the <a href="https://corecollective.dev/join" target="_blank" rel="noreferrer">CoreCollective Join page.</a>
   category: "Working Group FAQs"
 
 - question: "What CoreCollective groups are available to join?"
   answer: >
-    The <a href="/working-groups/">Working Groups</a> page lists all the
+    The <a href="/working-groups/" target="_blank" rel="noreferrer">Working Groups</a> page lists all the
     active working groups.
-    Click on the group title to get to the Google Group page where you can
-    request to join and see the archives.
+    Click on the group title to find more information about that Working Group.
   category: "Working Group FAQs"
 
-- question: "Can I join via email instead of the Google Groups page?"
+- question: "Can I join via personal email?"
   answer: >
-    Yes, send an empty email to [group-name]+subscribe@corecollective.dev where
-    the group-name is found on the Working Group --> About page of the
-    associated Google Working Group.  
+    No, joining requires corporate Membership. Once signed, anyone from a company can join.
+    Exceptions can be made, but rarely. Individual contributers/technical experts/community maintainers
+    are examples of people that may gain non-corporate access. Feel free to reach out for more
+    information.
   category: "Mailing List FAQs"
 
-- question: "Are working group archives public?"
+- question: "Are working group mailing list archives public?"
   answer: >
     Yes, working groups keep public archives of the mailing list traffic.
     You don't need to be a member of a group to read the archive.
-    You can see the mailing list archive by clicking on the group name
-    on the <a href="/working-groups/">Working Groups</a> page.
+    You can navigate to the mailing list archive by clicking on the group name
+    on the <a href="/working-groups/" target="_blank" rel="noreferrer">Working Groups</a> page.
   category: "Mailing List FAQs"
 
 - question: "How do I propose a new CoreCollective Working Group or WG Initiative?"
