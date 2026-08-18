@@ -23,6 +23,8 @@
   scale: "0.8"
 - src: https://static.corecollective.dev/company_logos/graphcoreLogo.svg
   alt: graphcore logo
+- src: https://static.corecollective.dev/company_logos/gutlafLogo.png
+  alt: gutlaf logo
 - src: https://static.corecollective.dev/company_logos/huawei3.svg
   alt: huawei logo
   scale: "2.8"
