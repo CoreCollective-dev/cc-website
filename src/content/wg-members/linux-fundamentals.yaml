@@ -1,0 +1,14 @@
+heading: Working Group Members
+members:
+  - { name: AMD, logo: amd }
+  - { name: Ampere, logo: ampere }
+  - { name: Arm, logo: arm }
+  - { name: Canonical, logo: canonical }
+  - { name: CIX, logo: cix }
+  - { name: Fujitsu, logo: fujitsu }
+  - { name: Google, logo: google }
+  - { name: Huawei, logo: huawei }
+  - { name: Linaro, logo: linaro }
+  - { name: Qualcomm, logo: qualcomm }
+  - { name: Red Hat, logo: redhat }
+  - { name: SUSE, logo: suse }

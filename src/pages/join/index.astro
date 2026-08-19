@@ -6,7 +6,6 @@ import { Image } from 'astro:assets';
 import backgroundImage from '../../assets/ccbgd3.png';
 import PageTitle from '../../components/PageTitle.astro';
 ---
-
 <BaseLayout title="Join">
   <div
     class="flex w-full flex-col items-center gap-16 py-12 md:px-32 md:pb-56"
@@ -21,13 +20,28 @@ import PageTitle from '../../components/PageTitle.astro';
       class="mx-8 flex flex-col gap-8 text-left text-xl text-white md:mx-24 md:text-xl"
     >
       <p class="text-2xl font-extrabold">
-        Membership in CoreCollective is free. The steps to join are as follows:
+        Membership in CoreCollective is free for eligible organizations.
       </p>
-      <ol class="list-disc space-y-8 text-left">
+
+      {/* Membership Criteria Section */}
+      <div class="rounded-lg border border-white/20 bg-white/5 p-6 text-base md:text-lg">
+        <p class="font-bold text-white mb-2">Membership Eligibility:</p>
+        <ul class="list-disc space-y-2 pl-6">
+          <li><strong>Company-Level Membership:</strong> Membership applies at the organizational level. Exceptions for individuals may be made for recognized technical domain experts.</li>
+          <li><strong>Pre-Qualification:</strong> All applicants undergo a brief screening process to verify technical credentials prior to approval.</li>
+        </ul>
+      </div>
+
+      <p class="text-xl font-bold pt-2">
+        To apply, follow these simple steps:
+      </p>
+
+      <ol class="list-decimal space-y-8 text-left pl-6">
         <li>
           Review the CoreCollective Charter <a
             href="/charter/"
-            class="text-cc-cyan">here</a
+            class="text-cc-cyan"
+            >here</a
           >
         </li>
 
@@ -39,11 +53,11 @@ import PageTitle from '../../components/PageTitle.astro';
           >. Return the signed Membership Agreement via email to <a
             href="mailto:enquiries@corecollective.dev"
             class="text-cc-cyan">enquiries@corecollective.dev</a
-          > for countersignature.
+          > for qualification review and countersignature.
         </li>
 
         <li>
-          CoreCollective Administrative team will countersign and return the
+          Once verified, the CoreCollective Administrative team will countersign and return the
           Membership Agreement to you.
         </li>
       </ol>

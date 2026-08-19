@@ -1,0 +1,9 @@
+heading: Working Group Members
+members:
+  - { name: AMD, logo: amd }
+  - { name: Arm, logo: arm }
+  - { name: Canonical, logo: canonical }
+  - { name: CIX, logo: cix }
+  - { name: Linaro, logo: linaro }
+  - { name: Qualcomm, logo: qualcomm }
+  - { name: Red Hat, logo: redhat }
