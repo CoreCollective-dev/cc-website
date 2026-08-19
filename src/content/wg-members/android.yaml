@@ -1,0 +1,7 @@
+heading: Working Group Members
+members:
+  - { name: Arm, logo: arm }
+  - { name: CIX, logo: cix }
+  - { name: Google, logo: google }
+  - { name: Linaro, logo: linaro }
+  - { name: Samsung, logo: samsung }
