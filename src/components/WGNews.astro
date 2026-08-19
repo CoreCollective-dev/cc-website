@@ -19,7 +19,7 @@ const { items, heading = 'Latest News' } = Astro.props;
           <h3 class="text-cc-cyan mb-2 text-lg font-semibold">{item.headline}</h3>
           <p class="text-gray-200">{item.body}</p>
           {item.links && item.links.length > 0 && (
-            <ul class="mt-3 flex flex-wrap gap-4">
+            <ul class="mt-3 flex flex-wrap justify-center gap-4">
               {item.links.map((link) => (
                 <li>
                   <a
