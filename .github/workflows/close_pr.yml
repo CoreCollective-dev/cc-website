@@ -39,4 +39,14 @@ jobs:
           aws-region: eu-west-1
 
       - name: Remove SST Stage
-        run: npx sst remove --stage pr-${{ github.event.number }}
+        run: |
+          # Only attempt removal if the stage actually exists. If the PR
+          # was from a fork and its build never got deployed (build
+          # failed, or the PR was closed before deploy_preview.yml ran),
+          # there's nothing to tear down and `sst remove` would fail.
+          if npx sst unlock --stage pr-${{ github.event.number }} 2>/dev/null; then
+            echo "Stage exists, removing..."
+            npx sst remove --stage pr-${{ github.event.number }}
+          else
+            echo "No stage found for pr-${{ github.event.number }}, nothing to clean up."
+          fi

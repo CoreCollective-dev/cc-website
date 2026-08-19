@@ -1,0 +1,63 @@
+name: Build PR Artifact
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+# Cancel in-progress jobs or runs for the current pull request
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number }}
+  cancel-in-progress: true
+
+# Deliberately uses "pull_request", not "pull_request_target": this job
+# checks out and builds the PR's own code, so it must never run with
+# access to repository secrets. See deploy_preview.yml for the privileged
+# step that actually deploys the preview, using a workflow_run trigger.
+permissions:
+  contents: read
+  statuses: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Initialise Status
+        run: |
+          STATUSES_URL=$(jq -r ".pull_request.statuses_url" "$GITHUB_EVENT_PATH")
+          DATA='{"state": "pending", "target_url": "", "context": "Deploy preview", "description": "Waiting for site to build"}'
+          curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" -d "$DATA" "$STATUSES_URL"
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Astro Site
+        run: npm run build
+
+      - name: Save PR metadata
+        run: |
+          mkdir -p build-metadata
+          echo "${{ github.event.number }}" > build-metadata/pr_number.txt
+          echo "${{ github.event.pull_request.head.sha }}" > build-metadata/commit_sha.txt
+          jq -r ".pull_request.statuses_url" "$GITHUB_EVENT_PATH" > build-metadata/statuses_url.txt
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: |
+            dist/
+            build-metadata/
