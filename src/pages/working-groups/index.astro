@@ -102,7 +102,7 @@ const data = [
           // If the WG has a dedicated sub-page (slug), link there. Otherwise fall back to GitHub or archive.
           const titleUrl = item.slug
             ? `/working-groups/${item.slug}/`
-            : (item.githubUrl || archiveUrl);
+            : (item.githubUrl || archiveUrl || item.url);
           const titleIsExternal = !item.slug;
 
           return (
