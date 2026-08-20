@@ -16,15 +16,17 @@ const { items, heading = 'Latest News' } = Astro.props;
     <div class="space-y-6">
       {items.map((item) => (
         <div class="border-b border-gray-700 pb-6 last:border-b-0 last:pb-0">
-          <h3 class="text-cc-cyan mb-2 text-lg font-semibold">{item.headline}</h3>
+          <h3 class="text-cc-cyan mb-2 text-xl font-semibold">{item.headline}</h3>
           <p class="text-gray-200">{item.body}</p>
           {item.links && item.links.length > 0 && (
-            <ul class="mt-3 flex flex-wrap gap-4">
+            <ul class="mt-3 flex flex-wrap justify-center gap-4">
               {item.links.map((link) => (
                 <li>
                   <a
                     href={link.href}
-                    class="text-cc-cyan underline decoration-transparent transition-colors hover:decoration-current focus:outline-none focus:ring-2 focus:ring-cc-cyan focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-cc-cyan underline decoration-current transition-colors hover:decoration-current focus:outline-none focus:ring-2 focus:ring-cc-cyan focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
                   >
                     {link.label}
                   </a>
