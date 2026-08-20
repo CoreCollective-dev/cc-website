@@ -1,7 +1,12 @@
 heading: Latest News
 items:
-  - headline: FFmpeg ARM64EC binaries now available
+  - headline: FFmpeg ARM64EC Binaries Now Available
     body: Prebuilt FFmpeg binaries for Windows on Arm are published for download.
-    date: 2026-07-01
+    date: 2026-04-16
     links:
       - { label: FFmpeg ARM64EC release page, href: https://github.com/Multicorewareinc/FFmpeg/releases }
+  - headline: Arm AppReady - Faster Path to Native WoA Applications
+    body: Arm AppReady for Windows brings developer resources, tooling guidance, and engineering support into one place for teams building native applications for Windows on Arm
+    date: 2026-06-02
+    links:
+      - { label: Arm AppReady blog post, href: https://newsroom.arm.com/blog/arm-appready-for-windows-native-applications }
