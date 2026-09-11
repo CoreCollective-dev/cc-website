@@ -1,3 +1,6 @@
+- src: https://static.corecollective.dev/company_logos/accelerateLogo.png
+  alt: acclerate logo
+  scale: "2"
 - src: https://static.corecollective.dev/company_logos/amdLogo.svg
   alt: amd logo
   scale: "0.8"
@@ -6,6 +9,8 @@
 - src: https://static.corecollective.dev/company_logos/armLogo.svg
   alt: arm logo
   scale: "0.75"
+- src: https://static.corecollective.dev/company_logos/astemoLogo.png
+  alt: astemo logo
 - src: https://static.corecollective.dev/company_logos/canonicalLogo.svg
   alt: canonical logo
   scale: "2"
@@ -18,6 +23,9 @@
   alt: epam logo
 - src: https://static.corecollective.dev/company_logos/fujitsuLogo.svg
   alt: fujitsu logo
+- src: https://static.corecollective.dev/company_logos/futureweiLogo.png
+  alt: futurewei logo
+  scale: "1.5"
 - src: https://static.corecollective.dev/company_logos/googleLogo.svg
   alt: google logo
   scale: "0.8"
@@ -28,6 +36,8 @@
 - src: https://static.corecollective.dev/company_logos/huawei3.svg
   alt: huawei logo
   scale: "2.8"
+- src: https://static.corecollective.dev/company_logos/hyundaiMotorGroupLogo.png
+  alt: hyundai motor group logo
 - src: https://static.corecollective.dev/company_logos/lecomputingLogo.png
   alt: lecomputing logo
 - src: https://static.corecollective.dev/company_logos/linaroLogo.svg
@@ -52,3 +62,4 @@
   alt: suse logo
 - src: https://static.corecollective.dev/company_logos/vivoLogo.png
   alt: vivo logo
+  scale: "0.8"
