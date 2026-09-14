@@ -9,6 +9,11 @@ export interface CompanyLogo {
  * URLs reference assets on static.corecollective.dev.
  */
 export const companyLogos: Record<string, CompanyLogo> = {
+  accelerate: {
+    src: "https://static.corecollective.dev/company_logos/accelerateLogo.png",
+    alt: "acclerate logo",
+    scale: "2",
+  },
   amd: {
     src: "https://static.corecollective.dev/company_logos/amdLogo.svg",
     alt: "amd logo",
@@ -22,6 +27,10 @@ export const companyLogos: Record<string, CompanyLogo> = {
     src: "https://static.corecollective.dev/company_logos/armLogo.svg",
     alt: "arm logo",
     scale: "0.75",
+  },
+  astemo: {
+    src: "https://static.corecollective.dev/company_logos/astemoLogo.png",
+    alt: "astemo logo",
   },
   canonical: {
     src: "https://static.corecollective.dev/company_logos/canonicalLogo.svg",
@@ -45,6 +54,11 @@ export const companyLogos: Record<string, CompanyLogo> = {
     src: "https://static.corecollective.dev/company_logos/fujitsuLogo.svg",
     alt: "fujitsu logo",
   },
+  futurewei: {
+    src: "https://static.corecollective.dev/company_logos/futureweiLogo.png",
+    alt: "futurewei logo",
+    scale: "1.5",
+  },
   google: {
     src: "https://static.corecollective.dev/company_logos/googleLogo.svg",
     alt: "google logo",
@@ -62,6 +76,10 @@ export const companyLogos: Record<string, CompanyLogo> = {
     src: "https://static.corecollective.dev/company_logos/huawei3.svg",
     alt: "huawei logo",
     scale: "2.8",
+  },
+  hyundaimotorgroup: {
+    src: "https://static.corecollective.dev/company_logos/hyundaiMotorGroupLogo.png",
+    alt: "hyundai motor group logo",
   },
   lecomputing: {
     src: "https://static.corecollective.dev/company_logos/lecomputingLogo.png",
@@ -115,6 +133,7 @@ export const companyLogos: Record<string, CompanyLogo> = {
   vivo: {
     src: "https://static.corecollective.dev/company_logos/vivoLogo.png",
     alt: "vivo logo",
+    scale: "0.8",
   },
 };
 
