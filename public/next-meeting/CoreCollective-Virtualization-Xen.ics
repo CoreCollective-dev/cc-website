@@ -1,0 +1,89 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:Europe/London
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:7.36.20260904T101043Z@hub.corecollective.dev
+DTSTAMP:20260904T101043Z
+ATTENDEE;RSVP=FALSE:MAILTO:virtualization@hub.corecollective.dev
+DESCRIPTION:Welcome to the bi-weekly CoreCollective Virtualization Xen Sub-
+ group meeting.\n\nThis is the new meeting invite sent from the Causeway pl
+ atform at https://hub.corecollective.dev/. \nAn agenda will be sent out cl
+ oser to the meeting.\nMeeting notes will be posted in the CoreCollective d
+ iscussion forum https://hub.corecollective.dev/wg/Virt/mail.\n\nBest regar
+ ds\,\nBertrand Marquis (chair) and Julianus Larson (Community manager)\n\n
+ Topic: CC Virtualization: Xen subgroup\nJoin Zoom Meeting\nhttps://us06web
+ .zoom.us/j/86161241771?pwd=rtX1wKPTMXouHW7RTf2eQtZ0cMbIc8.1\n\nMeeting cha
+ t link\nhttps://us06web.zoom.us/launch/jc/86161241771\n\nMeeting ID: 861 6
+ 124 1771\nPasscode: 416894\n\n---\n\nOne tap mobile\n+442080806591\,\,8616
+ 1241771#\,\,\,\,*416894# United Kingdom\n+442080806592\,\,86161241771#\,\,
+ \,\,*416894# United Kingdom\n\n---\n\nJoin by SIP\n• 86161241771@zoomcrc.c
+ om\n\nJoin instructions\nhttps://us06web.zoom.us/meetings/86161241771/invi
+ tations?signature=SST9H9jD4TqQGM0gyY3o8JojKdQqbfOYfUzL2hy1WGg\n
+DTSTART;TZID=Europe/London:20260907T150000
+DTEND;TZID=Europe/London:20260907T160000
+ORGANIZER;CN=Virtualization:MAILTO:cwy-event-36@hub.corecollective.dev
+RRULE:FREQ=WEEKLY;UNTIL=20270930T150000Z;INTERVAL=4;BYDAY=MO
+SEQUENCE:1
+SUMMARY:CoreCollective Virtualization Xen Sub-group
+X-ALT-DESC;FMTTYPE=text/html:<p>Welcome to the bi-weekly CoreCollective Vir
+ tualization Xen Sub-group meeting.</p>\n<p>This is the new meeting invite 
+ sent from the Causeway platform at&nbsp\;<a href='https://hub.corecollecti
+ ve.dev/'>https://hub.corecollective.dev/.</a>&nbsp\;<br>An agenda will be 
+ sent out closer to the meeting.<br>Meeting notes will be posted in the Cor
+ eCollective discussion forum <a href='https://hub.corecollective.dev/wg/Vi
+ rt/mail'>https://hub.corecollective.dev/wg/Virt/mail</a>.<br><br>Best rega
+ rds\,<br>Bertrand Marquis (chair) and Julianus Larson (Community manager)<
+ br><br>Topic: CC Virtualization: Xen subgroup<br>Join Zoom Meeting<br><a h
+ ref='https://www.google.com/url?q=https://us06web.zoom.us/j/86161241771?pw
+ d%3DrtX1wKPTMXouHW7RTf2eQtZ0cMbIc8.1&amp\;sa=D&amp\;source=calendar&amp\;u
+ st=1788939673765778&amp\;usg=AOvVaw2AvlUZDt8KoIeZcnuQqLwq' target='_blank'
+  rel='noopener'><span style='text-decoration: underline\;'>https://us06web
+ .zoom.us/j/86161241771?pwd=rtX1wKPTMXouHW7RTf2eQtZ0cMbIc8.1</span></a><br>
+ <br>Meeting chat link<br><a href='https://www.google.com/url?q=https://us0
+ 6web.zoom.us/launch/jc/86161241771&amp\;sa=D&amp\;source=calendar&amp\;ust
+ =1788939673765778&amp\;usg=AOvVaw0ghW5KUK0CXAlOtP_w7vmR' target='_blank' r
+ el='noopener'><span style='text-decoration: underline\;'>https://us06web.z
+ oom.us/launch/jc/86161241771</span></a><br><br>Meeting ID: 861 6124 1771<b
+ r>Passcode: 416894<br><br>---<br><br>One tap mobile<br><span style='text-d
+ ecoration: underline\;'>+442080806591</span>\,\,86161241771#\,\,\,\,*41689
+ 4# United Kingdom<br><span style='text-decoration: underline\;'>+442080806
+ 592</span>\,\,86161241771#\,\,\,\,*416894# United Kingdom<br><br>---<br><b
+ r>Join by SIP<br>&bull\;&nbsp\;<a href='mailto:86161241771@zoomcrc.com' ta
+ rget='_blank' rel='noopener'><span style='text-decoration: underline\;'>86
+ 161241771@zoomcrc.com</span></a><br><br>Join instructions<br><a href='http
+ s://www.google.com/url?q=https://us06web.zoom.us/meetings/86161241771/invi
+ tations?signature%3DSST9H9jD4TqQGM0gyY3o8JojKdQqbfOYfUzL2hy1WGg&amp\;sa=D&
+ amp\;source=calendar&amp\;ust=1788939673765778&amp\;usg=AOvVaw2fJwn8MbyFCk
+ iyu4mn_X7O' target='_blank' rel='noopener'><span style='text-decoration: u
+ nderline\;'>https://us06web.zoom.us/meetings/86161241771/invitations?signa
+ ture=SST9H9jD4TqQGM0gyY3o8JojKdQqbfOYfUzL2hy1WGg</span></a></p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

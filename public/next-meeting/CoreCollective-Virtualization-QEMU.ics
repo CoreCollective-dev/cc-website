@@ -1,0 +1,89 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:Europe/London
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:7.35.20260904T100940Z@hub.corecollective.dev
+DTSTAMP:20260904T100940Z
+ATTENDEE;RSVP=FALSE:MAILTO:virtualization@hub.corecollective.dev
+DESCRIPTION:Welcome to the CoreCollective Virtualization QEMU/KVM Sub-group
+  meeting.\n\n\nThis is the new meeting invite sent from the Causeway platf
+ orm at https://hub.corecollective.dev/. \nAn agenda will be sent out close
+ r to the meeting.\nMeeting notes will be posted in the CoreCollective disc
+ ussion forum https://hub.corecollective.dev/wg/Virt/mail.\n\nBest regards\
+ ,\nAlex Benée (chair) and Julianus Larson (Community manager)\n\nTopic: CC
+  Virtualization: QEMU/KVM subgroup\nJoin Zoom Meeting\nhttps://us06web.zoo
+ m.us/j/82805577543?pwd=uam4IvG7ZFCfzRoBivnI5vPyeaa19Z.1\n\nMeeting chat li
+ nk\nhttps://us06web.zoom.us/launch/jc/82805577543\n\n\nMeeting ID: 828 055
+ 7 7543\nPasscode: 918394\n\n---\n\nOne tap mobile\n+442080806591\,\,828055
+ 77543#\,\,\,\,*918394# United Kingdom\n+442080806592\,\,82805577543#\,\,\,
+ \,*918394# United Kingdom\n\n---\n\nJoin by SIP\n• 82805577543@zoomcrc.com
+ \n\nJoin instructions\nhttps://us06web.zoom.us/meetings/82805577543/invita
+ tions?signature=0OPQ1vrXxGgk0-zln8X425ZUCvaqiuEM0Wfm172fO-A\n
+DTSTART;TZID=Europe/London:20260909T150000
+DTEND;TZID=Europe/London:20260909T160000
+ORGANIZER;CN=Virtualization:MAILTO:cwy-event-35@hub.corecollective.dev
+RRULE:FREQ=WEEKLY;UNTIL=20270930T150000Z;INTERVAL=4;BYDAY=WE
+SEQUENCE:3
+SUMMARY:CoreCollective Virtualization QEMU/KVM Sub-group
+X-ALT-DESC;FMTTYPE=text/html:<p>Welcome to the CoreCollective Virtualizatio
+ n QEMU/KVM Sub-group meeting.</p>\n<p><br>This is the new meeting invite s
+ ent from the Causeway platform at&nbsp\;<a href='https://hub.corecollectiv
+ e.dev/'>https://hub.corecollective.dev/.</a>&nbsp\;<br>An agenda will be s
+ ent out closer to the meeting.<br>Meeting notes will be posted in the Core
+ Collective discussion forum <a href='https://hub.corecollective.dev/wg/Vir
+ t/mail'>https://hub.corecollective.dev/wg/Virt/mail</a>.<br><br>Best regar
+ ds\,<br>Alex Ben&eacute\;e (chair) and Julianus Larson (Community manager)
+ <br><br>Topic: CC Virtualization: QEMU/KVM subgroup<br>Join Zoom Meeting<b
+ r><a href='https://www.google.com/url?q=https://us06web.zoom.us/j/82805577
+ 543?pwd%3Duam4IvG7ZFCfzRoBivnI5vPyeaa19Z.1&amp\;sa=D&amp\;source=calendar&
+ amp\;ust=1788939673765778&amp\;usg=AOvVaw1wFp1i1jhG9LfUXeQ9DWu1' target='_
+ blank' rel='noopener'><span style='text-decoration: underline\;'>https://u
+ s06web.zoom.us/j/82805577543?pwd=uam4IvG7ZFCfzRoBivnI5vPyeaa19Z.1</span></
+ a><br><br>Meeting chat link<br><a href='https://www.google.com/url?q=https
+ ://us06web.zoom.us/launch/jc/82805577543&amp\;sa=D&amp\;source=calendar&am
+ p\;ust=1788939673765778&amp\;usg=AOvVaw2Gf3gvpirAt80uEZtaeQzJ' target='_bl
+ ank' rel='noopener'><span style='text-decoration: underline\;'>https://us0
+ 6web.zoom.us/launch/jc/82805577543</span></a><br><br><br>Meeting ID: 828 0
+ 557 7543<br>Passcode: 918394<br><br>---<br><br>One tap mobile<br><span sty
+ le='text-decoration: underline\;'>+442080806591</span>\,\,82805577543#\,\,
+ \,\,*918394# United Kingdom<br><span style='text-decoration: underline\;'>
+ +442080806592</span>\,\,82805577543#\,\,\,\,*918394# United Kingdom<br><br
+ >---<br><br>Join by SIP<br>&bull\;&nbsp\;<a href='mailto:82805577543@zoomc
+ rc.com' target='_blank' rel='noopener'><span style='text-decoration: under
+ line\;'>82805577543@zoomcrc.com</span></a><br><br>Join instructions<br><a 
+ href='https://www.google.com/url?q=https://us06web.zoom.us/meetings/828055
+ 77543/invitations?signature%3D0OPQ1vrXxGgk0-zln8X425ZUCvaqiuEM0Wfm172fO-A&
+ amp\;sa=D&amp\;source=calendar&amp\;ust=1788939673765778&amp\;usg=AOvVaw3P
+ Qn3CmPl6v9_JJidknnqC' target='_blank' rel='noopener'><span style='text-dec
+ oration: underline\;'>https://us06web.zoom.us/meetings/82805577543/invitat
+ ions?signature=0OPQ1vrXxGgk0-zln8X425ZUCvaqiuEM0Wfm172fO-A</span></a></p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
