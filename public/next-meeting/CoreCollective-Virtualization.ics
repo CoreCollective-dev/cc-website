@@ -1,0 +1,76 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:Europe/Amsterdam
+BEGIN:VTIMEZONE
+TZID:Europe/Amsterdam
+X-LIC-LOCATION:Europe/Amsterdam
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:7.51.20260922T140208Z@hub.corecollective.dev
+DTSTAMP:20260922T140208Z
+ATTENDEE;RSVP=FALSE:MAILTO:virtualization@hub.corecollective.dev
+DESCRIPTION:Hi\,\n\nIt is time to have a full Virtualization sync again. Th
+ e agenda is not fully set yet so\, please\, let us know any specific topic
+ s you would like to discuss.\n\nBest regards\,\n\nMark and Julianus\n\nTim
+ e: Oct 14\, 2026 04:00 PM Amsterdam\, Berlin\, Rome\, Stockholm\, Vienna\n
+ \nJoin Zoom Meeting\nhttps://us06web.zoom.us/j/84982038769?pwd=CK1b28SPquc
+ RF3LaJXTWabfH5LMKra.1\n\nMeeting chat link\nhttps://us06web.zoom.us/launch
+ /jc/84982038769\n\nView meeting insights\nhttps://us06web.zoom.us/launch/e
+ dl?muid=26544e00-3e92-4337-908e-9eae83f17ca8\n\nMeeting ID: 849 8203 8769
+ \nPasscode: 851246\n\n---\n\nOne tap mobile\n+442034815240\,\,84982038769#
+ \,\,\,\,*851246# United Kingdom\n+442039017895\,\,84982038769#\,\,\,\,*851
+ 246# United Kingdom\n\n---\n\nJoin by SIP\n• 84982038769@zoomcrc.com\n\nJo
+ in instructions\nhttps://us06web.zoom.us/meetings/84982038769/invitations?
+ signature=M9jVEe_PdJgXq3j7UN8qEnia1i-SUoxNIyZwJjgsEMM\n
+DTSTART;TZID=Europe/Amsterdam:20261021T160000
+DTEND;TZID=Europe/Amsterdam:20261021T170000
+ORGANIZER;CN=Virtualization:MAILTO:cwy-event-51@hub.corecollective.dev
+SEQUENCE:1
+SUMMARY:CoreCollective Virtualization all groups
+X-ALT-DESC;FMTTYPE=text/html:<p>Hi\,</p>\n<p>It is time to have a full Virt
+ ualization sync again. The agenda is not fully set yet so\, please\, let u
+ s know any specific topics you would like to discuss.</p>\n<p>Best regards
+ \,</p>\n<p>Mark and Julianus</p>\n<p>Time: Oct 14\, 2026 04:00 PM Amsterda
+ m\, Berlin\, Rome\, Stockholm\, Vienna</p>\n<p>Join Zoom Meeting<br><a hre
+ f='https://us06web.zoom.us/j/84982038769?pwd=CK1b28SPqucRF3LaJXTWabfH5LMKr
+ a.1'>https://us06web.zoom.us/j/84982038769?pwd=CK1b28SPqucRF3LaJXTWabfH5LM
+ Kra.1</a></p>\n<p>Meeting chat link<br><a href='https://us06web.zoom.us/la
+ unch/jc/84982038769'>https://us06web.zoom.us/launch/jc/84982038769</a></p>
+ \n<p>View meeting insights<br><a href='https://us06web.zoom.us/launch/edl?
+ muid=26544e00-3e92-4337-908e-9eae83f17ca8'>https://us06web.zoom.us/launch/
+ edl?muid=26544e00-3e92-4337-908e-9eae83f17ca8</a></p>\n<p>Meeting ID: 849 
+ 8203 8769<br>Passcode: 851246</p>\n<p>---</p>\n<p>One tap mobile<br>+44203
+ 4815240\,\,84982038769#\,\,\,\,*851246# United Kingdom<br>+442039017895\,\
+ ,84982038769#\,\,\,\,*851246# United Kingdom</p>\n<p>---</p>\n<p>Join by S
+ IP<br>&bull\; 84982038769@zoomcrc.com</p>\n<p>Join instructions<br><a href
+ ='https://us06web.zoom.us/meetings/84982038769/invitations?signature=M9jVE
+ e_PdJgXq3j7UN8qEnia1i-SUoxNIyZwJjgsEMM'>https://us06web.zoom.us/meetings/8
+ 4982038769/invitations?signature=M9jVEe_PdJgXq3j7UN8qEnia1i-SUoxNIyZwJjgsE
+ MM</a></p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

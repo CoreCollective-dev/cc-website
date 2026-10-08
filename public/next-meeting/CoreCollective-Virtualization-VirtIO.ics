@@ -1,0 +1,89 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:Europe/London
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:7.53.20261008T070834Z@hub.corecollective.dev
+DTSTAMP:20261008T070834Z
+ATTENDEE;RSVP=FALSE:MAILTO:virtualization@hub.corecollective.dev
+DESCRIPTION:Welcome to the CoreCollective Virtualization VirtIO Sub-group m
+ eeting.\nThis is the new meeting invite sent from the Causeway platform at
+  https://hub.corecollective.dev/. \nAn agenda will be sent out closer to t
+ he meeting.\nMeeting notes will be posted in the CoreCollective discussion
+  forum https://hub.corecollective.dev/wg/Virt/mail.\n\nBest regards\,\nSum
+ it Semwal (chair) and Julianus Larson (Community manager)\n\nTopic: CC Vir
+ tualization: VirtIO subgroup\nJoin Zoom Meeting\nhttps://us06web.zoom.us/j
+ /84676886280?pwd=2gXDY9Lvkjlw1JF45gB9s6UanUxGyJ.1\n\nMeeting chat link\nht
+ tps://us06web.zoom.us/launch/jc/84676886280\n\nMeeting ID: 846 7688 6280\n
+ Passcode: 306392\n\n---\n\nOne tap mobile\n+441314601196\,\,84676886280#\,
+ \,\,\,*306392# United Kingdom\n+442034815237\,\,84676886280#\,\,\,\,*30639
+ 2# United Kingdom\n\n\n---\n\nJoin by SIP\n• 84676886280@zoomcrc.com\n\nJo
+ in instructions\nhttps://us06web.zoom.us/meetings/84676886280/invitations?
+ signature=Wm8hVwaAYWjAIp6m1z7u2xu2AMQD0sr7rtTG1J0pLTg\n
+DTSTART;TZID=Europe/London:20261027T160000
+DTEND;TZID=Europe/London:20261027T170000
+ORGANIZER;CN=Virtualization:MAILTO:cwy-event-53@hub.corecollective.dev
+RRULE:FREQ=WEEKLY;UNTIL=20270930T160000Z;INTERVAL=4;BYDAY=TU
+SEQUENCE:1
+SUMMARY:CoreCollective Virtualization VirtIO Sub-group
+X-ALT-DESC;FMTTYPE=text/html:<p>Welcome to the CoreCollective Virtualizatio
+ n VirtIO Sub-group meeting.<br>This is the new meeting invite sent from th
+ e Causeway platform at&nbsp\;<a href='https://hub.corecollective.dev/'>htt
+ ps://hub.corecollective.dev/.</a>&nbsp\;<br>An agenda will be sent out clo
+ ser to the meeting.<br>Meeting notes will be posted in the CoreCollective 
+ discussion forum <a href='https://hub.corecollective.dev/wg/Virt/mail'>htt
+ ps://hub.corecollective.dev/wg/Virt/mail</a>.<br><br>Best regards\,<br>Sum
+ it Semwal (chair) and Julianus Larson (Community manager)<br><br>Topic: CC
+  Virtualization: VirtIO subgroup<br>Join Zoom Meeting<br><a href='https://
+ www.google.com/url?q=https://us06web.zoom.us/j/84676886280?pwd%3D2gXDY9Lvk
+ jlw1JF45gB9s6UanUxGyJ.1&amp\;sa=D&amp\;source=calendar&amp\;ust=1788939669
+ 731624&amp\;usg=AOvVaw1lSoarT0nbtRHOQ-UC02UR' target='_blank' rel='noopene
+ r'><span style='text-decoration: underline\;'>https://us06web.zoom.us/j/84
+ 676886280?pwd=2gXDY9Lvkjlw1JF45gB9s6UanUxGyJ.1</span></a><br><br>Meeting c
+ hat link<br><a href='https://www.google.com/url?q=https://us06web.zoom.us/
+ launch/jc/84676886280&amp\;sa=D&amp\;source=calendar&amp\;ust=178893966973
+ 1624&amp\;usg=AOvVaw1Z7zfPhNOnRI0nR7d6BWoE' target='_blank' rel='noopener'
+ ><span style='text-decoration: underline\;'>https://us06web.zoom.us/launch
+ /jc/84676886280</span></a><br><br>Meeting ID: 846 7688 6280<br>Passcode: 3
+ 06392<br><br>---<br><br>One tap mobile<br><span style='text-decoration: un
+ derline\;'>+441314601196</span>\,\,84676886280#\,\,\,\,*306392# United Kin
+ gdom<br><span style='text-decoration: underline\;'>+442034815237</span>\,\
+ ,84676886280#\,\,\,\,*306392# United Kingdom<br><br><br>---<br><br>Join by
+  SIP<br>&bull\;&nbsp\;<a href='mailto:84676886280@zoomcrc.com' target='_bl
+ ank' rel='noopener'><span style='text-decoration: underline\;'>84676886280
+ @zoomcrc.com</span></a><br><br>Join instructions<br><a href='https://www.g
+ oogle.com/url?q=https://us06web.zoom.us/meetings/84676886280/invitations?s
+ ignature%3DWm8hVwaAYWjAIp6m1z7u2xu2AMQD0sr7rtTG1J0pLTg&amp\;sa=D&amp\;sour
+ ce=calendar&amp\;ust=1788939669731624&amp\;usg=AOvVaw1RGu-uvsj-CoH9ZrGNpIj
+ m' target='_blank' rel='noopener'><span style='text-decoration: underline\
+ ;'>https://us06web.zoom.us/meetings/84676886280/invitations?signature=Wm8h
+ VwaAYWjAIp6m1z7u2xu2AMQD0sr7rtTG1J0pLTg</span></a></p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
