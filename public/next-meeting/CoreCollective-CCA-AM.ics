@@ -1,0 +1,88 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:UTC
+BEGIN:VTIMEZONE
+TZID:UTC
+BEGIN:STANDARD
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0000
+TZNAME:UTC
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:11.32.20260904T074346Z@hub.corecollective.dev
+DTSTAMP:20260904T074346Z
+ATTENDEE;RSVP=FALSE:MAILTO:confidential-compute@hub.corecollective.dev
+DESCRIPTION:Welcome to the bi-weekly CoreCollective Confidential Compute me
+ eting!\n\nThis is the new meeting invite sent from the Causeway platform a
+ t https://hub.corecollective.dev/.\n\nThe agenda will be posted before the
+  meeting in the groups discussion forum https://hub.corecollective.dev/wg/
+ CCA/mail and thereby also sent out to all members. There are two meetings 
+ with the same agenda to accomodate for different time zones. Please select
+  which one you want to attend by accepting or declining the invites.\n\nRe
+ member that feedback and topics for the agenda are always welcome!\n\nBest
+  regards\,\nCoreCollective Confidential Compute leads\n\nTopic: CoreCollec
+ tive Confidential Compute bi-weekly 1/2\nTime: This is a recurring meeting
+  Meet anytime\nJoin Zoom Meeting\nhttps://us06web.zoom.us/j/87614114473\n
+ \nMeeting chat link\nhttps://us06web.zoom.us/launch/jc/87614114473\n\nMeet
+ ing ID: 876 1411 4473\n\n---\n\nOne tap mobile\n+442039017895\,\,876141144
+ 73# United Kingdom\n+442080806591\,\,87614114473# United Kingdom\n\n---\n
+ \nJoin by SIP\n• 87614114473@zoomcrc.com\n\nJoin instructions\nhttps://us0
+ 6web.zoom.us/meetings/87614114473/invitations?signature=_3uNC_uogxet58eGWW
+ 7qDnEz7u3KEn8djjPC9hRFIHg\n\nPlease note that this recurring event has cha
+ nges in some of the occurrences:\nException for 2026-09-28\n Please refer 
+ to the Calendar on Causeway for complete information.\n
+DTSTART:20260914T090000Z
+DTEND:20260914T100000Z
+ORGANIZER;CN=Confidential Compute:MAILTO:cwy-event-32@hub.corecollective.de
+ v
+RRULE:FREQ=WEEKLY;UNTIL=20270930T100000Z;INTERVAL=2;BYDAY=MO
+SEQUENCE:1
+SUMMARY:CoreCollective Confidential Compute 1/2
+X-ALT-DESC;FMTTYPE=text/html:<p>Welcome to the bi-weekly CoreCollective Con
+ fidential Compute meeting!</p>\n<p>This is the new meeting invite sent fro
+ m the Causeway platform at <a href='https://hub.corecollective.dev/'>https
+ ://hub.corecollective.dev/.</a></p>\n<p>The agenda will be posted before t
+ he meeting in the groups discussion forum <a href='https://hub.corecollect
+ ive.dev/wg/CCA/mail'>https://hub.corecollective.dev/wg/CCA/mail</a> and th
+ ereby also sent out to all members. There are two meetings with the same a
+ genda to accomodate for different time zones. Please select which one you 
+ want to attend by accepting or declining the invites.<br><br>Remember that
+  feedback and topics for the agenda are always welcome!<br><br>Best regard
+ s\,<br>CoreCollective Confidential Compute leads<br><br>Topic: CoreCollect
+ ive Confidential Compute bi-weekly 1/2<br>Time: This is a recurring meetin
+ g Meet anytime<br>Join Zoom Meeting<br><a href='https://www.google.com/url
+ ?q=https://us06web.zoom.us/j/87614114473&amp\;sa=D&amp\;source=calendar&am
+ p\;ust=1788869514158255&amp\;usg=AOvVaw0exqtaaqsf2TvRcbT6ZAg-' target='_bl
+ ank' rel='noopener'>https://us06web.zoom.us/j/87614114473</a><br><br>Meeti
+ ng chat link<br><a href='https://www.google.com/url?q=https://us06web.zoom
+ .us/launch/jc/87614114473&amp\;sa=D&amp\;source=calendar&amp\;ust=17888695
+ 14158255&amp\;usg=AOvVaw3knCXdlUvPI3isJWEcvRyP' target='_blank' rel='noope
+ ner'>https://us06web.zoom.us/launch/jc/87614114473</a><br><br>Meeting ID: 
+ 876 1411 4473<br><br>---<br><br>One tap mobile<br>+442039017895\,\,8761411
+ 4473# United Kingdom<br>+442080806591\,\,87614114473# United Kingdom<br><b
+ r>---<br><br>Join by SIP<br>&bull\;&nbsp\;<a href='mailto:87614114473@zoom
+ crc.com' target='_blank' rel='noopener'>87614114473@zoomcrc.com</a><br><br
+ >Join instructions<br><a href='https://www.google.com/url?q=https://us06we
+ b.zoom.us/meetings/87614114473/invitations?signature%3D_3uNC_uogxet58eGWW7
+ qDnEz7u3KEn8djjPC9hRFIHg&amp\;sa=D&amp\;source=calendar&amp\;ust=178886951
+ 4158255&amp\;usg=AOvVaw1szS-P6f4eiF7Z7M8GQ8HB' target='_blank' rel='noopen
+ er'>https://us06web.zoom.us/meetings/87614114473/invitations?signature=_3u
+ NC_uogxet58eGWW7qDnEz7u3KEn8djjPC9hRFIHg</a></p><br><hr><p>Please note tha
+ t this recurring event has changes in some of the occurrences:</p><h4>Exce
+ ption for 2026-09-28</h4><p><br> Please refer to the Calendar on Causeway 
+ for complete information.</p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
