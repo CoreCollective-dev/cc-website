@@ -1,0 +1,91 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:Europe/London
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:9.30.20260824T180312Z@hub.corecollective.dev
+DTSTAMP:20260824T180312Z
+ATTENDEE;RSVP=FALSE:MAILTO:tac@hub.corecollective.dev
+DESCRIPTION:CoreCollective Technical Advisory Committee Monthly meeting - E
+ astern friendly time slot\n\nGrant Likely - CoreCollective TAC Chair is in
+ viting you to a scheduled Zoom meeting.\n\nTopic: TAC Monthly - Eastern\nT
+ ime: Sep 9\, 2026 08:00 AM London\n        Every month on the Second Wed\,
+  until Nov 11\, 2026\, 3 occurrence(s)\nPlease download and import the fol
+ lowing iCalendar (.ics) files to your calendar system.\nMonthly: https://u
+ s06web.zoom.us/meeting/tZIvf-itrTouEtXYJ8D1_q5l9Gd_NrGwOkAi/ics?icsToken=D
+ BcyYqbQbxV4b6QcMQAALAAAANIvuE204FHIRPJlygXSsprzrgLlrjBXIHXVc35xhDHUJoYguT_
+ _Sv1JmT1qFUNyobCPhogWbizd_2zKtDAwMDAwMg&meetingMasterEventId=ner6UpfdQSKHb
+ eLyoNG7XA\nJoin Zoom Meeting\nhttps://us06web.zoom.us/j/86281531481?pwd=N7
+ F1bHePXczttbXZI2pkkHIA6HhUrv.1\n\nMeeting chat link\nhttps://us06web.zoom.
+ us/launch/jc/86281531481\n\nMeeting ID: 862 8153 1481\nPasscode: 146350\n
+ \n---\n\nOne tap mobile\n+13092053325\,\,86281531481#\,\,\,\,*146350# US\n
+ +13126266799\,\,86281531481#\,\,\,\,*146350# US (Chicago)\n\n\n---\n\nJoin
+  by SIP\n• 86281531481@zoomcrc.com\n\nJoin instructions\nhttps://us06web.z
+ oom.us/meetings/86281531481/invitations?signature=qAqiigjdd_yc4OmLG1zBpi2B
+ NdqPW5dERE2TytUoF-k\n\nPlease note that this recurring event has changes i
+ n some of the occurrences:\nException for 2026-09-09\n Please refer to the
+  Calendar on Causeway for complete information.\n
+DTSTART;TZID=Europe/London:20260909T080000
+DTEND;TZID=Europe/London:20260909T090000
+ORGANIZER;CN=Technical Advisory Committee:MAILTO:cwy-event-30@hub.corecolle
+ ctive.dev
+RRULE:FREQ=MONTHLY;UNTIL=20261231T090000Z;BYDAY=WE;BYSETPOS=2
+SEQUENCE:1
+SUMMARY:TAC Monthly - Eastern
+X-ALT-DESC;FMTTYPE=text/html:<p>CoreCollective Technical Advisory Committee
+  Monthly meeting - Eastern friendly time slot</p>\n<p>Grant Likely - CoreC
+ ollective TAC Chair is inviting you to a scheduled Zoom meeting.</p>\n<p>T
+ opic: TAC Monthly - Eastern<br>Time: Sep 9\, 2026 08:00 AM London<br>&nbsp
+ \; &nbsp\; &nbsp\; &nbsp\; Every month on the Second Wed\, until Nov 11\, 
+ 2026\, 3 occurrence(s)<br>Please download and import the following iCalend
+ ar (.ics) files to your calendar system.<br>Monthly: <a href='https://us06
+ web.zoom.us/meeting/tZIvf-itrTouEtXYJ8D1_q5l9Gd_NrGwOkAi/ics?icsToken=DBcy
+ YqbQbxV4b6QcMQAALAAAANIvuE204FHIRPJlygXSsprzrgLlrjBXIHXVc35xhDHUJoYguT__Sv
+ 1JmT1qFUNyobCPhogWbizd_2zKtDAwMDAwMg&amp\;meetingMasterEventId=ner6UpfdQSK
+ HbeLyoNG7XA'>https://us06web.zoom.us/meeting/tZIvf-itrTouEtXYJ8D1_q5l9Gd_N
+ rGwOkAi/ics?icsToken=DBcyYqbQbxV4b6QcMQAALAAAANIvuE204FHIRPJlygXSsprzrgLlr
+ jBXIHXVc35xhDHUJoYguT__Sv1JmT1qFUNyobCPhogWbizd_2zKtDAwMDAwMg&amp\;meeting
+ MasterEventId=ner6UpfdQSKHbeLyoNG7XA</a><br>Join Zoom Meeting<br><a href='
+ https://us06web.zoom.us/j/86281531481?pwd=N7F1bHePXczttbXZI2pkkHIA6HhUrv.1
+ '>https://us06web.zoom.us/j/86281531481?pwd=N7F1bHePXczttbXZI2pkkHIA6HhUrv
+ .1</a></p>\n<p>Meeting chat link<br><a href='https://us06web.zoom.us/launc
+ h/jc/86281531481'>https://us06web.zoom.us/launch/jc/86281531481</a></p>\n<
+ p>Meeting ID: 862 8153 1481<br>Passcode: 146350</p>\n<p>---</p>\n<p>One ta
+ p mobile<br>+13092053325\,\,86281531481#\,\,\,\,*146350# US<br>+1312626679
+ 9\,\,86281531481#\,\,\,\,*146350# US (Chicago)</p>\n<p><br>---</p>\n<p>Joi
+ n by SIP<br>&bull\; 86281531481@zoomcrc.com</p>\n<p>Join instructions<br><
+ a href='https://us06web.zoom.us/meetings/86281531481/invitations?signature
+ =qAqiigjdd_yc4OmLG1zBpi2BNdqPW5dERE2TytUoF-k'>https://us06web.zoom.us/meet
+ ings/86281531481/invitations?signature=qAqiigjdd_yc4OmLG1zBpi2BNdqPW5dERE2
+ TytUoF-k</a></p><br><hr><p>Please note that this recurring event has chang
+ es in some of the occurrences:</p><h4>Exception for 2026-09-09</h4><p><br>
+  Please refer to the Calendar on Causeway for complete information.</p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

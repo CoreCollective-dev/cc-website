@@ -1,0 +1,87 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:Europe/London
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:9.29.20260824T180109Z@hub.corecollective.dev
+DTSTAMP:20260824T180109Z
+ATTENDEE;RSVP=FALSE:MAILTO:tac@hub.corecollective.dev
+DESCRIPTION:CoreCollective Technical Advisory Committee Monthly meeting - W
+ estern friendly time zone\n\nGrant Likely - CoreCollective TAC Chair is in
+ viting you to a scheduled Zoom meeting.\n\nTopic: TAC Monthly - Western\nT
+ ime: Sep 9\, 2026 05:00 PM London\n        Every month on the Second Wed\,
+  until Nov 11\, 2026\, 3 occurrence(s)\nPlease download and import the fol
+ lowing iCalendar (.ics) files to your calendar system.\nMonthly: https://u
+ s06web.zoom.us/meeting/tZcrf-2hqTsqGNE78Z8ECianm64LkWCmBSIl/ics?icsToken=D
+ KU-xhaJxPlXXWo2mAAALAAAAArjM7f1w41njuPwiWbeQydUMzyiWxBRsREoKRDJfXs-iRc0uXL
+ YOXl-omIbY94Mm9XO0XEd2b0VGhn4qzAwMDAwMg&meetingMasterEventId=Yv2Od_doTdKMS
+ pDJPZo7cA\nJoin Zoom Meeting\nhttps://us06web.zoom.us/j/83684970025?pwd=Ps
+ V7HkHlsCOtjRWQOdgw7wG3qbp47N.1\n\nMeeting chat link\nhttps://us06web.zoom.
+ us/launch/jc/83684970025\n\nMeeting ID: 836 8497 0025\nPasscode: 229424\n
+ \n---\n\nOne tap mobile\n+13602095623\,\,83684970025#\,\,\,\,*229424# US\n
+ +13863475053\,\,83684970025#\,\,\,\,*229424# US\n\n\n---\n\nJoin by SIP\n•
+  83684970025@zoomcrc.com\n\nJoin instructions\nhttps://us06web.zoom.us/mee
+ tings/83684970025/invitations?signature=cDZyK4-vKC4J_wTMA8UCXtQHIprH-d5NIZ
+ 7BeRUo7n8\n
+DTSTART;TZID=Europe/London:20260909T170000
+DTEND;TZID=Europe/London:20260909T180000
+ORGANIZER;CN=Technical Advisory Committee:MAILTO:cwy-event-29@hub.corecolle
+ ctive.dev
+RRULE:FREQ=MONTHLY;UNTIL=20261231T180000Z;BYDAY=WE;BYSETPOS=2
+SEQUENCE:1
+SUMMARY:TAC Monthly - Western
+X-ALT-DESC;FMTTYPE=text/html:<p>CoreCollective Technical Advisory Committee
+  Monthly meeting - Western friendly time zone</p>\n<p>Grant Likely - CoreC
+ ollective TAC Chair is inviting you to a scheduled Zoom meeting.</p>\n<p>T
+ opic: TAC Monthly - Western<br>Time: Sep 9\, 2026 05:00 PM London<br>&nbsp
+ \; &nbsp\; &nbsp\; &nbsp\; Every month on the Second Wed\, until Nov 11\, 
+ 2026\, 3 occurrence(s)<br>Please download and import the following iCalend
+ ar (.ics) files to your calendar system.<br>Monthly: <a href='https://us06
+ web.zoom.us/meeting/tZcrf-2hqTsqGNE78Z8ECianm64LkWCmBSIl/ics?icsToken=DKU-
+ xhaJxPlXXWo2mAAALAAAAArjM7f1w41njuPwiWbeQydUMzyiWxBRsREoKRDJfXs-iRc0uXLYOX
+ l-omIbY94Mm9XO0XEd2b0VGhn4qzAwMDAwMg&amp\;meetingMasterEventId=Yv2Od_doTdK
+ MSpDJPZo7cA'>https://us06web.zoom.us/meeting/tZcrf-2hqTsqGNE78Z8ECianm64Lk
+ WCmBSIl/ics?icsToken=DKU-xhaJxPlXXWo2mAAALAAAAArjM7f1w41njuPwiWbeQydUMzyiW
+ xBRsREoKRDJfXs-iRc0uXLYOXl-omIbY94Mm9XO0XEd2b0VGhn4qzAwMDAwMg&amp\;meeting
+ MasterEventId=Yv2Od_doTdKMSpDJPZo7cA</a><br>Join Zoom Meeting<br><a href='
+ https://us06web.zoom.us/j/83684970025?pwd=PsV7HkHlsCOtjRWQOdgw7wG3qbp47N.1
+ '>https://us06web.zoom.us/j/83684970025?pwd=PsV7HkHlsCOtjRWQOdgw7wG3qbp47N
+ .1</a></p>\n<p>Meeting chat link<br><a href='https://us06web.zoom.us/launc
+ h/jc/83684970025'>https://us06web.zoom.us/launch/jc/83684970025</a></p>\n<
+ p>Meeting ID: 836 8497 0025<br>Passcode: 229424</p>\n<p>---</p>\n<p>One ta
+ p mobile<br>+13602095623\,\,83684970025#\,\,\,\,*229424# US<br>+1386347505
+ 3\,\,83684970025#\,\,\,\,*229424# US</p>\n<p><br>---</p>\n<p>Join by SIP<b
+ r>&bull\; 83684970025@zoomcrc.com</p>\n<p>Join instructions<br><a href='ht
+ tps://us06web.zoom.us/meetings/83684970025/invitations?signature=cDZyK4-vK
+ C4J_wTMA8UCXtQHIprH-d5NIZ7BeRUo7n8'>https://us06web.zoom.us/meetings/83684
+ 970025/invitations?signature=cDZyK4-vKC4J_wTMA8UCXtQHIprH-d5NIZ7BeRUo7n8</
+ a></p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
