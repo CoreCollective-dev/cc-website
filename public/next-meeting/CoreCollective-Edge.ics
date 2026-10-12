@@ -1,0 +1,89 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:Europe/London
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:13.34.20260904T075228Z@hub.corecollective.dev
+DTSTAMP:20260904T075228Z
+ATTENDEE;RSVP=FALSE:MAILTO:edge-compute@hub.corecollective.dev
+DESCRIPTION:Welcome to the bi-weekly CoreCollective Edge Compute meeting!\n
+ \nThis is the new meeting invite sent from the Causeway platform at https:
+ //hub.corecollective.dev/.\n\nThe agenda will be posted before the meeting
+  in the groups discussion forum https://hub.corecollective.dev/wg/Edge/mai
+ l and thereby also sent out to all members. Please respond to the invites 
+ so that we know how many are attending.\n\nBest regards\,\n\nCoreCollctive
+  Edge Compute leads\, John and Julianus\n\nTopic: CoreCollective Edge Comp
+ ute bi-weekly\nTime: This is a recurring meeting Meet anytime\nJoin Zoom M
+ eeting\nhttps://us06web.zoom.us/j/86361685389?pwd=5zlDaKoXax0BY4gWAb6aMapE
+ LCuRSQ.1\n\nMeeting chat link\nhttps://us06web.zoom.us/launch/jc/863616853
+ 89\n\nView meeting insights with Zoom AI Companion\nhttps://us06web.zoom.u
+ s/launch/edl?muid=6f85c634-8744-475d-97b4-9e38ad668c39\n\nMeeting ID: 863 
+ 6168 5389\nPasscode: 914387\n\n---\n\nOne tap mobile\n+13863475053\,\,8636
+ 1685389#\,\,\,\,*914387# US\n+15074734847\,\,86361685389#\,\,\,\,*914387# 
+ US\n\nPlease note that this recurring event has changes in some of the occ
+ urrences:\nException for 2026-10-07\n Please refer to the Calendar on Caus
+ eway for complete information.\n
+DTSTART;TZID=Europe/London:20260909T160000
+DTEND;TZID=Europe/London:20260909T163000
+ORGANIZER;CN=Edge Compute:MAILTO:cwy-event-34@hub.corecollective.dev
+RRULE:FREQ=WEEKLY;UNTIL=20270930T153000Z;INTERVAL=2;BYDAY=WE
+SEQUENCE:2
+SUMMARY:CoreCollective Edge Compute bi-weekly
+X-ALT-DESC;FMTTYPE=text/html:<p>Welcome to the bi-weekly CoreCollective Edg
+ e Compute meeting!</p>\n<p>This is the new meeting invite sent from the Ca
+ useway platform at&nbsp\;<a href='https://hub.corecollective.dev/'>https:/
+ /hub.corecollective.dev/.</a></p>\n<p>The agenda will be posted before the
+  meeting in the groups discussion forum <a href='https://hub.corecollectiv
+ e.dev/wg/Edge/mail'>https://hub.corecollective.dev/wg/Edge/mail</a> and th
+ ereby also sent out to all members. Please respond to the invites so that 
+ we know how many are attending.<br><br>Best regards\,<br><br>CoreCollctive
+  Edge Compute leads\, John and Julianus<br><br>Topic: CoreCollective Edge 
+ Compute bi-weekly<br>Time: This is a recurring meeting Meet anytime<br>Joi
+ n Zoom Meeting<br><a href='https://www.google.com/url?q=https://us06web.zo
+ om.us/j/86361685389?pwd%3D5zlDaKoXax0BY4gWAb6aMapELCuRSQ.1&amp\;sa=D&amp\;
+ source=calendar&amp\;ust=1788939673765778&amp\;usg=AOvVaw2YQjgUsgdQLq7t3JL
+ mg8TO' target='_blank' rel='noopener'>https://us06web.zoom.us/j/8636168538
+ 9?pwd=5zlDaKoXax0BY4gWAb6aMapELCuRSQ.1</a><br><br>Meeting chat link<br><a 
+ href='https://www.google.com/url?q=https://us06web.zoom.us/launch/jc/86361
+ 685389&amp\;sa=D&amp\;source=calendar&amp\;ust=1788939673765778&amp\;usg=A
+ OvVaw3WIyTI3LUJylGneM0TELnW' target='_blank' rel='noopener'>https://us06we
+ b.zoom.us/launch/jc/86361685389</a><br><br>View meeting insights with Zoom
+  AI Companion<br><a href='https://www.google.com/url?q=https://us06web.zoo
+ m.us/launch/edl?muid%3D6f85c634-8744-475d-97b4-9e38ad668c39&amp\;sa=D&amp\
+ ;source=calendar&amp\;ust=1788939673765778&amp\;usg=AOvVaw0I9tv-oaknPYPsqs
+ y1KNyY' target='_blank' rel='noopener'>https://us06web.zoom.us/launch/edl?
+ muid=6f85c634-8744-475d-97b4-9e38ad668c39</a><br><br>Meeting ID: 863 6168 
+ 5389<br>Passcode: 914387<br><br>---<br><br>One tap mobile<br>+13863475053\
+ ,\,86361685389#\,\,\,\,*914387# US<br>+15074734847\,\,86361685389#\,\,\,\,
+ *914387# US</p><br><hr><p>Please note that this recurring event has change
+ s in some of the occurrences:</p><h4>Exception for 2026-10-07</h4><p><br> 
+ Please refer to the Calendar on Causeway for complete information.</p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
