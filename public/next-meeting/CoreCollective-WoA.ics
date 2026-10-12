@@ -1,0 +1,212 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:3.38.20260907T145219Z@hub.corecollective.dev
+DTSTAMP:20260907T145219Z
+ATTENDEE;RSVP=FALSE:MAILTO:woa@hub.corecollective.dev
+DESCRIPTION:This is the calendar series in the CoreCollective hub for the T
+ echnical meeting. The CoreCollective Google Groups & Google Calendar infra
+ structure is being deprecated & replaced by the CoreCollective hub.\n\nUse
+ ful links:\n\n\nWoA dashboard in CoreCollective hub\nWoA WG page on CoreCo
+ llective website\nWoA WG GitHub repo\n\nThis invite covers Daylight Saving
+ s in Europe.  We'll decide in October how to handle the span that Europe &
+  North America time zones get out of sync.   Join Zoom Meetinghttps://us06
+ web.zoom.us/j/86910039279?pwd=e8LyL6lmsVbwNECqWak8Jb6O7tR1YW.1Meeting ID: 
+ 869 1003 9279Passcode: 531543---One tap mobile+13126266799\,\,86910039279#
+ \,\,\,\,*531543# US (Chicago)+13462487799\,\,86910039279#\,\,\,\,*531543# 
+ US (Houston)---Join by SIP• 86910039279@zoomcrc.comJoin instructionshttps:
+ //us06web.zoom.us/meetings/86910039279/invitations?signature=MMwK6AcvhP5lJ
+ cMCbKp3iX3pF21Uk1c589OzA3PgjL4 Best regards\,Nathalie Chan King Choy-- Cor
+ eCollective Community Manager Android & WoA working groups\n
+DTSTART;TZID=America/Los_Angeles:20260908T080000
+DTEND;TZID=America/Los_Angeles:20260908T085000
+LOCATION:https://us06web.zoom.us/j/86910039279?pwd=e8LyL6lmsVbwNECqWak8Jb6O
+ 7tR1YW.1
+ORGANIZER;CN=Windows on Arm:MAILTO:cwy-event-38@hub.corecollective.dev
+RRULE:FREQ=WEEKLY;UNTIL=20261025T155000Z;INTERVAL=2;BYDAY=TU
+SEQUENCE:1
+SUMMARY:CoreCollective Windows on Arm Technical (DST)
+X-ALT-DESC;FMTTYPE=text/html:<p><span style='color: #1f1f1f\; font-family: 
+ 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; white-spac
+ e: pre-wrap\; background-color: #f0f4f9\;'>This is the calendar series in 
+ the CoreCollective hub for the Technical meeting. The CoreCollective Googl
+ e Groups &amp\; Google Calendar infrastructure is being deprecated &amp\; 
+ replaced by the CoreCollective hub.</span></p>\n<p><span style='color: #1f
+ 1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-siz
+ e: 14px\; white-space: pre-wrap\; background-color: #f0f4f9\;'>Useful link
+ s:</span></p>\n<ul>\n<li><a href='https://hub.corecollective.dev/wg/WoA/da
+ shboard' target='_blank' rel='noopener'><span style='color: #1f1f1f\; font
+ -family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; w
+ hite-space: pre-wrap\; background-color: #f0f4f9\;'>WoA dashboard in CoreC
+ ollective hub</span></a></li>\n<li><a href='https://corecollective.dev/wor
+ king-groups/windows-on-arm/' target='_blank' rel='noopener'><span style='c
+ olor: #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\;
+  font-size: 14px\; white-space: pre-wrap\; background-color: #f0f4f9\;'>Wo
+ A WG page on CoreCollective website</span></a></li>\n<li><a href='https://
+ github.com/CoreCollective-dev/windows-on-arm-wg' target='_blank' rel='noop
+ ener'><span style='color: #1f1f1f\; font-family: 'Google Sans'\, Roboto\, 
+ Arial\, sans-serif\; font-size: 14px\; white-space: pre-wrap\; background-
+ color: #f0f4f9\;'>WoA WG GitHub repo</span></a></li>\n</ul>\n<p><span styl
+ e='color: #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-ser
+ if\; font-size: 14px\; white-space: pre-wrap\; background-color: #f0f4f9\;
+ '>This invite covers Daylight Savings in Europe.&nbsp\; We'll decide in Oc
+ tober how to handle the span that Europe &amp\; North America time zones g
+ et out of sync. </span><span style='color: #1f1f1f\; font-family: 'Google 
+ Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; white-space: pre-w
+ rap\; background-color: #f0f4f9\; float: none\; display: inline\;'>&nbsp\;
+ </span><br style='color: #1f1f1f\; font-family: 'Google Sans'\, Roboto\, A
+ rial\, sans-serif\; font-size: 14px\; white-space: pre-wrap\; background-c
+ olor: #f0f4f9\;'><span style='color: #1f1f1f\; font-family: 'Google Sans'\
+ , Roboto\, Arial\, sans-serif\; font-size: 14px\; white-space: pre-wrap\; 
+ background-color: #f0f4f9\; float: none\; display: inline\;'>&nbsp\;</span
+ ><br style='color: #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\,
+  sans-serif\; font-size: 14px\; white-space: pre-wrap\; background-color: 
+ #f0f4f9\;'><span style='color: #1f1f1f\; font-family: 'Google Sans'\, Robo
+ to\, Arial\, sans-serif\; font-size: 14px\; white-space: pre-wrap\; backgr
+ ound-color: #f0f4f9\; float: none\; display: inline\;'>Join Zoom Meeting</
+ span><br style='color: #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Ari
+ al\, sans-serif\; font-size: 14px\; white-space: pre-wrap\; background-col
+ or: #f0f4f9\;'><a style='text-decoration-line: underline\; color: #0b57d0\
+ ; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14
+ px\; white-space: pre-wrap\; background-color: #f0f4f9\;' href='https://ww
+ w.google.com/url?q=https://us06web.zoom.us/j/86910039279?pwd%3De8LyL6lmsVb
+ wNECqWak8Jb6O7tR1YW.1&amp\;sa=D&amp\;source=calendar&amp\;ust=178922407665
+ 2560&amp\;usg=AOvVaw0JPZN1SdEM9ERkkEGdyEkl' target='_blank' rel='noopener'
+ >https://us06web.zoom.us/j/86910039279?pwd=e8LyL6lmsVbwNECqWak8Jb6O7tR1YW.
+ 1</a><br style='color: #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Ari
+ al\, sans-serif\; font-size: 14px\; white-space: pre-wrap\; background-col
+ or: #f0f4f9\;'><br style='color: #1f1f1f\; font-family: 'Google Sans'\, Ro
+ boto\, Arial\, sans-serif\; font-size: 14px\; white-space: pre-wrap\; back
+ ground-color: #f0f4f9\;'><span style='color: #1f1f1f\; font-family: 'Googl
+ e Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; white-space: pre
+ -wrap\; background-color: #f0f4f9\; float: none\; display: inline\;'>Meeti
+ ng ID: 869 1003 9279</span><br style='color: #1f1f1f\; font-family: 'Googl
+ e Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; white-space: pre
+ -wrap\; background-color: #f0f4f9\;'><span style='color: #1f1f1f\; font-fa
+ mily: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; whit
+ e-space: pre-wrap\; background-color: #f0f4f9\; float: none\; display: inl
+ ine\;'>Passcode: 531543</span><br style='color: #1f1f1f\; font-family: 'Go
+ ogle Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; white-space: 
+ pre-wrap\; background-color: #f0f4f9\;'><br style='color: #1f1f1f\; font-f
+ amily: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; whi
+ te-space: pre-wrap\; background-color: #f0f4f9\;'><span style='color: #1f1
+ f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size
+ : 14px\; white-space: pre-wrap\; background-color: #f0f4f9\; float: none\;
+  display: inline\;'>---</span><br style='color: #1f1f1f\; font-family: 'Go
+ ogle Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; white-space: 
+ pre-wrap\; background-color: #f0f4f9\;'><span style='color: #1f1f1f\; font
+ -family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; w
+ hite-space: pre-wrap\; background-color: #f0f4f9\; float: none\; display: 
+ inline\;'>One tap mobile</span><br style='color: #1f1f1f\; font-family: 'G
+ oogle Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; white-space:
+  pre-wrap\; background-color: #f0f4f9\;'><span style='color: #1f1f1f\; fon
+ t-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; 
+ white-space: pre-wrap\; background-color: #f0f4f9\; float: none\; display:
+  inline\;'>+13126266799\,\,86910039279#\,\,\,\,*531543# US (Chicago)</span
+ ><br style='color: #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\,
+  sans-serif\; font-size: 14px\; white-space: pre-wrap\; background-color: 
+ #f0f4f9\;'><span style='color: #1f1f1f\; font-family: 'Google Sans'\, Robo
+ to\, Arial\, sans-serif\; font-size: 14px\; white-space: pre-wrap\; backgr
+ ound-color: #f0f4f9\; float: none\; display: inline\;'>+13462487799\,\,869
+ 10039279#\,\,\,\,*531543# US (Houston)</span><br style='color: #1f1f1f\; f
+ ont-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\
+ ; white-space: pre-wrap\; background-color: #f0f4f9\;'><span style='color:
+  #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font
+ -size: 14px\; white-space: pre-wrap\; background-color: #f0f4f9\; float: n
+ one\; display: inline\;'>---</span><br style='color: #1f1f1f\; font-family
+ : 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; white-sp
+ ace: pre-wrap\; background-color: #f0f4f9\;'><br style='color: #1f1f1f\; f
+ ont-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\
+ ; white-space: pre-wrap\; background-color: #f0f4f9\;'><span style='color:
+  #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font
+ -size: 14px\; white-space: pre-wrap\; background-color: #f0f4f9\; float: n
+ one\; display: inline\;'>Join by SIP</span><br style='color: #1f1f1f\; fon
+ t-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; 
+ white-space: pre-wrap\; background-color: #f0f4f9\;'><span style='color: #
+ 1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-s
+ ize: 14px\; white-space: pre-wrap\; background-color: #f0f4f9\; float: non
+ e\; display: inline\;'>&bull\; </span><a style='text-decoration-line: unde
+ rline\; color: #0b57d0\; font-family: 'Google Sans'\, Roboto\, Arial\, san
+ s-serif\; font-size: 14px\; white-space: pre-wrap\; background-color: #f0f
+ 4f9\;' href='mailto:86910039279@zoomcrc.com' target='_blank' rel='noopener
+ '>86910039279@zoomcrc.com</a><br style='color: #1f1f1f\; font-family: 'Goo
+ gle Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; white-space: p
+ re-wrap\; background-color: #f0f4f9\;'><br style='color: #1f1f1f\; font-fa
+ mily: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; whit
+ e-space: pre-wrap\; background-color: #f0f4f9\;'><span style='color: #1f1f
+ 1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size:
+  14px\; white-space: pre-wrap\; background-color: #f0f4f9\; float: none\; 
+ display: inline\;'>Join instructions</span><br style='color: #1f1f1f\; fon
+ t-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; 
+ white-space: pre-wrap\; background-color: #f0f4f9\;'><a style='text-decora
+ tion-line: underline\; color: #0b57d0\; font-family: 'Google Sans'\, Robot
+ o\, Arial\, sans-serif\; font-size: 14px\; white-space: pre-wrap\; backgro
+ und-color: #f0f4f9\;' href='https://www.google.com/url?q=https://us06web.z
+ oom.us/meetings/86910039279/invitations?signature%3DMMwK6AcvhP5lJcMCbKp3iX
+ 3pF21Uk1c589OzA3PgjL4&amp\;sa=D&amp\;source=calendar&amp\;ust=178922407665
+ 2560&amp\;usg=AOvVaw2U3WIBzPwZtnw0NF9SdWgP' target='_blank' rel='noopener'
+ >https://us06web.zoom.us/meetings/86910039279/invitations?signature=MMwK6A
+ cvhP5lJcMCbKp3iX3pF21Uk1c589OzA3PgjL4</a><br style='color: #1f1f1f\; font-
+ family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; wh
+ ite-space: pre-wrap\; background-color: #f0f4f9\;'><br style='color: #1f1f
+ 1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size:
+  14px\; white-space: pre-wrap\; background-color: #f0f4f9\;'><span style='
+ color: #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\
+ ; font-size: 14px\; white-space: pre-wrap\; background-color: #f0f4f9\; fl
+ oat: none\; display: inline\;'>&nbsp\;</span><br style='color: #1f1f1f\; f
+ ont-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\
+ ; white-space: pre-wrap\; background-color: #f0f4f9\;'><span style='color:
+  #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font
+ -size: 14px\; white-space: pre-wrap\; background-color: #f0f4f9\; float: n
+ one\; display: inline\;'>Best regards\,</span><br style='color: #1f1f1f\; 
+ font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px
+ \; white-space: pre-wrap\; background-color: #f0f4f9\;'><span style='color
+ : #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; fon
+ t-size: 14px\; white-space: pre-wrap\; background-color: #f0f4f9\; float: 
+ none\; display: inline\;'>Nathalie Chan King Choy</span><br style='color: 
+ #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-
+ size: 14px\; white-space: pre-wrap\; background-color: #f0f4f9\;'><span st
+ yle='color: #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-s
+ erif\; font-size: 14px\; white-space: pre-wrap\; background-color: #f0f4f9
+ \;'>-- </span><br style='color: #1f1f1f\; font-family: 'Google Sans'\, Rob
+ oto\, Arial\, sans-serif\; font-size: 14px\; white-space: pre-wrap\; backg
+ round-color: #f0f4f9\;'><span style='color: #1f1f1f\; font-family: 'Google
+  Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; white-space: pre-
+ wrap\; background-color: #f0f4f9\; float: none\; display: inline\;'>CoreCo
+ llective Community Manager&nbsp\;</span><br style='color: #1f1f1f\; font-f
+ amily: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; whi
+ te-space: pre-wrap\; background-color: #f0f4f9\;'><span style='color: #1f1
+ f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size
+ : 14px\; white-space: pre-wrap\; background-color: #f0f4f9\; float: none\;
+  display: inline\;'>Android &amp\; WoA working groups</span></p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
