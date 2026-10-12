@@ -6,19 +6,27 @@ METHOD:REQUEST
 X-WR-CALNAME:CoreCollective
 X-WR-CALDESC:Causeway Calendar
 X-MS-OLK-FORCEINSPECTOROPEN:TRUE
-X-WR-TIMEZONE:UTC
+X-WR-TIMEZONE:Europe/London
 BEGIN:VTIMEZONE
-TZID:UTC
-BEGIN:STANDARD
+TZID:Europe/London
+BEGIN:DAYLIGHT
 TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
 TZOFFSETTO:+0000
-TZNAME:UTC
-DTSTART:19700101T000000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:11.33.20260904T074443Z@hub.corecollective.dev
-DTSTAMP:20260904T074443Z
+UID:11.55.20261012T152506Z@hub.corecollective.dev
+DTSTAMP:20261012T152506Z
 ATTENDEE;RSVP=FALSE:MAILTO:confidential-compute@hub.corecollective.dev
 DESCRIPTION:Welcome to the bi-weekly CoreCollective Confidential Compute me
  eting!\n\nThis is the new meeting invite sent from the Causeway platform a
@@ -37,15 +45,13 @@ DESCRIPTION:Welcome to the bi-weekly CoreCollective Confidential Compute me
  United Kingdom\n+442039017895\,\,88925757828#\,\,\,\,*395292# United Kingd
  om\n\n---\n\nJoin by SIP\n• 88925757828@zoomcrc.com\n\nJoin instructions\n
  https://us06web.zoom.us/meetings/88925757828/invitations?signature=4wAwcSh
- -NzGi6BSUqoQGz5B6GoaIFfIlNJmHytrZJUs\n\nPlease note that this recurring ev
- ent has changes in some of the occurrences:\nException for 2026-09-28\n Pl
- ease refer to the Calendar on Causeway for complete information.\n
-DTSTART:20260914T150000Z
-DTEND:20260914T160000Z
-ORGANIZER;CN=Confidential Compute:MAILTO:cwy-event-33@hub.corecollective.de
+ -NzGi6BSUqoQGz5B6GoaIFfIlNJmHytrZJUs\n
+DTSTART;TZID=Europe/London:20261026T160000
+DTEND;TZID=Europe/London:20261026T170000
+ORGANIZER;CN=Confidential Compute:MAILTO:cwy-event-55@hub.corecollective.de
  v
 RRULE:FREQ=WEEKLY;UNTIL=20270930T160000Z;INTERVAL=2;BYDAY=MO
-SEQUENCE:1
+SEQUENCE:0
 SUMMARY:CoreCollective Confidential Compute 2/2
 X-ALT-DESC;FMTTYPE=text/html:<p>Welcome to the bi-weekly CoreCollective Con
  fidential Compute meeting!</p>\n<p>This is the new meeting invite sent fro
@@ -78,10 +84,7 @@ X-ALT-DESC;FMTTYPE=text/html:<p>Welcome to the bi-weekly CoreCollective Con
  JmHytrZJUs&amp\;sa=D&amp\;source=calendar&amp\;ust=1788939669731624&amp\;u
  sg=AOvVaw0P2YrTnAM3vBNvkWcYaA6h' target='_blank' rel='noopener'>https://us
  06web.zoom.us/meetings/88925757828/invitations?signature=4wAwcSh-NzGi6BSUq
- oQGz5B6GoaIFfIlNJmHytrZJUs</a></p><br><hr><p>Please note that this recurri
- ng event has changes in some of the occurrences:</p><h4>Exception for 2026
- -09-28</h4><p><br> Please refer to the Calendar on Causeway for complete i
- nformation.</p>
+ oQGz5B6GoaIFfIlNJmHytrZJUs</a></p>
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Reminder
