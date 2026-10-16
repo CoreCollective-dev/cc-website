@@ -1,12 +1,10 @@
 heading: Latest News
 items:
-  - headline: FFmpeg ARM64EC Binaries Now Available
-    body: Prebuilt FFmpeg binaries for Windows on Arm are published for download.
-    date: 2026-04-16
+  - headline: "WoA WG accomplishment: Native-by-default in Python 3.15"
+    body: October 2026 release of Python 3.15 provides a native-by-default experience on Windows on Arm
+    date: 2026-10-14
     links:
-      - { label: FFmpeg ARM64EC release page, href: https://github.com/Multicorewareinc/FFmpeg/releases }
-  - headline: Arm AppReady - Faster Path to Native WoA Applications
-    body: Arm AppReady for Windows brings developer resources, tooling guidance, and engineering support into one place for teams building native applications for Windows on Arm
-    date: 2026-06-02
-    links:
-      - { label: Arm AppReady blog post, href: https://newsroom.arm.com/blog/arm-appready-for-windows-native-applications }
+      - { label: Arm blog post, href: https://developer.arm.com/community/arm-community-blogs/b/announcements/posts/python-3-15-advances-the-native-developer-experience-on-windows-on-arm }
+      - { label: Microsoft blog post, href: https://blogs.windows.com/windowsdeveloper/2026/10/14/python-3-15-delivers-native-by-default-experience-on-windows-arm/ }
+      - { label: Qualcomm blog post, href: https://www.qualcomm.com/developer/blog/2026/10/native-python-windows-on-snapdragon-stronger-foundation-for-developers-ai-workflows }
+      - { label: Anaconda blog post, href: https://www.anaconda.com/blog/python-3-15 }
