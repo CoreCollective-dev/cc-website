@@ -1,0 +1,114 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:3.56.20261016T205158Z@hub.corecollective.dev
+DTSTAMP:20261016T205158Z
+ATTENDEE;RSVP=FALSE:MAILTO:woa@hub.corecollective.dev
+DESCRIPTION:This is the calendar series in the CoreCollective hub for the T
+ echnical meeting. The CoreCollective Google Groups & Google Calendar infra
+ structure is being deprecated & replaced by the CoreCollective hub.\n\nUse
+ ful links:\n\n\nWoA dashboard in CoreCollective hub\nWoA WG page on CoreCo
+ llective website\nWoA WG GitHub repo\n\nThis invite covers Standard Time i
+ n North America.  We'll decide in Feb/March how to handle the span that Eu
+ rope & North America time zones get out of sync.\n\nTopic: CoreCollective 
+ Windows on Arm Technical (Standard Time)\nTime: Nov 3\, 2026 08:00 AM Paci
+ fic Time (US and Canada)\n        Every 2 weeks on Tue\, until Mar 9\, 202
+ 7\, 10 occurrence(s)\n\nJoin Zoom Meeting\nhttps://us06web.zoom.us/j/84481
+ 099270?pwd=de2LwetX7UOvFKjaEoUxo79NIZbzfg.1\n\nMeeting ID: 844 8109 9270\n
+ Passcode: 988979\n\n---\n\nOne tap mobile\n+13462487799\,\,84481099270#\,\
+ ,\,\,*988979# US (Houston)\n+13602095623\,\,84481099270#\,\,\,\,*988979# U
+ S\n\n\n---\n\nJoin by SIP\n• 84481099270@zoomcrc.com\n\nJoin instructions
+ \nhttps://us06web.zoom.us/meetings/84481099270/invitations?signature=3RRIN
+ 1QvNZlTdsnYO0VynPkfabps7K4lg87ge1fziPs\n\nBest regards\,\nNathalie Chan Ki
+ ng Choy\n-- \nCoreCollective Community Manager \nAndroid & WoA working gro
+ ups\n
+DTSTART;TZID=America/Los_Angeles:20261103T080000
+DTEND;TZID=America/Los_Angeles:20261103T090000
+LOCATION:https://us06web.zoom.us/j/84481099270?pwd=de2LwetX7UOvFKjaEoUxo79N
+ IZbzfg.1
+ORGANIZER;CN=Windows on Arm:MAILTO:cwy-event-56@hub.corecollective.dev
+RRULE:FREQ=WEEKLY;UNTIL=20270314T170000Z;INTERVAL=2;BYDAY=TU
+SEQUENCE:0
+SUMMARY:CoreCollective Windows on Arm Technical (Standard Time)
+X-ALT-DESC;FMTTYPE=text/html:<p style='margin: 0px 0px 1.5em\; color: #5555
+ 55\; font-family: 'Helvetica Neue'\, Arial\, Helvetica\, sans-serif\; font
+ -size: 12px\; text-align: left\; white-space: normal\; background-color: #
+ ffffff\;'><span style='color: #1f1f1f\; font-family: 'Google Sans'\, Robot
+ o\, Arial\, sans-serif\; font-size: 14px\; white-space: pre-wrap\;'>This i
+ s the calendar series in the CoreCollective hub for the Technical meeting.
+  The CoreCollective Google Groups &amp\; Google Calendar infrastructure is
+  being deprecated &amp\; replaced by the CoreCollective hub.</span></p>\n<
+ p style='margin: 0px 0px 1.5em\; color: #555555\; font-family: 'Helvetica 
+ Neue'\, Arial\, Helvetica\, sans-serif\; font-size: 12px\; text-align: lef
+ t\; white-space: normal\; background-color: #ffffff\;'><span style='color:
+  #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font
+ -size: 14px\; white-space: pre-wrap\;'>Useful links:</span></p>\n<ul style
+ ='margin: 0px 1.5em 1.5em 0px\; padding-left: 3.333em\; list-style-type: d
+ isc\; color: #555555\; font-family: 'Helvetica Neue'\, Arial\, Helvetica\,
+  sans-serif\; font-size: 12px\; text-align: left\; white-space: normal\; b
+ ackground-color: #ffffff\;'>\n<li><span style='text-decoration: underline\
+ ;'><a style='color: #114488\; text-decoration: underline\;' href='https://
+ hub.corecollective.dev/wg/WoA/dashboard' target='_blank' rel='noopener'><s
+ pan style='color: #1f1f1f\; font-family: 'Google Sans'\, Roboto\, Arial\, 
+ sans-serif\; font-size: 14px\; white-space: pre-wrap\; text-decoration: un
+ derline\;'>WoA dashboard in CoreCollective hub</span></a></span></li>\n<li
+ ><span style='text-decoration: underline\;'><a style='color: #114488\; tex
+ t-decoration: underline\;' href='https://corecollective.dev/working-groups
+ /windows-on-arm/' target='_blank' rel='noopener'><span style='color: #1f1f
+ 1f\; font-family: 'Google Sans'\, Roboto\, Arial\, sans-serif\; font-size:
+  14px\; white-space: pre-wrap\; text-decoration: underline\;'>WoA WG page 
+ on CoreCollective website</span></a></span></li>\n<li><span style='text-de
+ coration: underline\;'><a style='color: #114488\; text-decoration: underli
+ ne\;' href='https://github.com/CoreCollective-dev/windows-on-arm-wg' targe
+ t='_blank' rel='noopener'><span style='color: #1f1f1f\; font-family: 'Goog
+ le Sans'\, Roboto\, Arial\, sans-serif\; font-size: 14px\; white-space: pr
+ e-wrap\; text-decoration: underline\;'>WoA WG GitHub repo</span></a></span
+ ></li>\n</ul>\n<p>This invite covers Standard Time in North America.&nbsp\
+ ; We'll decide in Feb/March how to handle the span that Europe &amp\; Nort
+ h America time zones get out of sync.</p>\n<p>Topic: CoreCollective Window
+ s on Arm Technical (Standard Time)<br>Time: Nov 3\, 2026 08:00 AM Pacific 
+ Time (US and Canada)<br>&nbsp\; &nbsp\; &nbsp\; &nbsp\; Every 2 weeks on T
+ ue\, until Mar 9\, 2027\, 10 occurrence(s)</p>\n<p>Join Zoom Meeting<br><a
+  href='https://us06web.zoom.us/j/84481099270?pwd=de2LwetX7UOvFKjaEoUxo79NI
+ Zbzfg.1'>https://us06web.zoom.us/j/84481099270?pwd=de2LwetX7UOvFKjaEoUxo79
+ NIZbzfg.1</a></p>\n<p>Meeting ID: 844 8109 9270<br>Passcode: 988979</p>\n<
+ p>---</p>\n<p>One tap mobile<br>+13462487799\,\,84481099270#\,\,\,\,*98897
+ 9# US (Houston)<br>+13602095623\,\,84481099270#\,\,\,\,*988979# US</p>\n<p
+ ><br>---</p>\n<p>Join by SIP<br>&bull\; 84481099270@zoomcrc.com</p>\n<p>Jo
+ in instructions<br><a href='https://us06web.zoom.us/meetings/84481099270/i
+ nvitations?signature=3RRIN1QvNZlTdsnYO0VynPkfabps7K4lg87ge1fziPs'>https://
+ us06web.zoom.us/meetings/84481099270/invitations?signature=3RRIN1QvNZlTdsn
+ YO0VynPkfabps7K4lg87ge1fziPs</a></p>\n<p>Best regards\,<br>Nathalie Chan K
+ ing Choy<br>-- <br>CoreCollective Community Manager&nbsp\;<br>Android &amp
+ \; WoA working groups</p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
