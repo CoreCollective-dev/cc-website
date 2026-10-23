@@ -30,7 +30,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: site-build
           run-id: ${{ github.event.workflow_run.id }}
@@ -43,7 +43,7 @@ jobs:
           echo "STATUSES_URL=$(cat build-metadata/statuses_url.txt)" >> "$GITHUB_OUTPUT"
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.workflow_run.head_sha }}
           # actions/checkout blocks checking out a fork PR's head commit
@@ -56,13 +56,15 @@ jobs:
           allow-unsafe-pr-checkout: true
 
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20
-          cache: "npm"
+          node-version: 22
+          # This job assumes AWS credentials, so keep setup-node v5's
+          # default package-manager caching disabled on privileged jobs.
+          package-manager-cache: false
 
       - name: Install Pulumi
-        uses: pulumi/actions@v5
+        uses: pulumi/actions@v6
         with:
           pulumi-version: 3.117.0
 
@@ -70,7 +72,7 @@ jobs:
         run: npm ci
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v5
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: eu-west-1
