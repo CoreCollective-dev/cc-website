@@ -1,7 +1,21 @@
 name: Close Pull Request
 
+# Uses "pull_request_target", not "pull_request". A fork PR's "closed"
+# event under "pull_request" is downgraded to a read-only, secret-less
+# token with no id-token permission, so configure-aws-credentials cannot
+# assume AWS_ROLE_ARN and the teardown silently fails - that's how
+# orphaned preview stacks (CloudFront distributions + cache policies)
+# accumulated and exhausted the account's CloudFront cache-policy limit.
+#
+# "pull_request_target" runs in the base repository's context with full
+# secrets and id-token access even for fork PRs. This is safe HERE - and
+# would NOT be in build_pr.yml / deploy_preview.yml - because this job
+# only ever checks out and runs the base branch's own trusted code
+# (npm ci + sst remove). It never checks out or executes the PR's head
+# commit, so the "pwn request" risk that those workflows guard against
+# does not apply.
 on:
-  pull_request:
+  pull_request_target:
     types: [closed]
 
 permissions:
@@ -18,6 +32,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        # Explicitly check out the base branch's code, never the PR head.
+        # This is what keeps pull_request_target safe here: the teardown
+        # runs trusted base-repo code only.
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
 
       - name: Install Node.js
         uses: actions/setup-node@v4
