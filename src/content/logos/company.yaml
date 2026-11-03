@@ -38,6 +38,8 @@
   scale: "2.8"
 - src: https://static.corecollective.dev/company_logos/hyundaiMotorGroupLogo.png
   alt: hyundai motor group logo
+- src: https://static.corecollective.dev/company_logos/kernkonzeptLogo.png
+  alt: kernkonzept logo
 - src: https://static.corecollective.dev/company_logos/lecomputingLogo.png
   alt: lecomputing logo
 - src: https://static.corecollective.dev/company_logos/linaroLogo.svg
@@ -52,6 +54,8 @@
   alt: redhat logo
 - src: https://static.corecollective.dev/company_logos/rockylinuxLogo.svg
   alt: rocky linux logo
+- src: https://static.corecollective.dev/company_logos/rooflineLogo.png
+  alt: roofline logo
 - src: https://static.corecollective.dev/company_logos/samsungLogo.svg
   alt: samsung logo
 - src: https://static.corecollective.dev/company_logos/socionextLogo.png
