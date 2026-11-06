@@ -1,0 +1,81 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:Europe/London
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:7.59.20261104T174148Z@hub.corecollective.dev
+DTSTAMP:20261104T174148Z
+ATTENDEE;RSVP=FALSE:MAILTO:virtualization@hub.corecollective.dev
+DESCRIPTION:We have decided to have an extra meeting to present the virtIO-
+ msg project that has been approved and started.\n\nPlease join us on Tuesd
+ ay!\n\nMeeting notes will be posted in the CoreCollective discussion forum
+  https://hub.corecollective.dev/wg/Virt/mail.\n\nBest regards\,\nSumit Sem
+ wal (chair) and Julianus Larson (Community manager)\n\nTopic: CC Virtualiz
+ ation: VirtIO subgroup\nJoin Zoom Meeting\nhttps://us06web.zoom.us/j/84676
+ 886280?pwd=2gXDY9Lvkjlw1JF45gB9s6UanUxGyJ.1\n\nMeeting chat link\nhttps://
+ us06web.zoom.us/launch/jc/84676886280\n\nMeeting ID: 846 7688 6280\nPassco
+ de: 306392\n\n---\n\nOne tap mobile\n+441314601196\,\,84676886280#\,\,\,\,
+ *306392# United Kingdom\n+442034815237\,\,84676886280#\,\,\,\,*306392# Uni
+ ted Kingdom\n\n\n---\n\nJoin by SIP\n• 84676886280@zoomcrc.com\n\nJoin ins
+ tructions\nhttps://us06web.zoom.us/meetings/84676886280/invitations?signat
+ ure=Wm8hVwaAYWjAIp6m1z7u2xu2AMQD0sr7rtTG1J0pLTg\n
+DTSTART;TZID=Europe/London:20261112T160000
+DTEND;TZID=Europe/London:20261112T170000
+ORGANIZER;CN=Virtualization:MAILTO:cwy-event-59@hub.corecollective.dev
+SEQUENCE:1
+SUMMARY:Extra CoreCollective VirtIO meeting
+X-ALT-DESC;FMTTYPE=text/html:<p>We have decided to have an extra meeting to
+  present the virtIO-msg project that has been approved and started.</p>\n<
+ p>Please join us on Tuesday!</p>\n<p>Meeting notes will be posted in the C
+ oreCollective discussion forum&nbsp\;<a href='https://hub.corecollective.d
+ ev/wg/Virt/mail'>https://hub.corecollective.dev/wg/Virt/mail</a>.<br><br>B
+ est regards\,<br>Sumit Semwal (chair) and Julianus Larson (Community manag
+ er)<br><br>Topic: CC Virtualization: VirtIO subgroup<br>Join Zoom Meeting<
+ br><a href='https://www.google.com/url?q=https://us06web.zoom.us/j/8467688
+ 6280?pwd%3D2gXDY9Lvkjlw1JF45gB9s6UanUxGyJ.1&amp\;sa=D&amp\;source=calendar
+ &amp\;ust=1788939669731624&amp\;usg=AOvVaw1lSoarT0nbtRHOQ-UC02UR' target='
+ _blank' rel='noopener'>https://us06web.zoom.us/j/84676886280?pwd=2gXDY9Lvk
+ jlw1JF45gB9s6UanUxGyJ.1</a><br><br>Meeting chat link<br><a href='https://w
+ ww.google.com/url?q=https://us06web.zoom.us/launch/jc/84676886280&amp\;sa=
+ D&amp\;source=calendar&amp\;ust=1788939669731624&amp\;usg=AOvVaw1Z7zfPhNOn
+ RI0nR7d6BWoE' target='_blank' rel='noopener'>https://us06web.zoom.us/launc
+ h/jc/84676886280</a><br><br>Meeting ID: 846 7688 6280<br>Passcode: 306392<
+ br><br>---<br><br>One tap mobile<br>+441314601196\,\,84676886280#\,\,\,\,*
+ 306392# United Kingdom<br>+442034815237\,\,84676886280#\,\,\,\,*306392# Un
+ ited Kingdom<br><br><br>---<br><br>Join by SIP<br>&bull\;&nbsp\;<a href='m
+ ailto:84676886280@zoomcrc.com' target='_blank' rel='noopener'>84676886280@
+ zoomcrc.com</a><br><br>Join instructions<br><a href='https://www.google.co
+ m/url?q=https://us06web.zoom.us/meetings/84676886280/invitations?signature
+ %3DWm8hVwaAYWjAIp6m1z7u2xu2AMQD0sr7rtTG1J0pLTg&amp\;sa=D&amp\;source=calen
+ dar&amp\;ust=1788939669731624&amp\;usg=AOvVaw1RGu-uvsj-CoH9ZrGNpIjm' targe
+ t='_blank' rel='noopener'>https://us06web.zoom.us/meetings/84676886280/inv
+ itations?signature=Wm8hVwaAYWjAIp6m1z7u2xu2AMQD0sr7rtTG1J0pLTg</a></p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
