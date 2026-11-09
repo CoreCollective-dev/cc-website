@@ -6,25 +6,36 @@ import Members from '../components/Members.astro';
 import backgroundImage from '../assets/52dad6ed54df0213f77fdc794d6d29be3972009c.png';
 import logo from '../assets/CC_logo_no_tag.svg';
 ---
-
 <BaseLayout title="Core Collective">
   <div
     class="bg-cc-blue w-full bg-[linear-gradient(to_bottom,transparent_0%,#000000_50%,transparent_100%)]"
   >
     <div
-      class="mx-auto mt-8 mb-24 flex h-full w-4/5 flex-col items-center justify-center gap-8 md:mt-24 md:mb-64"
+      class="mx-auto mt-4 mb-12 flex h-full w-4/5 flex-col items-center justify-center gap-5 md:mt-8 md:mb-20 md:gap-6"
     >
       <Image src={logo} alt="logo" class="w-full md:w-1/2" />
-      <h1 class="text-2xl md:text-4xl">
+      <h1 class="text-2xl md:text-4xl text-center">
         Where the Arm software ecosystem connects
       </h1>
-      <h3 class="text-cc-cyan max-w-3xl text-base md:text-xl">
+      <h3 class="text-cc-cyan max-w-3xl text-center text-base md:text-xl">
         CoreCollective is an open collaborative forum for the Arm Ecosystem,
         designed to accelerate innovation through shared software tools and
         standards that power every Arm system from cloud to edge.
       </h3>
+
+      <!-- Tech Forum Announcement Box -->
+      <div class="mx-auto w-full max-w-3xl rounded-xl border border-white/10 bg-slate-900/60 p-6 text-center shadow-lg backdrop-blur-md">
+        <h2 class="text-lg md:text-xl font-bold tracking-tight text-white mb-2">
+          Join us for the inaugural CoreCollective Quarterly Tech Forum!
+        </h2>
+        <div class="space-y-1 text-sm md:text-base text-slate-200">
+          <p><span class="font-semibold text-white">Date &amp; Time:</span> December 2nd, 14:00–17:00 GMT</p>
+          <p><span class="font-semibold text-white">Dial in info:</span> &lt;zoom info to be added soon&gt;</p>
+        </div>
+      </div>
     </div>
   </div>
+
   <div
     class="bg-cc-blue flex w-full flex-col gap-16 bg-cover bg-center bg-no-repeat py-32"
     style={{
