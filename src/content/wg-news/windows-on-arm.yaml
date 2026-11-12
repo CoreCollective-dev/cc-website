@@ -8,3 +8,9 @@ items:
       - { label: Microsoft blog post, href: https://blogs.windows.com/windowsdeveloper/2026/10/14/python-3-15-delivers-native-by-default-experience-on-windows-arm/ }
       - { label: Qualcomm blog post, href: https://www.qualcomm.com/developer/blog/2026/10/native-python-windows-on-snapdragon-stronger-foundation-for-developers-ai-workflows }
       - { label: Anaconda blog post, href: https://www.anaconda.com/blog/python-3-15 }
+  - headline: "Experimental weekly builds: GNU Toolchain for Windows Arm64"
+    body: "See latest status, get experimental weekly toolchain builds, and the build scripts for (MinGW/Cygwin) targets"
+    date: 2026-10-19
+    links:
+      - { label: gnu-toolchain-for-windows-on-arm64, href: https://github.com/arm/gnu-toolchain-for-windows-on-arm64 }
+      
