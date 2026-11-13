@@ -5,7 +5,8 @@ image: '../../assets/spotlights/CC-WGSpotlight-Virtualization.png'
 author: "Julianus Larson, Community Manager, Virtualization, CoreCollective"
 excerpt: The CoreCollective Virtualization Working Group unites hypervisor developers, firmware engineers, and silicon vendors to coordinate architecture-level enablement and advance the open-source virtualization stack for Arm. 
 ---
-Virtualization is the foundational layer of modern computing, rapidly expanding across hyperscale cloud infrastructure, physical AI, automotive systems, and embedded edge devices. As Arm-based platforms scale across these highly divergent workloads, the underlying virtual machine monitors and hypervisors must deliver native performance without the overhead of emulation taxes or fragmented tooling.
+
+Virtualization is the foundational layer of modern computing across hyperscale cloud infrastructure, physical AI, automotive systems, and embedded edge devices. As Arm-based platforms scale across these highly divergent workloads, the underlying virtual machine monitors and hypervisors must deliver native performance without the overhead of emulation taxes or fragmented tooling.
 
 Ensuring robust, consistent virtualization support requires bridging the gap between new hardware extensions and upstream software readiness.
 
@@ -15,36 +16,34 @@ The CoreCollective Virtualization Working Group serves as the industry's collabo
 
 Self-sustaining enablement for Arm virtualization requires tight cross-industry alignment to close the gap between silicon capabilities and software support without relying on isolated, downstream vendor forks.
 
-The Working Group brings together competitors and partners to advance the open-source virtualization stack for Arm, ensuring interoperability and unified upstream contributions for hypervisors, standard device interfaces, and userspace monitors:
-
-* Propose, align, and prioritize existing open source collaborative efforts.
-* Identify new collaboration opportunities across the software stack.
-
+The Working Group brings the ecosystem together to advance the open source virtualization stack for Arm, ensuring interoperability and unified upstream contributions for hypervisors, standard device interfaces, and userspace monitors.
 
 ## Areas of Active Collaboration
 
 ### 1. VirtIO
 
-* **What**: Upstreaming virtio-msg, a new message-based transport protocol for VirtIO. This fills the gap for environments where existing trap-and-emulate transports (like PCI or MMIO) are not natural abstractions, such as Asymmetric Multiprocessing (AMP) systems, secure partitions, firmware co-processors, or software-only VM-to-VM endpoints
+* **What**: Upstreaming virtio-msg, a new message-based transport protocol for VirtIO. This fills the gap for environments where existing trap-and-emulate transports (like PCI or MMIO) are not natural abstractions, such as Asymmetric Multiprocessing (AMP) systems, secure partitions, firmware co-processors, or software-only VM-to-VM endpoints.
 
 * **Why it matters**: VirtIO is the de facto standard for paravirtualized devices in Linux. While traditional transports work for standard VMs, they create significant developer friction in heterogeneous systems. The new virtio-msg protocol provides a critical, lightweight abstraction tailored for emerging Physical AI and automotive use cases.
 
 * **Why open collaboration wins**: Defining a standardized message-based transport prevents fragmented, vendor-specific workarounds. Cross-industry alignment streamlines upstream OASIS standard integration and Linux kernel reviews by demonstrating broad ecosystem demand and shared engineering support.
 
-#### Active projects – Funded by AMD & Arm
+#### Active projects – Funded by 
 
-* [Upstream](https://lists.linaro.org/archives/list/virtio-msg@lists.linaro.org/message/ZRCJQVE5RVCK4QSODYFLJOQ25SKVUVGV/) VirtIO-msg to OASIS
-* [Upstream](https://lore.kernel.org/all/cover.1753865268.git.viresh.kumar@linaro.org/) VirtIO-msg support for Linux
+<div style="display: flex"><img src="https://static.corecollective.dev/company_logos/amdLogo.svg" alt="AMD" width="300" height="100" class="max-h-10 max-w-[7rem] object-contain sm:max-h-12 sm:max-w-[9rem] md:max-h-14 md:max-w-[12rem]" style="transform: scale(0.8)" /><img src="https://static.corecollective.dev/company_logos/armLogo.svg" alt="Arm" width="300" height="100" class="max-h-10 max-w-[7rem] object-contain sm:max-h-12 sm:max-w-[9rem] md:max-h-14 md:max-w-[12rem]" style="transform: scale(0.75)" /></div>
 
-### 2. XEN
+* <a href="https://lists.linaro.org/archives/list/virtio-msg@lists.linaro.org/message/ZRCJQVE5RVCK4QSODYFLJOQ25SKVUVGV/" target="_blank">Upstream</a> VirtIO-msg to OASIS
+* <a href="https://lore.kernel.org/all/cover.1753865268.git.viresh.kumar@linaro.org/" target="_blank">Upstream</a> VirtIO-msg support for Linux
+
+### 2. XEN Hypervisor
 
 * **What**: Implementing missing architectural features in the Xen hypervisor for Arm, targeting Pointer Authentication, GICv5 support, and new atomic operations, alongside hardening real-time capabilities for certification efforts.
 
 * **Why it matters**: Xen is a critical dependency for embedded, automotive, and safety-focused systems requiring a small-footprint, independent hypervisor. Upstreaming new architectural features allows these demanding environments to fully leverage modern Arm CPU performance and security mechanisms without carrying local patches.
 
-* **Why open collaboration wins**: Sharing the engineering burden for complex architectural enablement prevents duplicated effort. Collaborative upstreaming accelerates the availability of safety-critical features, de-risking deployment for robotics and automotive vendors relying on certified hypervisors.
+* **Why open collaboration wins**: Aligning early on QEMU implementations ensures that newer VMMs (such as Cloud Hypervisor) inherit stable, well-tested KVM APIs. Openly collaborating on the emulation layer unblocks maintainers and accelerates software readiness across the entire Arm ecosystem.
 
-### 3. VMMs & KVM
+### 3. Virtual Machine Monitor (VMM) & KVM
 
 * **What**: Exercising KVM APIs and implementing logic for new architectural features using QEMU as the foundational Virtual Machine Monitor (VMM). This includes leveraging QEMU's dynamic JIT (TCG) for ISA virtualization and block layer capable of supporting complex copy-on-write storage chains.
 
@@ -54,14 +53,14 @@ The Working Group brings together competitors and partners to advance the open-s
 
 ## The Working Group In Action
 
-* **Explore current and past projects** on the [Virtualization working group webpage](/working-groups/virtualization/).
+* **Explore current and past projects** on the <a href="/working-groups/virtualization/" target="_blank">Virtualization working group webpage</a>.
 
-* **Follow technical discussions and working group activity** through the [public mailing list archive](https://lists.corecollective.dev/archives/list/virtualization-wg@lists.corecollective.dev/).
+* **Follow technical discussions and working group activity** through the <a href="https://lists.corecollective.dev/archives/list/virtualization-wg@lists.corecollective.dev/" target="_blank">public mailing list archive</a>.
 
 ## Get Involved And Shape the Ecosystem
 
 CoreCollective is a free, open community where companies collaborate to accelerate building, testing, and deploying Arm workloads. Members can drive change by joining an existing Working Group or empowering their teams to propose new Working Groups to solve pressing industry challenges.
 
-* [Join CoreCollective](/join/)
+* <a href="/join/" target="_blank">Join CoreCollective</a>
 
-* [Already a CoreCollective member? Sign up for Virtualization & other working groups](https://hub.corecollective.dev/)
+* <a href="https://hub.corecollective.dev/" target="_blank">Already a CoreCollective member? Sign up for Virtualization & other working groups</a>
