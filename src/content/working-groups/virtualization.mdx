@@ -17,8 +17,8 @@ The working group is divided in three subgroups:
 ## Joining
 
 If your company is not yet a CoreCollective member, have your company sign and return the 
-[CoreCollective Membership Agreement found here](/join/). Membership is free. 
-Once the membership agreement has been fully signed, you’ll be able to register and sign into the [CoreCollective hub](https://hub.corecollective.dev/) 
+<a href="/join/" target="_blank">CoreCollective Membership Agreement found here</a>. Membership is free. 
+Once the membership agreement has been fully signed, you’ll be able to register and sign into the <a href="https://hub.corecollective.dev/" target="_blank">CoreCollective hub</a> 
 and join any desired Working Groups. 
 
 ## Participate in meetings
@@ -35,21 +35,35 @@ and join any desired Working Groups.
  
 ## Mailing List
 
-- [Public mailing list archive mirror that non-members can subscribe to (read-only)](https://lists.corecollective.dev/mailman3/lists/virtualization-wg.lists.corecollective.dev/). 
+- <a href="https://lists.corecollective.dev/mailman3/lists/virtualization-wg.lists.corecollective.dev/" target="_blank">Public mailing list archive mirror that non-members can subscribe to (read-only).</a>
 Subscription details available on the mailing list subscription page.
-- If you work for a CoreCollective member company, then you should register and sign into the [CoreCollective hub](https://hub.corecollective.dev/) 
+- If you work for a CoreCollective member company, then you should register and sign into the <a href="https://hub.corecollective.dev/" target="_blank">CoreCollective hub</a> 
 and join any desired Working Groups, which will enable you to send emails to the working group mailing lists.  
 
 <Note>
   CoreCollective hub subscriptions are restricted to company email domains of current members.
-  If you don't receive a confirmation email within 24 hours, email [help@hub.corecollective.dev](mailto:help@hub.corecollective.dev)
+  If you don't receive a confirmation email within 24 hours, email [admin@hub.corecollective.dev](mailto:admin@hub.corecollective.dev)
   to notify the CoreCollective community managers.
 </Note>
 
 ## Projects
 
-- [Upstream VirtIO-msg to OASIS](https://lists.linaro.org/archives/list/virtio-msg@lists.linaro.org/message/ZRCJQVE5RVCK4QSODYFLJOQ25SKVUVGV/)
-- [Upstream VirtIO-msg support for Linux](https://lore.kernel.org/all/cover.1753865268.git.viresh.kumar@linaro.org/)
-- Current Working Group activities are still being established. Join the
-  Working Group to influence the direction
+- <a href="https://lists.linaro.org/archives/list/virtio-msg@lists.linaro.org/message/ZRCJQVE5RVCK4QSODYFLJOQ25SKVUVGV/" target="_blank">Upstream VirtIO-msg to OASIS</a>
+- <a href="https://lore.kernel.org/all/cover.1753865268.git.viresh.kumar@linaro.org/" target="_blank">Upstream VirtIO-msg support for Linux</a>
+- Other Working Group projects are still being established. <a href="/join/" target="_blank">Join the Working Group to influence the direction</a>
 
+## Exploration Areas
+
+### Xen hypervisor
+
+Implementing missing architectural features in the Xen hypervisor for Arm, targeting Pointer Authentication, GICv5 support, and new atomic operations, alongside hardening real-time capabilities for certification efforts.
+
+### QEMU/KVM
+
+Exercising KVM APIs and implementing logic for new architectural features using QEMU as the foundational Virtual Machine Monitor (VMM). This includes leveraging QEMU's dynamic JIT (TCG) for ISA virtualization and block layer capable of supporting complex copy-on-write storage chains.
+
+### VirtIO
+
+Upstreaming virtio-msg, a new message-based transport protocol for VirtIO. This fills the gap for environments where existing trap-and-emulate transports (like PCI or MMIO) are not natural abstractions, such as Asymmetric Multiprocessing (AMP) systems, secure partitions, firmware co-processors, or software-only VM-to-VM endpoints.
+
+Active VirtIO projects are ongoing, but there is always room to <a href="/join/" target="_blank">join the collaboration</a>!
