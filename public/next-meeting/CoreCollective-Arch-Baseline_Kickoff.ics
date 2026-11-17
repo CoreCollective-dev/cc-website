@@ -1,0 +1,78 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//3.11.206.72//NONSGML kigkonsult.se iCalcreator 2.22//
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+X-WR-CALNAME:CoreCollective
+X-WR-CALDESC:Causeway Calendar
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+X-WR-TIMEZONE:Europe/London
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:32.63.20261117T173520Z@hub.corecollective.dev
+DTSTAMP:20261117T173520Z
+ATTENDEE;RSVP=FALSE:MAILTO:arch-baseline@hub.corecollective.dev
+DESCRIPTION:Working Group Kickoff Meeting\n\nCoreCollective is inviting you
+  to a scheduled Zoom meeting.\n\nTopic: Architecture Baseline Kickoff\nTim
+ e: Dec 1\, 2026 05:00 PM Greenwich Mean Time\n\nJoin Zoom Meeting\nhttps:/
+ /us06web.zoom.us/j/84573884213?pwd=UUtSp6Hr9X1QSNILswYjwOtsfikxvB.1\n\nMee
+ ting chat link\nhttps://us06web.zoom.us/launch/jc/84573884213\n\nMeeting I
+ D: 845 7388 4213\nPasscode: 049468\n\n---\n\nOne tap mobile\n+12532158782\
+ ,\,84573884213#\,\,\,\,*049468# US (Tacoma)\n+13462487799\,\,84573884213#\
+ ,\,\,\,*049468# US (Houston)---\n\nJoin by SIP\n• 84573884213@zoomcrc.com
+ \n\nJoin instructions\nhttps://us06web.zoom.us/meetings/84573884213/invita
+ tions?signature=24WsVa4DKFrJSytctVobsXaAM6EeendVN8TPNIB9mGU\n
+DTSTART;TZID=Europe/London:20261201T170000
+DTEND;TZID=Europe/London:20261201T180000
+ORGANIZER;CN=Architecture Baseline for Distributions:MAILTO:no-reply@hub.co
+ recollective.dev
+SEQUENCE:0
+SUMMARY:Architecture Baseline Kickoff
+X-ALT-DESC;FMTTYPE=text/html:<p><span style='font-size: 10pt\;'>Working Gro
+ up Kickoff Meeting</span></p>\n<p><span style='font-size: 10pt\;'>CoreColl
+ ective is inviting you to a scheduled Zoom meeting.</span></p>\n<p><span s
+ tyle='font-size: 10pt\;'>Topic: Architecture Baseline Kickoff</span><br><s
+ pan style='font-size: 10pt\;'>Time: Dec 1\, 2026 05:00 PM Greenwich Mean T
+ ime</span></p>\n<p><span style='font-size: 10pt\;'>Join Zoom Meeting</span
+ ><br><span style='font-size: 10pt\;'><a href='https://us06web.zoom.us/j/84
+ 573884213?pwd=UUtSp6Hr9X1QSNILswYjwOtsfikxvB.1'>https://us06web.zoom.us/j/
+ 84573884213?pwd=UUtSp6Hr9X1QSNILswYjwOtsfikxvB.1</a></span></p>\n<p><span 
+ style='font-size: 10pt\;'>Meeting chat link</span><br><span style='font-si
+ ze: 10pt\;'><a href='https://us06web.zoom.us/launch/jc/84573884213'>https:
+ //us06web.zoom.us/launch/jc/84573884213</a></span></p>\n<p><span style='fo
+ nt-size: 10pt\;'>Meeting ID: 845 7388 4213</span><br><span style='font-siz
+ e: 10pt\;'>Passcode: 049468</span></p>\n<p><span style='font-size: 10pt\;'
+ >---</span></p>\n<p><span style='font-size: 10pt\;'>One tap mobile</span><
+ br><span style='font-size: 10pt\;'>+12532158782\,\,84573884213#\,\,\,\,*04
+ 9468# US (Tacoma)</span><br><span style='font-size: 10pt\;'>+13462487799\,
+ \,84573884213#\,\,\,\,*049468# US (Houston)---</span></p>\n<p><span style=
+ 'font-size: 10pt\;'>Join by SIP</span><br><span style='font-size: 10pt\;'>
+ &bull\; 84573884213@zoomcrc.com</span></p>\n<p><span style='font-size: 10p
+ t\;'>Join instructions</span><br><span style='font-size: 10pt\;'><a href='
+ https://us06web.zoom.us/meetings/84573884213/invitations?signature=24WsVa4
+ DKFrJSytctVobsXaAM6EeendVN8TPNIB9mGU'>https://us06web.zoom.us/meetings/845
+ 73884213/invitations?signature=24WsVa4DKFrJSytctVobsXaAM6EeendVN8TPNIB9mGU
+ </a></span></p>
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT0H15M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
