@@ -33,6 +33,7 @@ const navLinks: NavLink[] = [
   },
   { name: 'Join', href: '/join/' },
   { name: 'Blog & News', href: '/blog/' },
+  { name: 'Tech Forum', href: '/tech-forum/' },
   { name: 'Contact', href: '/contact/' },
 ];
 
