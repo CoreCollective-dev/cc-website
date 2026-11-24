@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const agenda = [
+  { time: '14:00–14:05', topic: 'Welcome and CoreCollective News', presenter: 'Grant Likely — Arm, CoreCollective Technical Chair' },
+  { time: '14:05–14:10', topic: 'Arm Roadmap Updates', presenter: 'Bharath Subramanian — Arm' },
+  { time: '14:10–14:20', topic: 'Linux Kernel', roadmapItem: true, presenter: 'Hemendra Dassanayake & Bharath Subramanian — Arm' },
+  { time: '14:20–14:30', topic: 'Trusted Firmware — A Roadmap', roadmapItem: true, presenter: 'Manish Pandey & Bharath Subramanian — Arm' },
+  { time: '14:30–14:40', topic: 'Confidential Compute', roadmapItem: true, presenter: 'Dan Handley & Bharath Subramanian — Arm' },
+  { time: '14:40–15:10', topic: 'Windows on Arm Open Source Achievements', presenter: 'Marcus Perryman — Microsoft' },
+  { time: '15:10–15:20', topic: 'Working Group News and Updates', presenter: '' },
+  { time: '15:20–15:30', topic: 'Tea Break', presenter: '' },
+  { time: '15:30–16:00', topic: 'Arm64 Nested Virtualisation Upstream', presenter: 'Lorenzo Stoakes — Arm', id: 'nested-virtualisation' },
+  { time: '16:00–16:30', topic: 'Virtio-msg — A Message-based Transport for Heterogeneous Systems', presenter: 'Viresh Kumar — Linaro', id: 'virtio-msg' },
+  { time: '16:30–17:00', topic: 'The Future of MPAM in Linux and resctrl', presenter: 'Ben Horgan — Arm', id: 'mpam' },
+  { time: '17:00', topic: 'Closing', presenter: 'Grant Likely' },
+];
+---
+
+<BaseLayout title="Tech Forum">
+  <div class="mx-auto w-full max-w-6xl px-6 py-16 text-left md:px-12">
+    <h1 class="text-cc-cyan text-3xl md:text-5xl">Tech Forum</h1>
+    <p class="mt-6 text-white/75">CoreCollective Tech Forum is a quarterly event with technical presentations from across the Arm Open Source community. It features presentations and development updates about Linux, Windows on Arm, Confidential Compute, Virtualisation, firmware, enablement of the latest Arm features, and much more. All brought to you by key open source technical leaders. It is open and free to join. </p>
+    <p class="mt-6 text-white/75">The first Tech Forum takes place on <time datetime="2026-12-02">2 December 2026</time>, 14:00–17:00 GMT, on Zoom.</p>
+
+    <p class="mt-6">
+      <a href="https://us06web.zoom.us/j/82956103576?pwd=Urkgv5KFjffGZxwLNC4mJqbB3R5Hwb.1" target="_blank" rel="noopener noreferrer" class="text-cc-cyan underline underline-offset-4 hover:text-white">Join Zoom Meeting</a>
+    </p>
+
+    <section class="mt-12" aria-labelledby="agenda-heading">
+      <h2 id="agenda-heading" class="text-2xl">Agenda</h2>
+      <p id="timing-note" class="mt-4 text-white/75">All times are in GMT.</p>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full min-w-[640px] border-collapse text-left" aria-describedby="timing-note">
+          <caption class="sr-only">Tech Forum session times, topics and presenters</caption>
+          <thead class="bg-white/5 text-cc-cyan">
+            <tr>
+              <th scope="col" class="p-4">Time</th>
+              <th scope="col" class="p-4">Topic</th>
+              <th scope="col" class="p-4">Presenter</th>
+            </tr>
+          </thead>
+          <tbody>
+            {agenda.map((session) => (
+              <tr class="border-b border-white/15">
+                <td class="whitespace-nowrap p-4 align-top">{session.time}</td>
+                <th scope="row" class:list={["p-4 align-top font-normal", { "pl-10 md:pl-12": session.roadmapItem }]}>
+                  {session.roadmapItem && <span class="sr-only">Arm Roadmap Updates: </span>}
+                  {session.id ? <a class="text-cc-cyan underline underline-offset-4 hover:text-white" href={`#${session.id}`}>{session.topic}</a> : session.topic}
+                </th>
+                <td class="p-4 align-top">{session.presenter || '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="prose prose-invert mt-16 max-w-none" aria-labelledby="sessions-heading">
+      <h2 id="sessions-heading">Session Details</h2>
+      <article id="nested-virtualisation" class="scroll-mt-36 border-t border-white/15 pt-6">
+        <h3 class="text-cc-cyan">Arm64 Nested Virtualisation Upstream</h3>
+        <p>In this session we'll provide an overview of the arm64 nested virtualisation feature and its upstream development.</p>
+        <p><strong>Lorenzo Stoakes</strong> — Arm, KVM team lead, kernel mm maintainer</p>
+      </article>
+      <article id="virtio-msg" class="mt-10 scroll-mt-36 border-t border-white/15 pt-6">
+        <h3 class="text-cc-cyan">Virtio-msg — A Message-based Transport for Heterogeneous Systems</h3>
+        <p>Virtio-msg is a proposed message-based Virtio transport for heterogeneous systems where PCI and MMIO are not a natural fit. In this session we will discuss its architecture, use cases, and ongoing standardization.</p>
+        <p><strong>Viresh Kumar</strong> — Linaro</p>
+        <p>Viresh Kumar is a Senior Kernel Engineer at Linaro and an active Linux kernel maintainer. He has worked extensively on virtualization technologies including Virtio, Xen, QEMU, and Rust-VMM. His recent work includes the development of the virtio-msg transport, and Rust-based Virtio backends. Beyond virtualization, he co-maintains the Linux CPUFreq and OPP frameworks and has been an upstream Linux kernel contributor for over two decades.</p>
+      </article>
+      <article id="mpam" class="mt-10 scroll-mt-36 border-t border-white/15 pt-6">
+        <h3 class="text-cc-cyan">The Future of MPAM in Linux and resctrl</h3>
+        <p>An MPAM Linux driver roadmap. Support for MPAM in Linux using the resctrl interface is now in mainline Linux but there is still more to be done. I will discuss the upcoming cross-architecture resctrl changes, in Linux, for adding more controls and monitors and what this gives us for MPAM. Also, how PARTID narrowing can be harnessed to give more monitor groups and what more needs to be done in the driver to support existing MPAM features.</p>
+        <p><strong>Ben Horgan</strong> — Arm, MPAM driver co-maintainer</p>
+      </article>
+    </section>
+  </div>
+</BaseLayout>
