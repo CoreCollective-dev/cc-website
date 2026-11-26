@@ -3,5 +3,6 @@ members:
   - { name: Arm, logo: arm }
   - { name: CIX, logo: cix }
   - { name: Google, logo: google }
+  - { name: Hyundai, logo: hyundaimotorgroup }
   - { name: Linaro, logo: linaro }
   - { name: Samsung, logo: samsung }

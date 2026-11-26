@@ -9,9 +9,9 @@ export interface CompanyLogo {
  * URLs reference assets on static.corecollective.dev.
  */
 export const companyLogos: Record<string, CompanyLogo> = {
-  accelerate: {
+  accelerat: {
     src: "https://static.corecollective.dev/company_logos/accelerateLogo.png",
-    alt: "acclerate logo",
+    alt: "acclerat logo",
     scale: "2",
   },
   amd: {

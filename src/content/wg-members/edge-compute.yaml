@@ -4,6 +4,8 @@ members:
   - { name: Arm, logo: arm }
   - { name: Canonical, logo: canonical }
   - { name: CIX, logo: cix }
+  - { name: Gutlaf, logo: gutlaf }
   - { name: Linaro, logo: linaro }
   - { name: Qualcomm, logo: qualcomm }
   - { name: Red Hat, logo: redhat }
+  - { name: Socionext, logo: socionext }
