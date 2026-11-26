@@ -12,4 +12,5 @@ members:
   - { name: Linaro, logo: linaro }
   - { name: Qualcomm, logo: qualcomm }
   - { name: Red Hat, logo: redhat }
+  - { name: Roofline, logo: roofline }
   - { name: SUSE, logo: suse }

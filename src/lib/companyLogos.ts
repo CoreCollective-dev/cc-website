@@ -81,6 +81,10 @@ export const companyLogos: Record<string, CompanyLogo> = {
     src: "https://static.corecollective.dev/company_logos/hyundaiMotorGroupLogo.png",
     alt: "hyundai motor group logo",
   },
+  kernkonzept: {
+    src: "https://static.corecollective.dev/company_logos/kernkonzeptLogo.png",
+    alt: "kernkonzept logo",
+  },
   lecomputing: {
     src: "https://static.corecollective.dev/company_logos/lecomputingLogo.png",
     alt: "lecomputing logo",
@@ -97,11 +101,6 @@ export const companyLogos: Record<string, CompanyLogo> = {
     src: "https://static.corecollective.dev/company_logos/microsoftLogo.svg",
     alt: "microsoft logo",
   },
-  nvidia: {
-    src: "https://static.corecollective.dev/company_logos/nvidiaLogo.svg",
-    alt: "nvidia logo",
-    scale: "2.8",
-  },
   qualcomm: {
     src: "https://static.corecollective.dev/company_logos/qualcommLogo.svg",
     alt: "qualcomm logo",
@@ -113,6 +112,10 @@ export const companyLogos: Record<string, CompanyLogo> = {
   rockylinux: {
     src: "https://static.corecollective.dev/company_logos/rockylinuxLogo.svg",
     alt: "rocky linux logo",
+  },
+  roofline: {
+    src: "https://static.corecollective.dev/company_logos/rooflineLogo.png",
+    alt: "roofline logo",
   },
   samsung: {
     src: "https://static.corecollective.dev/company_logos/samsungLogo.svg",
