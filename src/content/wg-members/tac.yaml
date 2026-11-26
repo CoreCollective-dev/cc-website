@@ -5,6 +5,7 @@ members:
   - { name: Arm, logo: arm }
   - { name: Canonical, logo: canonical }
   - { name: CIX, logo: cix }
+  - { name: EPAM Systems, logo: epam }
   - { name: Fujitsu, logo: fujitsu }
   - { name: Google, logo: google }
   - { name: Huawei, logo: huawei }

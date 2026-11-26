@@ -1,0 +1,4 @@
+heading: Working Group Members
+members:
+  - { name: Arm, logo: arm }
+  - { name: Linaro, logo: linaro }
