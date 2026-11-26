@@ -9,6 +9,7 @@ members:
   - { name: Fujitsu, logo: fujitsu }
   - { name: Google, logo: google }
   - { name: Huawei, logo: huawei }
+  - { name: Kernkonzept, logo: kernkonzept }
   - { name: Le Computing, logo: lecomputing }
   - { name: Linaro, logo: linaro }
   - { name: Machineware, logo: machineware }
